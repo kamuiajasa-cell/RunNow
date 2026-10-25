@@ -79,7 +79,7 @@ export default function RootLayout() {
 }
 
 /** A tab's label. It reads the language itself: the navigator keeps the options it first got, so a label built from `t` in them would stay in the old language after a switch in Settings. */
-function TabLabel({ name, color }: { name: 'today' | 'workouts' | 'social' | 'more'; color: ColorValue }) {
+function TabLabel({ name, color }: { name: 'today' | 'workouts' | 'social' | 'plan' | 'more'; color: ColorValue }) {
   const { t } = useTranslation('common');
   const { fonts } = useTheme();
   return (
@@ -225,6 +225,16 @@ function RootNavigator() {
                       }}
                     />
                     <Tabs.Screen name="social" options={{ href: null }} />
+                    <Tabs.Screen
+                     name="plan"
+                     options={{
+                       title: t('nav.plan'),
+                       tabBarLabel: ({ color }) => <TabLabel name="plan" color={color} />,
+                       tabBarIcon: ({ focused, color, size }) => (
+                         <TabIcon on="calendar" off="calendar-outline" focused={focused} size={size} color={color} />
+                       ),
+                     }}
+                   />
                     {/* More: the Settings stack (its index lists the Watch section first, then the settings), so /settings and every /settings/* link keep working. */}
                     <Tabs.Screen
                       name="settings"
