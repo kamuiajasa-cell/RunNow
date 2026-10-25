@@ -1,4 +1,9 @@
-{
+{  "rencana": {
+    "empty": {
+      "title": "Rencana lari",
+      "body": "Di sini kamu akan menyusun rencana lari dua minggu, dengan jarak dan pace target per hari."
+    }
+  },
   "title": "Coach",
   "disclaimer": "Saran Coach dihitung dari data jam dan aturan umum latihan. Ini bukan saran medis. Kalau ada nyeri, pusing, atau keluhan lain, berhenti dan periksakan ke dokter.",
   "access": {
