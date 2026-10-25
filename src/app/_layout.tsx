@@ -224,16 +224,7 @@ function RootNavigator() {
                         ),
                       }}
                     />
-                    <Tabs.Screen
-                      name="social"
-                      options={{
-                        title: t('nav.social'),
-                        tabBarLabel: ({ color }) => <TabLabel name="social" color={color} />,
-                        tabBarIcon: ({ focused, color, size }) => (
-                          <TabIcon on="people" off="people-outline" focused={focused} size={size} color={color} />
-                        ),
-                      }}
-                    />
+                    <Tabs.Screen name="social" options={{ href: null }} />
                     {/* More: the Settings stack (its index lists the Watch section first, then the settings), so /settings and every /settings/* link keep working. */}
                     <Tabs.Screen
                       name="settings"
