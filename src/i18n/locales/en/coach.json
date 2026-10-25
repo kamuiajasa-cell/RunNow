@@ -1,4 +1,10 @@
 {
+    "rencana": {
+    "empty": {
+      "title": "Running plan",
+      "body": "Build a two-week running plan here, with a target distance and pace for each day."
+    }
+  },
   "title": "Coach",
   "disclaimer": "Coach suggestions are worked out from your watch data and general training rules. This is not medical advice. If you feel pain, dizziness or anything else wrong, stop and see a doctor.",
   "access": {
