@@ -185,17 +185,21 @@ export default function SettingsScreen() {
     ],
   };
 
-  // Account on top, then goals and body, then the one Watch row, then the settings.
+    // Fork pribadi: tanpa akun JoyoRogo, Joyo AI, dan Keluarga. Barisnya disembunyikan, kodenya tetap ada.
+  const PERSONAL_FORK = true;
+  const HIDDEN_ROWS = new Set(['joyo-ai', 'family']);
   const groups = [
-    accountSummaryGroup,
+    ...(PERSONAL_FORK ? [] : [accountSummaryGroup]),
     coachGroup,
     bodyGroup,
     watchGroup,
     watchSettingsGroup,
     connectionsGroup,
     appGroup,
-    ...(cloud.signedIn ? [accountGroup] : []),
-  ].filter((group) => group.data.length > 0);
+    ...(cloud.signedIn && !PERSONAL_FORK ? [accountGroup] : []),
+  ]
+    .map((group) => ({ ...group, data: group.data.filter((row) => !HIDDEN_ROWS.has(row.key)) }))
+    .filter((group) => group.data.length > 0);
 
   return (
     <SectionList
