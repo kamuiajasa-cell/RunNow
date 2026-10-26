@@ -1,4 +1,54 @@
 {
+    "rencanaCedera": {
+    "pain": {
+      "title": "Pain today",
+      "hint": "Tap the minus or plus button for each area. 0 means no pain.",
+      "none": "No pain",
+      "stale": "This pain note is more than 3 days old, so it is not used for advice. Update it if you still hurt.",
+      "dec": "Lower {{area}} pain",
+      "inc": "Raise {{area}} pain",
+      "areas": {
+        "knee": "Knee",
+        "shin": "Shin",
+        "calf": "Calf",
+        "foot": "Foot and heel",
+        "ham": "Hamstring",
+        "hip": "Hip",
+        "back": "Lower back"
+      },
+      "advice": {
+        "ok": "No pain. Run as planned.",
+        "reduce": "Mild pain. Cut the distance by 30 to 50 percent and skip hard running.",
+        "noHard": "Moderate pain. No hard runs and no long runs; walk or run very easy only.",
+        "stop": "Severe pain. Do not run today. If it does not improve in a few days, see a doctor or physiotherapist."
+      }
+    },
+    "triggers": {
+      "title": "Injury triggers",
+      "empty": "No runs recorded yet. This card fills in once a few runs have synced from the watch.",
+      "noData": "Not enough data to judge yet.",
+      "cadenceOff": "Cadence is not used because run-walk makes the average look low.",
+      "disclaimer": "This is general guidance, not medical advice. If pain continues, see a doctor.",
+      "level": {
+        "none": "No data yet",
+        "safe": "Safe",
+        "watch": "Watch out",
+        "high": "High"
+      },
+      "frequency": {
+        "name": "Run frequency",
+        "body": "{{streak}} days in a row, {{week}} run days in the last 7. Take a day off every 3 to 4 run days."
+      },
+      "longRun": {
+        "name": "Long run share",
+        "body": "Longest run {{longest}} km, {{share}} percent of {{total}} km this week. Keep it under 40 percent."
+      },
+      "jump": {
+        "name": "Distance jump",
+        "body": "This week {{thisWeek}} km, last week {{lastWeek}} km ({{pct}} percent). Raise weekly distance by about 30 percent at most."
+      }
+    }
+  },
   "rencana": {
     "empty": {
       "title": "Running plan",
