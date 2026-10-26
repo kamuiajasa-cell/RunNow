@@ -1,4 +1,35 @@
 {
+        "rencanaPlan": {
+    "title": "Rencana 2 minggu",
+    "hint": "Ketuk kolom km untuk mengisi sendiri. Hari lain menyesuaikan sisa jarak mingguan. Kosongkan kolom untuk kembali ke saran.",
+    "unit": "km",
+    "taper": {
+      "label": "Minggu pemulihan (tapering)",
+      "hint": "Jarak minggu itu turun menjadi 75 persen dan pace sedikit lebih pelan.",
+      "off": "Mati",
+      "this": "Minggu ini",
+      "next": "Minggu depan"
+    },
+    "noPace": "Belum cukup lari untuk menaksir pace. Jarak tetap diisi; target pace muncul setelah 2 lari berjarak 1,5 km atau lebih tersinkron dari jam.",
+    "stop": "Nyeri berat: tidak ada lari yang direncanakan.",
+    "week": {
+      "recovery": "Pemulihan",
+      "range": "{{from}} sampai {{to}}",
+      "limit": "Batas {{limit}} km, terencana {{planned}} km, sudah lari {{done}} km"
+    },
+    "done": "Sudah lari {{km}} km",
+    "rest": "Istirahat",
+    "kind": {
+      "easy": "Santai",
+      "recovery": "Pemulihan",
+      "long": "Lari panjang",
+      "slow": "Lari-jalan ringan"
+    },
+    "target": "{{lo}} sampai {{hi}} per km, sekitar {{min}} menit",
+    "slowNote": "Pola 1 menit lari, 2 menit jalan.",
+    "clear": "Hapus semua isianku",
+    "inputLabel": "Jarak {{day}}, km"
+  },
       "rencanaCedera": {
     "pain": {
       "title": "Nyeri hari ini",
