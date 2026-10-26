@@ -1,4 +1,54 @@
-{  "rencana": {
+{
+      "rencanaCedera": {
+    "pain": {
+      "title": "Nyeri hari ini",
+      "hint": "Ketuk tombol kurang atau tambah di tiap area. 0 berarti tidak nyeri.",
+      "none": "Tidak ada nyeri",
+      "stale": "Catatan nyeri ini sudah lebih dari 3 hari, jadi tidak dipakai untuk saran. Perbarui kalau masih nyeri.",
+      "dec": "Kurangi nyeri {{area}}",
+      "inc": "Tambah nyeri {{area}}",
+      "areas": {
+        "knee": "Lutut",
+        "shin": "Tulang kering",
+        "calf": "Betis",
+        "foot": "Kaki dan tumit",
+        "ham": "Paha belakang",
+        "hip": "Pinggul",
+        "back": "Punggung bawah"
+      },
+      "advice": {
+        "ok": "Tidak ada nyeri. Lari sesuai rencana.",
+        "reduce": "Nyeri ringan. Kurangi jarak 30 sampai 50 persen dan hindari lari keras.",
+        "noHard": "Nyeri sedang. Tanpa lari keras dan tanpa lari panjang; jalan atau lari sangat santai saja.",
+        "stop": "Nyeri berat. Jangan lari hari ini. Kalau tidak membaik dalam beberapa hari, periksakan ke dokter atau fisioterapis."
+      }
+    },
+    "triggers": {
+      "title": "Pemicu cedera",
+      "empty": "Belum ada lari tercatat. Kartu ini terisi setelah beberapa lari tersinkron dari jam.",
+      "noData": "Belum cukup data untuk dinilai.",
+      "cadenceOff": "Kadens tidak dipakai karena lari-jalan membuat rata-ratanya terlihat rendah.",
+      "disclaimer": "Ini panduan umum, bukan saran medis. Kalau nyeri berlanjut, periksakan ke dokter.",
+      "level": {
+        "none": "Belum ada data",
+        "safe": "Aman",
+        "watch": "Waspada",
+        "high": "Tinggi"
+      },
+      "frequency": {
+        "name": "Frekuensi lari",
+        "body": "Beruntun {{streak}} hari, {{week}} hari lari dalam 7 hari terakhir. Beri jeda sehari setiap 3 sampai 4 hari lari."
+      },
+      "longRun": {
+        "name": "Porsi lari panjang",
+        "body": "Lari terpanjang {{longest}} km, {{share}} persen dari {{total}} km minggu ini. Jaga di bawah 40 persen."
+      },
+      "jump": {
+        "name": "Lonjakan jarak",
+        "body": "Minggu ini {{thisWeek}} km, minggu lalu {{lastWeek}} km ({{pct}} persen). Naikkan jarak mingguan paling banyak sekitar 30 persen."
+      }
+    }
+  },"rencana": {
     "empty": {
       "title": "Rencana lari",
       "body": "Di sini kamu akan menyusun rencana lari dua minggu, dengan jarak dan pace target per hari."
