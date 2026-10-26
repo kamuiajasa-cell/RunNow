@@ -160,12 +160,10 @@ function LibraryRow() {
   const router = useRouter();
   return (
     <Card>
-      <NavRow icon="chatbubbles" tint="link" title={t('home.chat.title')} subtitle={t('home.chat.subtitle')} onPress={() => router.navigate('/joyo/chat', OPEN_JOYO_AI)} />
       <NavRow icon="barbell" tint="workouts" title={t('home.library.title')} subtitle={t('home.library.subtitle', { n: fmtInt(EXERCISES.length) })} onPress={() => router.push('/coach/library')} />
     </Card>
   );
 }
-
 export default function CoachScreen() {
   return (
     <Screen>
