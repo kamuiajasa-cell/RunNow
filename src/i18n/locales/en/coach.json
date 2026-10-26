@@ -1,4 +1,35 @@
 {
+      "rencanaPlan": {
+    "title": "Two-week plan",
+    "hint": "Tap a km box to fill it yourself. The other days adjust to the weekly distance left. Clear a box to go back to the suggestion.",
+    "unit": "km",
+    "taper": {
+      "label": "Recovery week (tapering)",
+      "hint": "That week's distance drops to 75 percent and the pace gets a little slower.",
+      "off": "Off",
+      "this": "This week",
+      "next": "Next week"
+    },
+    "noPace": "Not enough runs to estimate your pace. Distances are still planned; pace targets appear once 2 runs of 1.5 km or more have synced from the watch.",
+    "stop": "Severe pain: no runs planned.",
+    "week": {
+      "recovery": "Recovery",
+      "range": "{{from}} to {{to}}",
+      "limit": "Limit {{limit}} km, planned {{planned}} km, run so far {{done}} km"
+    },
+    "done": "Ran {{km}} km",
+    "rest": "Rest",
+    "kind": {
+      "easy": "Easy",
+      "recovery": "Recovery",
+      "long": "Long run",
+      "slow": "Easy run-walk"
+    },
+    "target": "{{lo}} to {{hi}} per km, about {{min}} min",
+    "slowNote": "Pattern: 1 minute run, 2 minutes walk.",
+    "clear": "Clear all my entries",
+    "inputLabel": "Distance on {{day}}, km"
+  },
     "rencanaCedera": {
     "pain": {
       "title": "Pain today",
