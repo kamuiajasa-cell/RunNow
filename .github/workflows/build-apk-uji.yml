@@ -1,5 +1,5 @@
-# APK uji untuk fork: tanpa kunci rahasia, tanpa persetujuan. Dijalankan manual dari tab Actions.
-# Ditandatangani kunci debug bawaan Expo (tetap sama tiap build, jadi APK baru bisa menimpa yang lama).
+# APK Run Now untuk fork pribadi. Dijalankan manual dari tab Actions.
+# Ditandatangani keystore milikku sendiri: signing/runnow.jks.enc, dibuka dengan secret KEYSTORE_PASSPHRASE.
 name: Build APK uji
 
 on:
@@ -49,6 +49,21 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      - name: Siapkan keystore
+        env:
+          KS_PASS: ${{ secrets.KEYSTORE_PASSPHRASE }}
+        run: |
+          test -f signing/runnow.jks.enc || { echo "signing/runnow.jks.enc belum ada. Jalankan workflow Buat keystore dulu."; exit 1; }
+          test -n "$KS_PASS" || { echo "Secret KEYSTORE_PASSPHRASE kosong"; exit 1; }
+          mkdir -p keystore
+          openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -pass env:KS_PASS -in signing/runnow.jks.enc -out keystore/runnow.jks
+          cat > keystore/keystore.properties <<EOF3
+          storeFile=$GITHUB_WORKSPACE/keystore/runnow.jks
+          storePassword=$KS_PASS
+          keyAlias=runnow
+          keyPassword=$KS_PASS
+          EOF3
+
       - name: Prebuild Android
         run: |
           export JOYOFIT_VERSION_CODE="$(( ($(date -u +%s) - 1704067200) / 60 ))"
@@ -62,14 +77,13 @@ jobs:
       - name: Ringkasan
         run: |
           mkdir -p dist
-          cp android/app/build/outputs/apk/release/app-release.apk dist/joyofit-uji-${JOYOFIT_VERSION_CODE}.apk
+          cp android/app/build/outputs/apk/release/app-release.apk dist/runnow-${JOYOFIT_VERSION_CODE}.apk
           ls -la dist
           sha256sum dist/*.apk | tee -a "$GITHUB_STEP_SUMMARY"
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: joyofit-apk-uji-${{ github.run_number }}
+          name: runnow-apk-${{ github.run_number }}
           path: dist/*.apk
           if-no-files-found: error
           retention-days: 30
-          
