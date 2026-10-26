@@ -305,7 +305,7 @@
     ],
     "extra": {
       "joyorogoUrl": "https://api.joyorogo.com",
-      "cloudUrl": "https://api.fit.joyorogo.com",
+      "cloudUrl": "",
       "facebookAppId": "1016598258111944",
       "eas": {
         "projectId": "6175ba14-6962-4cbe-bc80-a5bb46be7fcb"
@@ -317,7 +317,7 @@
     },
     "updates": {
       "url": "https://u.expo.dev/6175ba14-6962-4cbe-bc80-a5bb46be7fcb",
-      "enabled": true,
+      "enabled": false,
       "checkAutomatically": "ON_LOAD",
       "fallbackToCacheTimeout": 0,
       "requestHeaders": {
