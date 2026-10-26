@@ -187,7 +187,7 @@ export default function SettingsScreen() {
 
     // Fork pribadi: tanpa akun JoyoRogo, Joyo AI, dan Keluarga. Barisnya disembunyikan, kodenya tetap ada.
   const PERSONAL_FORK = true;
-  const HIDDEN_ROWS = new Set(['joyo-ai', 'family']);
+  const HIDDEN_ROWS = new Set(['joyo-ai', 'family', 'scale', 'thermometer', 'cycling', 'guide']);
   const groups = [
     ...(PERSONAL_FORK ? [] : [accountSummaryGroup]),
     coachGroup,
