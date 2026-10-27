@@ -47,6 +47,12 @@ export interface DaysInput {
   fixed: readonly number[];
   /** Tujuh nilai: hari yang sudah lewat tidak boleh diisi rencana. */
   locked: readonly boolean[];
+  /** Hari lari minggu ini (Senin = 0). Tanpa ini dipakai pola dari `runDays`. */
+  pattern?: readonly number[];
+  /** Tujuh nilai: bobot tiap hari (mis. menit sesi Coach). Tanpa ini semua hari sama, lari panjang lebih besar. */
+  weightByDay?: readonly number[];
+  /** Hari lari panjang; -1 kalau minggu ini tidak ada. Tanpa ini hari terakhir pola. */
+  longDay?: number;
 }
 
 /**
@@ -57,11 +63,11 @@ export function distributeWeek(input: DaysInput): number[] {
   const out = input.fixed.map((k) => (k > 0 ? k : 0));
   const rem = input.targetKm - out.reduce((s, k) => s + k, 0);
   if (!(rem >= MIN_REMAINDER_KM)) return out;
-  const long = longRunDay(input.runDays);
-  const open = DAY_PATTERNS[input.runDays].filter((d) => !input.locked[d] && out[d] <= 0);
+  const long = input.longDay ?? longRunDay(input.runDays);
+  const open = (input.pattern ?? DAY_PATTERNS[input.runDays]).filter((d) => !input.locked[d] && out[d] <= 0);
   while (open.length > 1 && rem / open.length < MIN_RUN_KM) open.shift();
   if (open.length === 0) return out;
-  const weights = open.map((d) => (d === long ? LONG_RUN_WEIGHT : 1));
+  const weights = open.map((d) => (input.weightByDay ? Math.max(input.weightByDay[d] ?? 0, 1) : d === long ? LONG_RUN_WEIGHT : 1));
   const sum = weights.reduce((a, b) => a + b, 0);
   open.forEach((d, i) => {
     let km = (rem * weights[i]) / sum;
