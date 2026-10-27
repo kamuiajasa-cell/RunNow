@@ -15,6 +15,7 @@ import { usePain } from '@/features/injury/usePain';
 import { useRecentRuns } from '@/features/injury/useRecentRuns';
 import { formatPace } from '@/features/plan/pace';
 import { buildPlan, dayStartOf, mondayStart, type PlanDay, type PlanWeek } from '@/features/plan/plan';
+import { FoldCard } from '@/features/plan/ui/FoldCard';
 import { usePlanPrefs } from '@/features/plan/usePlanPrefs';
 import { getLocale, INTL_TAG } from '@/i18n';
 import { useWatch } from '@/state/WatchProvider';
@@ -130,29 +131,10 @@ function DayRow(props: { day: PlanDay; disabled: boolean; onCommit: (km: number 
   );
 }
 
-function WeekBlock(props: { week: PlanWeek; index: number; disabled: boolean; onCommit: (week: number, day: number, km: number | null) => void }) {
-  const { t } = useTranslation('coach');
-  const colors = useColors();
-  const { week } = props;
+function WeekDays(props: { week: PlanWeek; index: number; disabled: boolean; onCommit: (week: number, day: number, km: number | null) => void }) {
   return (
     <View style={styles.week}>
-      <View style={styles.weekHead}>
-        <AppText variant="bodyStrong" style={styles.grow}>
-          {t('rencanaPlan.week.range', {
-            from: fmtDate(week.start, SHORT_DATE),
-            to: fmtDate(dayStartOf(week.start, 6), SHORT_DATE),
-          })}
-        </AppText>
-        {week.recovery ? (
-          <AppText variant="label" color={colors.primary}>
-            {t('rencanaPlan.week.recovery')}
-          </AppText>
-        ) : null}
-      </View>
-      <AppText variant="caption" muted>
-        {t('rencanaPlan.week.limit', { limit: week.targetKm, planned: week.plannedKm, done: week.doneKm })}
-      </AppText>
-      {week.days.map((day, d) => (
+      {props.week.days.map((day, d) => (
         <DayRow key={day.start} day={day} disabled={props.disabled} onCommit={(km) => props.onCommit(props.index, d, km)} />
       ))}
     </View>
@@ -248,6 +230,14 @@ export function PlanScreen() {
     [runs, todayStart],
   );
 
+  const topPain = activePain(report)[0];
+  const painSummary = topPain
+    ? `${t(`coach:rencanaCedera.pain.areas.${topPain.area}`)} ${topPain.value}`
+    : t('coach:rencanaCedera.pain.none');
+  const worstTrigger = triggers.reduce<TriggerLevel>((m, x) => (x.level > m ? x.level : m), -1);
+  const triggerSummary =
+    runs === null || runs.length === 0 ? undefined : t(`coach:rencanaCedera.triggers.level.${levelKey(worstTrigger)}`);
+
   const taperOptions = [
     { value: -1, label: t('coach:rencanaPlan.taper.off') },
     { value: 0, label: t('coach:rencanaPlan.taper.this') },
@@ -275,20 +265,33 @@ export function PlanScreen() {
           </View>
           {plan !== null && !plan.paceKnown ? <Notice>{t('coach:rencanaPlan.noPace')}</Notice> : null}
           {advice === 'stop' ? <Notice tone="danger">{t('coach:rencanaPlan.stop')}</Notice> : null}
-          {plan === null ? (
-            <Skeleton width="100%" height={240} radius="card" />
-          ) : (
-            plan.weeks.map((week, w) => (
-              <WeekBlock key={week.start} week={week} index={w} disabled={!prefsLoaded} onCommit={setKm} />
-            ))
-          )}
           {Object.keys(prefs.overrides).length > 0 ? (
             <Button variant="ghost" label={t('coach:rencanaPlan.clear')} onPress={clearKm} />
           ) : null}
         </View>
       </Section>
 
-      <Section title={t('coach:rencanaCedera.pain.title')} icon="bandage-outline" tint="heart">
+      {plan === null ? (
+        <Skeleton width="100%" height={120} radius="card" />
+      ) : (
+        plan.weeks.map((week, w) => (
+          <FoldCard
+            key={week.start}
+            title={t('coach:rencanaPlan.week.range', {
+              from: fmtDate(week.start, SHORT_DATE),
+              to: fmtDate(dayStartOf(week.start, 6), SHORT_DATE),
+            })}
+            summary={t('coach:rencanaPlan.week.limit', { limit: week.targetKm, planned: week.plannedKm, done: week.doneKm })}
+            badge={week.recovery ? t('coach:rencanaPlan.week.recovery') : undefined}
+            icon="calendar-outline"
+            tint="workouts"
+            defaultOpen={w === 0}>
+            <WeekDays week={week} index={w} disabled={!prefsLoaded} onCommit={setKm} />
+          </FoldCard>
+        ))
+      )}
+
+      <FoldCard title={t('coach:rencanaCedera.pain.title')} summary={painSummary} icon="bandage-outline" tint="heart">
         <View style={styles.stack}>
           <AppText variant="caption" muted>
             {t('coach:rencanaCedera.pain.hint')}
@@ -324,9 +327,9 @@ export function PlanScreen() {
             <Notice tone={advice === 'stop' ? 'danger' : 'info'}>{t(`coach:rencanaCedera.pain.advice.${advice}`)}</Notice>
           ) : null}
         </View>
-      </Section>
+      </FoldCard>
 
-      <Section title={t('coach:rencanaCedera.triggers.title')} icon="shield-checkmark" tint="workouts">
+      <FoldCard title={t('coach:rencanaCedera.triggers.title')} summary={triggerSummary} icon="shield-checkmark" tint="workouts">
         <View style={styles.stack}>
           {runs === null ? (
             <Skeleton width="100%" height={120} radius="card" />
@@ -344,7 +347,7 @@ export function PlanScreen() {
             {t('coach:rencanaCedera.triggers.disclaimer')}
           </AppText>
         </View>
-      </Section>
+      </FoldCard>
     </Screen>
   );
 }
@@ -354,7 +357,6 @@ const styles = StyleSheet.create({
   grow: { flex: 1 },
   taper: { gap: spacing.sm },
   week: { gap: spacing.sm },
-  weekHead: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   dayRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   dayLabel: { width: 44, alignItems: 'center' },
   kmBox: { width: 88 },
