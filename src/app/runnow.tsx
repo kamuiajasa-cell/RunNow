@@ -5,6 +5,7 @@ import { WebView } from 'react-native-webview';
 
 import { listWorkouts, type WorkoutRow } from '@/db/queries';
 import { RUNNOW_HTML } from '@/features/runnow/runnowHtml';
+import { loadWellness, type WellnessRow } from '@/features/runnow/wellness';
 import { sportCategory } from '@/features/workouts/sportCategory';
 import { useWatch } from '@/state/WatchProvider';
 import { useTheme } from '@/theme';
@@ -32,7 +33,9 @@ export default function RunNowScreen() {
     try {
       const rows = await listWorkouts(db);
       const acts = rows.slice(0, 500).map(toAct).filter((a): a is Act => a !== null);
-      const payload = { acts, debug: true };
+      // Hari tanpa data apa pun tidak dikirim, supaya tidak ada baris kosong di index.html.
+      const wellness: WellnessRow[] = (await loadWellness(db)).filter((w) => Object.keys(w).length > 1);
+      const payload = { acts, wellness, debug: true };
       webRef.current?.injectJavaScript(`window.nativeImport && window.nativeImport(${JSON.stringify(payload)}); true;`);
     } catch (e) {
       console.warn('RunNow: kirim data gagal', e);
