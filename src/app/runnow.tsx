@@ -4,8 +4,10 @@ import { View } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 import { listWorkouts, type WorkoutRow } from '@/db/queries';
+import { isLinkUp } from '@/features/device/linkState';
 import { RUNNOW_HTML } from '@/features/runnow/runnowHtml';
 import { loadWellness, type WellnessRow } from '@/features/runnow/wellness';
+import { useLiveHeartRate } from '@/features/today/useLiveHeartRate';
 import { sportCategory } from '@/features/workouts/sportCategory';
 import { useWatch } from '@/state/WatchProvider';
 import { useTheme } from '@/theme';
@@ -23,10 +25,13 @@ function toAct(w: WorkoutRow): Act | null {
 
 export default function RunNowScreen() {
   const db = useSQLiteContext();
-  const { dataVersion } = useWatch();
+  const { dataVersion, linkState } = useWatch();
   const { colors } = useTheme();
   const webRef = useRef<WebView>(null);
   const [loadCount, setLoadCount] = useState(0);
+
+  // Detak live dari jam. Hook ini hanya meminta jam mengirim detak saat layar ini aktif dan aplikasi di depan.
+  const live = useLiveHeartRate(isLinkUp(linkState));
 
   // Hanya MEMBACA database; tidak ada yang ditulis ke joyofit.db.
   const push = useCallback(async () => {
@@ -35,7 +40,7 @@ export default function RunNowScreen() {
       const acts = rows.slice(0, 500).map(toAct).filter((a): a is Act => a !== null);
       // Hari tanpa data apa pun tidak dikirim, supaya tidak ada baris kosong di index.html.
       const wellness: WellnessRow[] = (await loadWellness(db)).filter((w) => Object.keys(w).length > 1);
-      const payload = { acts, wellness, debug: true };
+      const payload = { acts, wellness };
       webRef.current?.injectJavaScript(`window.nativeImport && window.nativeImport(${JSON.stringify(payload)}); true;`);
     } catch (e) {
       console.warn('RunNow: kirim data gagal', e);
@@ -46,6 +51,14 @@ export default function RunNowScreen() {
   useEffect(() => {
     if (loadCount > 0) void push();
   }, [loadCount, dataVersion, push]);
+
+  // Setiap bacaan detak dari jam diteruskan ke grafik live di index.html.
+  useEffect(() => {
+    if (!live) return;
+    webRef.current?.injectJavaScript(
+      `window.nativeLiveHr && window.nativeLiveHr(${JSON.stringify(live.bpm)}, ${JSON.stringify(live.ts)}); true;`,
+    );
+  }, [live]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
