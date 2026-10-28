@@ -1,4 +1,24 @@
 {
+        "rencanaCoach": {
+    "kind": {
+      "easy": "Easy",
+      "recovery": "Recovery",
+      "long": "Long run",
+      "slow": "Easy run-walk",
+      "walkrun": "Run-walk",
+      "tempo": "Tempo",
+      "intervals": "Intervals",
+      "race": "Race",
+      "retest": "Re-test"
+    },
+    "zone": "Heart-rate zone {{zone}}, about {{min}} min",
+    "minutes": "About {{min}} min",
+    "downgraded": "Hard session swapped for an easy run because of pain.",
+    "capped": "Coach asks for more than the safe limit, so the distance is capped.",
+    "fromCoach": "Following your Coach plan, week {{n}} of {{total}}.",
+    "fromCoachNoWeek": "Following your Coach plan.",
+    "noCoach": "There is no running plan in Coach yet, so this plan is built from your run history. Create a plan in Coach for a more guided schedule."
+  },
       "rencanaPlan": {
     "title": "Two-week plan",
     "hint": "Tap a km box to fill it yourself. The other days adjust to the weekly distance left. Clear a box to go back to the suggestion.",
