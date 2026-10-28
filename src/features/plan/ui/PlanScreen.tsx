@@ -1,4 +1,5 @@
-import { useMemo } from 'react';
+import { useSQLiteContext } from 'expo-sqlite';
+import { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, View } from 'react-native';
 
@@ -8,11 +9,14 @@ import { Input } from '@/components/Input';
 import { Screen, Section } from '@/components/Screen';
 import { Segmented } from '@/components/Segmented';
 import { Notice, Skeleton } from '@/components/States';
+import { loadCoachDoc, useCoachDoc } from '@/features/coach/store';
+import { localDay } from '@/features/coach/time';
 import { activePain, PAIN_AREAS, runAdvice } from '@/features/injury/pain';
 import { currentPain, isStale } from '@/features/injury/painDoc';
 import { injuryTriggers, type Trigger, type TriggerLevel } from '@/features/injury/triggers';
 import { usePain } from '@/features/injury/usePain';
 import { useRecentRuns } from '@/features/injury/useRecentRuns';
+import { coachHints } from '@/features/plan/coachHints';
 import { formatPace } from '@/features/plan/pace';
 import { buildPlan, dayStartOf, mondayStart, type PlanDay, type PlanWeek } from '@/features/plan/plan';
 import { FoldCard } from '@/features/plan/ui/FoldCard';
@@ -79,19 +83,28 @@ function DayRow(props: { day: PlanDay; disabled: boolean; onCommit: (km: number 
   let main = '';
   let sub: string | null = null;
   let note: string | null = null;
+  const coachType = day.coach?.type;
   if (done) {
     main = t('rencanaPlan.done', { km: day.doneKm });
   } else if (day.km <= 0) {
     main = t('rencanaPlan.rest');
   } else if (day.target) {
-    main = t(`rencanaPlan.kind.${day.target.slow ? 'slow' : day.target.kind}`);
+    const kind = day.target.slow ? 'slow' : coachType === 'walkrun' ? 'walkrun' : day.target.kind;
+    main = t(`rencanaCoach.kind.${kind}`);
     sub = t('rencanaPlan.target', {
       lo: formatPace(day.target.paceLo),
       hi: formatPace(day.target.paceHi),
       min: day.target.minutes,
     });
     if (day.target.slow) note = t('rencanaPlan.slowNote');
+  } else if (day.coach) {
+    main = t(`rencanaCoach.kind.${day.coach.type}`);
+    sub =
+      day.coach.zone === null
+        ? t('rencanaCoach.minutes', { min: day.coach.minutes })
+        : t('rencanaCoach.zone', { zone: day.coach.zone, min: day.coach.minutes });
   }
+  if (day.downgraded && !done && day.km > 0) note = t('rencanaCoach.downgraded');
 
   return (
     <View style={styles.dayRow}>
@@ -132,8 +145,14 @@ function DayRow(props: { day: PlanDay; disabled: boolean; onCommit: (km: number 
 }
 
 function WeekDays(props: { week: PlanWeek; index: number; disabled: boolean; onCommit: (week: number, day: number, km: number | null) => void }) {
+  const { t } = useTranslation('coach');
   return (
     <View style={styles.week}>
+      {props.week.capped && props.week.targetKm > 0 ? (
+        <AppText variant="caption" muted>
+          {t('rencanaCoach.capped')}
+        </AppText>
+      ) : null}
       {props.week.days.map((day, d) => (
         <DayRow key={day.start} day={day} disabled={props.disabled} onCommit={(km) => props.onCommit(props.index, d, km)} />
       ))}
@@ -189,7 +208,7 @@ function TriggerRow({ trigger }: { trigger: Trigger }) {
   );
 }
 
-/** Tab Rencana: rencana lari dua minggu, nyeri hari ini, dan pemicu cedera dari lari nyata. */
+/** Tab Rencana: rencana lari dua minggu (dari Coach bila ada), nyeri hari ini, dan pemicu cedera dari lari nyata. */
 export function PlanScreen() {
   const { t } = useTranslation(['coach', 'common']);
   const { dataVersion } = useWatch();
@@ -200,7 +219,23 @@ export function PlanScreen() {
   midnight.setHours(0, 0, 0, 0);
   const todayStart = Math.floor(midnight.getTime() / 1000);
   const now = Math.floor(Date.now() / 1000);
-  const { prefs, loaded: prefsLoaded, setKm, setTaper, clearKm } = usePlanPrefs(mondayStart(todayStart));
+  const weekStart = mondayStart(todayStart);
+  const { prefs, loaded: prefsLoaded, setKm, setTaper, clearKm } = usePlanPrefs(weekStart);
+
+  const db = useSQLiteContext();
+  const coachDoc = useCoachDoc();
+  useEffect(() => {
+    void loadCoachDoc(db).catch(() => {});
+  }, [db]);
+  const coachPlan = coachDoc?.plan ?? null;
+  const hints = useMemo(
+    () =>
+      coachHints(
+        coachPlan,
+        [0, 1].map((w) => Array.from({ length: 7 }, (_, d) => localDay(dayStartOf(weekStart, w * 7 + d)))),
+      ),
+    [coachPlan, weekStart],
+  );
 
   const report = currentPain(doc, now);
   const advice = runAdvice(report);
@@ -218,8 +253,9 @@ export function PlanScreen() {
             advice,
             recoveryWeek: prefs.recoveryWeek,
             overrides: prefs.overrides,
+            coach: hints,
           }),
-    [runs, todayStart, advice, prefs],
+    [runs, todayStart, advice, prefs, hints],
   );
 
   const triggers = useMemo(
@@ -251,6 +287,14 @@ export function PlanScreen() {
           <AppText variant="caption" muted>
             {t('coach:rencanaPlan.hint')}
           </AppText>
+          {plan !== null && plan.coach !== null ? (
+            <Notice>
+              {plan.coach.weekNumber === null
+                ? t('coach:rencanaCoach.fromCoachNoWeek')
+                : t('coach:rencanaCoach.fromCoach', { n: plan.coach.weekNumber, total: plan.coach.totalWeeks })}
+            </Notice>
+          ) : null}
+          {coachDoc !== null && coachPlan === null ? <Notice>{t('coach:rencanaCoach.noCoach')}</Notice> : null}
           <View style={styles.taper}>
             <AppText variant="bodyStrong">{t('coach:rencanaPlan.taper.label')}</AppText>
             <Segmented
