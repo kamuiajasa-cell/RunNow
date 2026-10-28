@@ -8,8 +8,7 @@
 export const MORE_ROUTE = 'settings';
 
 /** The tabs whose stack index is a top-level root: Today, Workouts, Social and More (the Settings stack). */
-const ROOT_TABS: Record<string, true> = { index: true, workouts: true, social: true, plan: true, [MORE_ROUTE]: true };
-/** The route name a stack's first screen has (`app/<tab>/index.tsx`). */
+   const ROOT_TABS: Record<string, true> = { index: true, workouts: true, social: true, plan: true, runnow: true, [MORE_ROUTE]: true };/** The route name a stack's first screen has (`app/<tab>/index.tsx`). */
 const STACK_ROOT = 'index';
 
 /**
