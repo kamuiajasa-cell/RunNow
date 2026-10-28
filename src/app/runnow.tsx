@@ -1,18 +1,14 @@
 import { View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { WebView } from 'react-native-webview';
 
-import { useTabBarInset } from '@/components/tabBarInset';
 import { RUNNOW_HTML } from '@/features/runnow/runnowHtml';
 import { useTheme } from '@/theme';
 
 export default function RunNowScreen() {
-  const insets = useSafeAreaInsets();
-  const tabBarInset = useTabBarInset();
   const { colors } = useTheme();
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.background, paddingTop: insets.top, paddingBottom: tabBarInset }}>
+    <View style={{ flex: 1, backgroundColor: colors.background }}>
       <WebView
         style={{ flex: 1, backgroundColor: colors.background }}
         originWhitelist={['*']}
