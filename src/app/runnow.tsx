@@ -1,20 +1,59 @@
+import { useSQLiteContext } from 'expo-sqlite';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { WebView } from 'react-native-webview';
 
+import { listWorkouts, type WorkoutRow } from '@/db/queries';
 import { RUNNOW_HTML } from '@/features/runnow/runnowHtml';
+import { sportCategory } from '@/features/workouts/sportCategory';
+import { useWatch } from '@/state/WatchProvider';
 import { useTheme } from '@/theme';
 
+/** Bentuk satu latihan di S.acts milik index.html: [startMs, jenis, menit, km, avgHR, maxHR, bestSegs, cadence, load, id]. */
+type Act = [number, 'run' | 'ride' | 'walk' | 'weight' | 'other', number, number, number, number, null, number, number, string];
+
+function toAct(w: WorkoutRow): Act | null {
+  if (!w.complete || w.duration <= 0) return null;
+  const cat = sportCategory(w.sportName);
+  const kind = cat === 'run' || cat === 'walk' || cat === 'ride' ? cat : cat === 'gym' ? 'weight' : 'other';
+  // start dan duration di database dalam detik, distance dalam meter; index.html memakai ms, menit, km.
+  return [w.start * 1000, kind, w.duration / 60, w.distance / 1000, w.avgHr ?? 0, w.maxHr ?? 0, null, 0, 0, `jf:${w.start}`];
+}
+
 export default function RunNowScreen() {
+  const db = useSQLiteContext();
+  const { dataVersion } = useWatch();
   const { colors } = useTheme();
+  const webRef = useRef<WebView>(null);
+  const [loadCount, setLoadCount] = useState(0);
+
+  // Hanya MEMBACA database; tidak ada yang ditulis ke joyofit.db.
+  const push = useCallback(async () => {
+    try {
+      const rows = await listWorkouts(db);
+      const acts = rows.slice(0, 500).map(toAct).filter((a): a is Act => a !== null);
+      const payload = { acts, debug: true };
+      webRef.current?.injectJavaScript(`window.nativeImport && window.nativeImport(${JSON.stringify(payload)}); true;`);
+    } catch (e) {
+      console.warn('RunNow: kirim data gagal', e);
+    }
+  }, [db]);
+
+  // Sekali setelah halaman selesai dimuat, dan lagi setiap sinkron jam menyimpan data baru.
+  useEffect(() => {
+    if (loadCount > 0) void push();
+  }, [loadCount, dataVersion, push]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <WebView
+        ref={webRef}
         style={{ flex: 1, backgroundColor: colors.background }}
         originWhitelist={['*']}
         source={{ html: RUNNOW_HTML, baseUrl: 'https://runnow.local/' }}
         javaScriptEnabled
         domStorageEnabled
+        onLoadEnd={() => setLoadCount((n) => n + 1)}
         onError={(e) => console.warn('RunNow WebView error', e.nativeEvent)}
         onHttpError={(e) => console.warn('RunNow WebView HTTP', e.nativeEvent.statusCode, e.nativeEvent.url)}
       />
