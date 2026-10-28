@@ -1,4 +1,24 @@
 {
+      "rencanaCoach": {
+    "kind": {
+      "easy": "Santai",
+      "recovery": "Pemulihan",
+      "long": "Lari panjang",
+      "slow": "Lari-jalan ringan",
+      "walkrun": "Lari-jalan",
+      "tempo": "Tempo",
+      "intervals": "Interval",
+      "race": "Lomba",
+      "retest": "Uji ulang"
+    },
+    "zone": "Zona detak {{zone}}, sekitar {{min}} menit",
+    "minutes": "Sekitar {{min}} menit",
+    "downgraded": "Sesi keras diganti lari santai karena ada nyeri.",
+    "capped": "Coach meminta lebih dari batas aman, jadi jarak dibatasi.",
+    "fromCoach": "Mengikuti rencana Coach, minggu ke-{{n}} dari {{total}}.",
+    "fromCoachNoWeek": "Mengikuti rencana Coach.",
+    "noCoach": "Belum ada rencana lari di Coach, jadi rencana ini disusun dari riwayat larimu. Buat rencana di Coach untuk jadwal yang lebih terarah."
+  },
         "rencanaPlan": {
     "title": "Rencana 2 minggu",
     "hint": "Ketuk kolom km untuk mengisi sendiri. Hari lain menyesuaikan sisa jarak mingguan. Kosongkan kolom untuk kembali ke saran.",
