@@ -1,11 +1,13 @@
 import { useSQLiteContext } from 'expo-sqlite';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { View } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { WebView, type WebViewMessageEvent } from 'react-native-webview';
 
 import { listWorkouts, type WorkoutRow } from '@/db/queries';
 import { isLinkUp } from '@/features/device/linkState';
 import { RUNNOW_HTML } from '@/features/runnow/runnowHtml';
+import { buildWorkouts } from '@/features/runnow/bridge';
+import { runRpc } from '@/features/runnow/rpc';
 import { loadWellness, type WellnessRow } from '@/features/runnow/wellness';
 import { useLiveHeartRate } from '@/features/today/useLiveHeartRate';
 import { sportCategory } from '@/features/workouts/sportCategory';
@@ -40,7 +42,9 @@ export default function RunNowScreen() {
       const acts = rows.slice(0, 500).map(toAct).filter((a): a is Act => a !== null);
       // Hari tanpa data apa pun tidak dikirim, supaya tidak ada baris kosong di index.html.
       const wellness: WellnessRow[] = (await loadWellness(db)).filter((w) => Object.keys(w).length > 1);
-      const payload = { acts, wellness };
+      // Latihan detail (grafik, zona, titik GPS/detak) untuk halaman Aktivitas di index.html.
+      const workouts = await buildWorkouts(db);
+      const payload = { acts, workouts, wellness };
       webRef.current?.injectJavaScript(`window.nativeImport && window.nativeImport(${JSON.stringify(payload)}); true;`);
     } catch (e) {
       console.warn('RunNow: kirim data gagal', e);
@@ -60,6 +64,25 @@ export default function RunNowScreen() {
     );
   }, [live]);
 
+  // Panggilan dari index.html (pengaturan jam). Hanya metode yang diizinkan di rpcRules.ts yang dijalankan.
+  const onMessage = useCallback((e: WebViewMessageEvent) => {
+    let msg: { type?: unknown; id?: unknown; method?: unknown; args?: unknown };
+    try {
+      msg = JSON.parse(e.nativeEvent.data);
+    } catch {
+      return;
+    }
+    if (msg.type !== 'rpc' || typeof msg.id !== 'number' || typeof msg.method !== 'string') return;
+    const id = msg.id;
+    const args = Array.isArray(msg.args) ? msg.args : [];
+    const reply = (ok: boolean, value: unknown) =>
+      webRef.current?.injectJavaScript(`window.__rn && window.__rn(${id}, ${ok}, ${JSON.stringify(value ?? null)}); true;`);
+    runRpc(msg.method, args).then(
+      (value) => reply(true, value),
+      (err: unknown) => reply(false, err instanceof Error ? err.message : String(err)),
+    );
+  }, []);
+
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <WebView
@@ -70,6 +93,7 @@ export default function RunNowScreen() {
         javaScriptEnabled
         domStorageEnabled
         onLoadEnd={() => setLoadCount((n) => n + 1)}
+        onMessage={onMessage}
         onError={(e) => console.warn('RunNow WebView error', e.nativeEvent)}
         onHttpError={(e) => console.warn('RunNow WebView HTTP', e.nativeEvent.statusCode, e.nativeEvent.url)}
       />
