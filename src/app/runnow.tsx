@@ -45,6 +45,9 @@ export default function RunNowScreen() {
 
   const isTrusted = (url: string | undefined) =>
     !!url && (url.startsWith(BUNDLED_ORIGIN) || (USE_REMOTE_PAGE && url.startsWith(REMOTE_PAGE)));
+  // Mode bawaan: konten milik kita dan navigasinya dikunci, jadi semua pesan dari sini dipercaya.
+  // Mode online: hanya pesan dari alamat online yang dipercaya.
+  const fromTrusted = (url: string | undefined) => (remote ? !!url && url.startsWith(REMOTE_PAGE) : true);
 
   // Hanya halaman tepercaya yang boleh dibuka di layar ini. Tautan lain dibuka di browser.
   const onShouldStart = useCallback((req: WebViewNavigation | { url: string }) => {
@@ -92,7 +95,7 @@ export default function RunNowScreen() {
   // Panggilan dari index.html (pengaturan jam). Hanya metode yang diizinkan di rpcRules.ts yang dijalankan.
   const onMessage = useCallback((e: WebViewMessageEvent) => {
     // Jembatan hanya menerima pesan dari halaman tepercaya.
-    if (!isTrusted(e.nativeEvent.url)) return;
+    if (!fromTrusted(e.nativeEvent.url)) return;
     let msg: { type?: unknown; id?: unknown; method?: unknown; args?: unknown };
     try {
       msg = JSON.parse(e.nativeEvent.data);
@@ -108,7 +111,7 @@ export default function RunNowScreen() {
       (value) => reply(true, value),
       (err: unknown) => reply(false, err instanceof Error ? err.message : String(err)),
     );
-  }, [USE_REMOTE_PAGE, useBundled]);
+  }, [remote]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
