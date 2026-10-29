@@ -279,9 +279,6 @@ function WatchToday() {
   );
 }
 
-/** Sudah pindah ke Run Now sejak aplikasi dibuka? Hidup selama proses JS berjalan, jadi hanya sekali per peluncuran. */
-let launchRedirectDone = false;
-
 /**
  * Today. With a watch (or data from one) it is the watch's day: ring, scores, sleep, heart rate. A phone that has never had a watch
  * gets `TodayNoWatch`, built around the strength logger and Coach, instead of a screen of empty cards. The first moment, before the
@@ -290,10 +287,8 @@ let launchRedirectDone = false;
 export default function TodayScreen() {
   const { t } = useTranslation('common');
   const router = useRouter();
-  // Sekali per peluncuran aplikasi: langsung pindah ke Run Now. Tab Today tetap bisa dibuka lewat tab bar setelahnya.
+  // Aplikasi pembungkus Run Now: setiap kali layar Today muncul (app dibuka, juga setelah ditutup lalu dibuka lagi), langsung pindah ke Run Now.
   useEffect(() => {
-    if (launchRedirectDone) return;
-    launchRedirectDone = true;
     router.navigate('/runnow');
   }, [router]);
   const presence = useWatchPresence();
