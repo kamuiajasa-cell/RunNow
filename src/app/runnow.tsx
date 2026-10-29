@@ -109,7 +109,7 @@ export default function RunNowScreen() {
     const args = Array.isArray(msg.args) ? msg.args : [];
     const reply = (ok: boolean, value: unknown) =>
       webRef.current?.injectJavaScript(`window.__rn && window.__rn(${id}, ${ok}, ${JSON.stringify(value ?? null)}); true;`);
-    runRpc(msg.method, args, { sync: () => sync(), open: (route) => router.push(route as Href) }).then(
+    runRpc(msg.method, args, { sync: () => sync(), open: (route) => router.navigate(route as Href) }).then(
       (value) => reply(true, value),
       (err: unknown) => reply(false, err instanceof Error ? err.message : String(err)),
     );

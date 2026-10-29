@@ -66,6 +66,9 @@ async function initDatabase(db: SQLiteDatabase): Promise<void> {
 // Hold the splash until the fonts and tab icons are ready, so the first frame is already typeset.
 void SplashScreen.preventAutoHideAsync().catch(() => {});
 
+// Layar pertama saat aplikasi dibuka adalah Run Now (halaman dari web).
+export const unstable_settings = { initialRouteName: 'runnow' };
+
 export default function RootLayout() {
   return (
     <ThemeProvider>
@@ -79,7 +82,8 @@ export default function RootLayout() {
 }
 
 /** A tab's label. It reads the language itself: the navigator keeps the options it first got, so a label built from `t` in them would stay in the old language after a switch in Settings. */
-function TabLabel({ name, color }: { name: 'today' | 'workouts' | 'social' | 'plan' | 'runnow' | 'more'; color: ColorValue }) {  const { t } = useTranslation('common');
+function TabLabel({ name, color }: { name: 'today' | 'workouts' | 'social' | 'plan' | 'runnow' | 'more'; color: ColorValue }) {
+  const { t } = useTranslation('common');
   const { fonts } = useTheme();
   return (
     <Text
@@ -234,7 +238,7 @@ function RootNavigator() {
                        ),
                      }}
                    />
-                     <Tabs.Screen
+                    <Tabs.Screen
                       name="runnow"
                       options={{
                         title: t('nav.runnow'),
