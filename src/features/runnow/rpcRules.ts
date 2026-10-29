@@ -40,6 +40,11 @@ export const ALLOWED_METHODS = [
 
 /** Layar lama yang boleh dibuka dari index.html. */
 export const ALLOWED_ROUTES = [
+  '/',
+  '/workouts',
+  '/plan',
+  '/social',
+  '/settings',
   '/watch',
   '/watch/alarms',
   '/watch/faces',
