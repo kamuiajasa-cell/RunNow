@@ -10,7 +10,6 @@ import { listWorkouts, type WorkoutRow } from '@/db/queries';
 import { isLinkUp } from '@/features/device/linkState';
 import { RUNNOW_HTML } from '@/features/runnow/runnowHtml';
 import { buildWorkouts } from '@/features/runnow/bridge';
-import { applyPlan, showTest } from '@/features/runnow/notify';
 import { runRpc } from '@/features/runnow/rpc';
 import { loadWellness, type WellnessRow } from '@/features/runnow/wellness';
 import { useLiveHeartRate } from '@/features/today/useLiveHeartRate';
@@ -24,16 +23,6 @@ const REMOTE_PAGE = 'https://runnow2.kamui-aja-sa.workers.dev/';
 /** Ubah ke true hanya setelah halaman di alamat itu sudah berisi versi terbaru index.html (ada Cadangan data dan Pengaturan jam). */
 const USE_REMOTE_PAGE = true;
 const BUNDLED_ORIGIN = 'https://runnow.local/';
-
-/**
- * index.html punya sistem notifikasi yang memanggil Android.setPlan(json) dan Android.test(...).
- * WebView tidak punya objek Android, jadi dipasang penggantinya yang meneruskan panggilan itu ke React Native.
- * Dipasang sebelum halaman dimuat, jadi berlaku untuk versi bawaan maupun versi online.
- */
-const ANDROID_SHIM = `window.Android={
-  setPlan:function(j){window.ReactNativeWebView.postMessage(JSON.stringify({type:"plan",plan:j}))},
-  test:function(t,b,g){window.ReactNativeWebView.postMessage(JSON.stringify({type:"test",title:t,body:b,big:g}))}
-};true;`;
 
 /** Bentuk satu latihan di S.acts milik index.html: [startMs, jenis, menit, km, avgHR, maxHR, bestSegs, cadence, load, id]. */
 type Act = [number, 'run' | 'ride' | 'walk' | 'weight' | 'other', number, number, number, number, null, number, number, string];
@@ -109,29 +98,10 @@ export default function RunNowScreen() {
   // Panggilan dari index.html (pengaturan jam). Hanya metode yang diizinkan di rpcRules.ts yang dijalankan.
   const onMessage = useCallback((e: WebViewMessageEvent) => {
     // Navigasi WebView sudah dikunci ke halaman tepercaya (onShouldStart), jadi pesan datang dari sana.
-    let msg: { type?: unknown; id?: unknown; method?: unknown; args?: unknown; plan?: unknown; title?: unknown; body?: unknown; big?: unknown };
+    let msg: { type?: unknown; id?: unknown; method?: unknown; args?: unknown };
     try {
       msg = JSON.parse(e.nativeEvent.data);
     } catch {
-      return;
-    }
-    // Teks di baris status kartu Notifikasi index.html (elemen #nm), kalau kartunya sedang tampil.
-    const say = (text: string) =>
-      webRef.current?.injectJavaScript(`var e=document.getElementById("nm");if(e)e.textContent=${JSON.stringify(text)};true;`);
-    if (msg.type === 'plan' && typeof msg.plan === 'string') {
-      void applyPlan(msg.plan).then((r) => {
-        if (r === 'denied') say('Izin notifikasi belum diberikan. Aktifkan lewat Pengaturan Android, Aplikasi, Run Now, Notifikasi.');
-      });
-      return;
-    }
-    if (msg.type === 'test' && typeof msg.title === 'string') {
-      void showTest({
-        title: msg.title,
-        body: typeof msg.body === 'string' ? msg.body : '',
-        big: typeof msg.big === 'string' ? msg.big : undefined,
-      }).then((ok) => {
-        if (!ok) say('Gagal mengirim notifikasi tes. Cek izin notifikasi di Pengaturan Android.');
-      });
       return;
     }
     if (msg.type !== 'rpc' || typeof msg.id !== 'number' || typeof msg.method !== 'string') return;
@@ -157,7 +127,6 @@ export default function RunNowScreen() {
         style={{ flex: 1, backgroundColor: colors.background }}
         originWhitelist={['*']}
         source={source}
-        injectedJavaScriptBeforeContentLoaded={ANDROID_SHIM}
         onShouldStartLoadWithRequest={onShouldStart}
         javaScriptEnabled
         domStorageEnabled
