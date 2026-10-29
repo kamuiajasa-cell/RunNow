@@ -18,7 +18,7 @@ import { useTheme } from '@/theme';
 /** Alamat halaman yang bisa diubah tanpa build APK. Hanya alamat ini (dan versi bawaan) yang boleh dibuka dan dipercaya. */
 const REMOTE_PAGE = 'https://runnow2.kamui-aja-sa.workers.dev/';
 /** Ubah ke true hanya setelah halaman di alamat itu sudah berisi versi terbaru index.html (ada Cadangan data dan Pengaturan jam). */
-const USE_REMOTE_PAGE = false;
+const USE_REMOTE_PAGE = true;
 const BUNDLED_ORIGIN = 'https://runnow.local/';
 
 /** Bentuk satu latihan di S.acts milik index.html: [startMs, jenis, menit, km, avgHR, maxHR, bestSegs, cadence, load, id]. */
