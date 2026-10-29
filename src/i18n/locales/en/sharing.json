@@ -1,6 +1,6 @@
 {
   "share": {
-    "caption": "Tracked with JoyoFit · https://fit.joyorogo.com",
+    "caption": "Tracked with Run Now · https://fit.joyorogo.com",
     "workout": {
       "heading": "Share workout"
     },
@@ -21,13 +21,13 @@
       "copy": "Could not copy the image: {{error}}",
       "save": "Could not save the image: {{error}}",
       "share": "Could not share the image: {{error}}",
-      "photosDenied": "Photos access is off for JoyoFit. Turn it on in Settings.",
+      "photosDenied": "Photos access is off for Run Now. Turn it on in Settings.",
       "openSettings": "Open Settings"
     },
     "photosDialog": {
       "title": "Photos access",
-      "instagram": "Instagram opens an image from your photo library, so JoyoFit saves this one there first. Your phone asks for permission next.",
-      "save": "JoyoFit adds this image to your photos. It does not read the photos you already have. Your phone asks for permission next.",
+      "instagram": "Instagram opens an image from your photo library, so Run Now saves this one there first. Your phone asks for permission next.",
+      "save": "Run Now adds this image to your photos. It does not read the photos you already have. Your phone asks for permission next.",
       "confirm": "Continue",
       "cancel": "Not now"
     }
@@ -119,8 +119,8 @@
     },
     "calc": {
       "title": "How is this calculated?",
-      "watch": "An estimate by JoyoFit, the watch does not measure it: each calorie is split by your heart rate at that moment, with a maximum of {{max}} bpm (220 minus your age from the profile). Easier effort burns a larger share of fat.",
-      "phone": "An estimate by JoyoFit, the watch does not measure it: each calorie is split by your heart rate at that moment, with a maximum of {{max}} bpm (220 minus your age from the profile). Easier effort burns a larger share of fat. The watch sends no live calories to JoyoFit, so they too come from its live heart rate, your weight, age and sex (Keytel 2005); the watch screen may differ."
+      "watch": "An estimate by Run Now, the watch does not measure it: each calorie is split by your heart rate at that moment, with a maximum of {{max}} bpm (220 minus your age from the profile). Easier effort burns a larger share of fat.",
+      "phone": "An estimate by Run Now, the watch does not measure it: each calorie is split by your heart rate at that moment, with a maximum of {{max}} bpm (220 minus your age from the profile). Easier effort burns a larger share of fat. The watch sends no live calories to Run Now, so they too come from its live heart rate, your weight, age and sex (Keytel 2005); the watch screen may differ."
     },
     "more": {
       "title": "More",

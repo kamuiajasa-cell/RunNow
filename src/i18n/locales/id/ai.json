@@ -30,7 +30,7 @@
   "chat": {
     "usageToday": "Hari ini: {{tokens}} token, {{calls}} dari {{ceiling}} panggilan",
     "ownTitle": "Atau pakai kunci sendiri",
-    "ownBody": "Gratis dari JoyoFit, tanpa JoyoRogo Pro. Kamu memasang kunci dari penyedia AI pilihanmu (OpenRouter, OpenAI, Anthropic, Gemini) dan hanya membayar pemakaian ke mereka.",
+    "ownBody": "Gratis dari Run Now, tanpa JoyoRogo Pro. Kamu memasang kunci dari penyedia AI pilihanmu (OpenRouter, OpenAI, Anthropic, Gemini) dan hanya membayar pemakaian ke mereka.",
     "ownCta": "Atur kunci sendiri",
     "signIn": "Masuk",
     "noFood": "Kamu belum masuk ke JoyoRogo, jadi makan dan berat badan tidak tersambung. Jawaban tidak memakai data makan.",
@@ -164,7 +164,7 @@
     "useHosted": "Pakai mesin JoyoRogo",
     "noProvider": {
       "title": "Kunci sendiri belum diatur",
-      "body": "Joyo AI dengan kunci sendiri butuh satu kunci dari penyedia AI pilihanmu. Fiturnya gratis dari JoyoFit; biaya pemakaian ada di akun penyedia.",
+      "body": "Joyo AI dengan kunci sendiri butuh satu kunci dari penyedia AI pilihanmu. Fiturnya gratis dari Run Now; biaya pemakaian ada di akun penyedia.",
       "action": "Atur kunci sendiri"
     },
     "noKey": {
@@ -275,9 +275,9 @@
       "pasteEmpty": "Clipboard kosong. Salin kuncinya dulu dari halaman penyedia.",
       "keepSaved": "Pakai kunci yang tersimpan",
       "open": "Buka halaman kunci {{provider}}",
-      "tip": "Buat kunci khusus untuk JoyoFit dan beri batas pemakaian bulanan di akun penyedia.",
+      "tip": "Buat kunci khusus untuk Run Now dan beri batas pemakaian bulanan di akun penyedia.",
       "revokeTitle": "Cara mencabut kunci",
-      "revoke": "Cabut atau hapus kunci kapan saja di halaman kunci akun penyedia. Hapus kunci di JoyoFit hanya menghapusnya dari ponsel ini; kunci yang sama tetap berlaku di penyedia sampai kamu mencabutnya di sana."
+      "revoke": "Cabut atau hapus kunci kapan saja di halaman kunci akun penyedia. Hapus kunci di Run Now hanya menghapusnya dari ponsel ini; kunci yang sama tetap berlaku di penyedia sampai kamu mencabutnya di sana."
     },
     "test": {
       "run": "Tes koneksi",

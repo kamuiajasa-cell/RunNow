@@ -121,7 +121,7 @@
       },
       "outOf": "dari 21",
       "addedToDay": "+{{value}} ke hari ini",
-      "explain": "Usaha Relatif adalah strain JoyoFit untuk latihan ini dalam skala 0 sampai 21: makin lama jantungmu bekerja di level tinggi, makin besar angkanya.",
+      "explain": "Usaha Relatif adalah strain Run Now untuk latihan ini dalam skala 0 sampai 21: makin lama jantungmu bekerja di level tinggi, makin besar angkanya.",
       "a11y": "Usaha relatif {{value}} dari 21, {{band}}"
     },
     "load": {
@@ -323,7 +323,7 @@
       "chartLabel": "{{metric}}, rata-rata per menit",
       "minute": "Menit {{n}}",
       "how": "Dari mana angka ini?",
-      "explain": "Jam mengirim angka ini saat kamu berlari, dan JoyoFit merata-ratakannya per menit. Hanya tampil kalau jam kamu mengirimnya. Untuk latihan yang disinkronkan sebelum fitur ini ada, angkanya bisa diambil ulang dari jam selama jam masih menyimpannya. Keseimbangan: angka pertama adalah sisi kiri sesuai kiriman jam; belum kami cocokkan dengan Huawei Health."
+      "explain": "Jam mengirim angka ini saat kamu berlari, dan Run Now merata-ratakannya per menit. Hanya tampil kalau jam kamu mengirimnya. Untuk latihan yang disinkronkan sebelum fitur ini ada, angkanya bisa diambil ulang dari jam selama jam masih menyimpannya. Keseimbangan: angka pertama adalah sisi kiri sesuai kiriman jam; belum kami cocokkan dengan Huawei Health."
     },
     "effect": {
       "title": "Efek latihan",
@@ -339,7 +339,7 @@
       "valueSource": "{{value}} ({{source}})",
       "how": "Cara dihitung",
       "explainWatch": "Angka dari jam adalah yang dilaporkan jam setelah latihan ini, apa adanya. Efek latihan berskala 0 sampai 5. Satuan poin latihan dan beban dari jam belum kami pastikan, dan beban jam bukan TRIMP. VO2max dari jam dibulatkan ke bawah ke bilangan bulat; nilai di luar 10 sampai 90 tidak ditampilkan.",
-      "explainEstimate": "Angka dari jam adalah yang dilaporkan jam setelah latihan ini, apa adanya. Efek latihan berskala 0 sampai 5. Jam tidak melaporkan efek aerobik, jadi ini perkiraan JoyoFit dari TRIMP latihan ini: 5 x (1 - e^(-TRIMP / 150)). Satuan poin latihan dan beban dari jam belum kami pastikan, dan beban jam bukan TRIMP. VO2max dari jam dibulatkan ke bawah ke bilangan bulat; nilai di luar 10 sampai 90 tidak ditampilkan."
+      "explainEstimate": "Angka dari jam adalah yang dilaporkan jam setelah latihan ini, apa adanya. Efek latihan berskala 0 sampai 5. Jam tidak melaporkan efek aerobik, jadi ini perkiraan Run Now dari TRIMP latihan ini: 5 x (1 - e^(-TRIMP / 150)). Satuan poin latihan dan beban dari jam belum kami pastikan, dan beban jam bukan TRIMP. VO2max dari jam dibulatkan ke bawah ke bilangan bulat; nilai di luar 10 sampai 90 tidak ditampilkan."
     },
     "burn": {
       "title": "Lemak dan karbo terbakar",
@@ -348,7 +348,7 @@
       "zoneRow": "Zona {{zone}} {{label}}",
       "grams": "lemak {{fat}} g, karbo {{carbs}} g",
       "how": "Bagaimana ini dihitung?",
-      "explain": "Perkiraan dari JoyoFit, jam tidak mengukurnya: {{kcal}} kcal dibagi menurut waktu yang benar-benar kamu habiskan di tiap detak jantung, dengan maksimum {{maxHr}} bpm (dari Zona HR di Pengaturan, bawaannya 220 dikurangi usiamu). Usaha yang lebih ringan membakar porsi lemak yang lebih besar.",
+      "explain": "Perkiraan dari Run Now, jam tidak mengukurnya: {{kcal}} kcal dibagi menurut waktu yang benar-benar kamu habiskan di tiap detak jantung, dengan maksimum {{maxHr}} bpm (dari Zona HR di Pengaturan, bawaannya 220 dikurangi usiamu). Usaha yang lebih ringan membakar porsi lemak yang lebih besar.",
       "below": "Di bawah zona"
     },
     "more": {
@@ -570,7 +570,7 @@
       "noGpsNote": "Tanpa GPS. Jarak dan kecepatan datang dari sensor, kalau ada.",
       "gnssHint": "Jam bilang data GNSS kedaluwarsa? Itu wajar. GPS tetap jalan, cuma butuh 30–60 detik di luar ruangan. Tunggu ikon GPS sebelum mulai.",
       "gnssWhy": "Kenapa?",
-      "gnssWhyBody": "Data bantuan GPS jam Huawei hanya bisa datang dari Huawei Health. JoyoFit mengirim lokasi dan waktu HP-mu untuk membantu titik GPS pertama. Jamnya tidak rusak.",
+      "gnssWhyBody": "Data bantuan GPS jam Huawei hanya bisa datang dari Huawei Health. Run Now mengirim lokasi dan waktu HP-mu untuk membantu titik GPS pertama. Jamnya tidak rusak.",
       "start": "Mulai",
       "prepareError": "Tidak bisa menyiapkan rekaman: {{error}}",
       "bluetoothOff": "Bluetooth mati. Nyalakan dulu supaya sensor bisa tersambung."
@@ -605,7 +605,7 @@
       "hint": "Kamu bisa mulai tanpa menunggu GPS. Jarak dihitung begitu sinyalnya siap.",
       "hintNoGps": "Tekan Mulai kalau kamu sudah siap.",
       "noPhoneSteps": "Penghitung langkah HP tidak aktif, jadi kadens dan langkah hanya terekam kalau ada sensor lari yang tersambung.",
-      "noService": "Layar mati bisa menghentikan rekaman. Izinkan notifikasi dan matikan penghemat baterai untuk JoyoFit di pengaturan HP supaya rekaman tetap jalan.",
+      "noService": "Layar mati bisa menghentikan rekaman. Izinkan notifikasi dan matikan penghemat baterai untuk Run Now di pengaturan HP supaya rekaman tetap jalan.",
       "start": "Mulai",
       "cancel": "Batal"
     },
@@ -704,8 +704,8 @@
     "menu": "Menu latihan",
     "action": "Hapus latihan",
     "title": "Hapus latihan ini?",
-    "message": "{{sport}}, {{date}}. Latihan ini dihapus dari JoyoFit di HP ini, dari cloud, dan dari catatan olahraga di JoyoRogo, dan jam-mu tidak akan membawanya kembali. Aktivitas di Strava tidak ikut terhapus.",
-    "withPost": "{{sport}}, {{date}}. Latihan ini dihapus dari JoyoFit di HP ini, dari cloud, dan dari catatan olahraga di JoyoRogo, dan jam-mu tidak akan membawanya kembali. Aktivitas di Strava tidak ikut terhapus.\n\nHapus juga postingan di feed?",
+    "message": "{{sport}}, {{date}}. Latihan ini dihapus dari Run Now di HP ini, dari cloud, dan dari catatan olahraga di JoyoRogo, dan jam-mu tidak akan membawanya kembali. Aktivitas di Strava tidak ikut terhapus.",
+    "withPost": "{{sport}}, {{date}}. Latihan ini dihapus dari Run Now di HP ini, dari cloud, dan dari catatan olahraga di JoyoRogo, dan jam-mu tidak akan membawanya kembali. Aktivitas di Strava tidak ikut terhapus.\n\nHapus juga postingan di feed?",
     "confirm": "Hapus",
     "withPostYes": "Hapus latihan dan postingan",
     "withPostNo": "Hapus latihan saja",
@@ -736,7 +736,7 @@
   },
   "refetch": {
     "action": "Ambil ulang dari jam",
-    "hint": "Lari ini disinkronkan sebelum dinamika lari disimpan. Kalau jam masih menyimpan datanya, JoyoFit bisa membacanya lagi.",
+    "hint": "Lari ini disinkronkan sebelum dinamika lari disimpan. Kalau jam masih menyimpan datanya, Run Now bisa membacanya lagi.",
     "running": "Mengambil data lari dari jam...",
     "progress": "Mengambil {{done}} dari {{total}}",
     "single": {
@@ -755,7 +755,7 @@
       "none": "Tidak ada yang diambil.",
       "stopped": "Berhenti di tengah jalan: {{message}}"
     },
-    "bulkHint": "Untuk lari yang disinkronkan sebelum dinamika lari disimpan: JoyoFit meminta jam mengirim ulang datanya, hanya untuk yang masih ada di jam. Yang ditambahkan hanya angka dinamikanya, data lain tidak berubah.",
+    "bulkHint": "Untuk lari yang disinkronkan sebelum dinamika lari disimpan: Run Now meminta jam mengirim ulang datanya, hanya untuk yang masih ada di jam. Yang ditambahkan hanya angka dinamikanya, data lain tidak berubah.",
     "bulkAction": "Ambil ulang dinamika lari",
     "bulkCount_other": "{{count}} lari bisa dicoba",
     "bulkNone": "Tidak ada lari yang perlu diambil ulang."

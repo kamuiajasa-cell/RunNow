@@ -17,8 +17,8 @@
     "skip": "Skip"
   },
   "welcome": {
-    "title": "Set up JoyoFit",
-    "intro": "JoyoFit works with your Huawei or Honor watch directly, without Huawei Health. This guide takes a few minutes and you can skip any step.",
+    "title": "Set up Run Now",
+    "intro": "Run Now works with your Huawei or Honor watch directly, without Huawei Health. This guide takes a few minutes and you can skip any step.",
     "beforeTitle": "Before you start",
     "before1": "Have the watch next to you, charged and awake.",
     "before2Ios": "Bluetooth on this iPhone.",
@@ -40,9 +40,9 @@
   },
   "unbind": {
     "title": "Release the watch from Huawei Health",
-    "intro": "A Huawei or Honor watch talks to one app at a time. While Huawei Health holds it, the watch refuses JoyoFit.",
+    "intro": "A Huawei or Honor watch talks to one app at a time. While Huawei Health holds it, the watch refuses Run Now.",
     "step1": "Open Huawei Health and pull down on its first screen to sync once more. Anything that is only on the watch and not yet in your Huawei account is lost when you unbind.",
-    "step2": "Optional: keep your history. Huawei can send everything Huawei Health stored as a ZIP file, which JoyoFit imports on this phone. It can take up to 7 days to arrive, so request it now and import it whenever it comes.",
+    "step2": "Optional: keep your history. Huawei can send everything Huawei Health stored as a ZIP file, which Run Now imports on this phone. It can take up to 7 days to arrive, so request it now and import it whenever it comes.",
     "step3": "In Huawei Health, open the watch under Devices and unbind (remove) it. If it is still connected to another phone, disconnect it there too.",
     "hideImport": "Hide the history import",
     "showImport": "Request or import my Huawei Health history",
@@ -50,7 +50,7 @@
   },
   "pair": {
     "title": "Pair your watch",
-    "intro": "Wake the watch and keep it next to the phone. JoyoFit looks for it as soon as Bluetooth is allowed; the first time, the watch asks you to confirm on its own screen.",
+    "intro": "Wake the watch and keep it next to the phone. Run Now looks for it as soon as Bluetooth is allowed; the first time, the watch asks you to confirm on its own screen.",
     "connected": "Connected. The first sync runs in the background while you finish setting up.",
     "helpTitle": "The watch refuses to pair?",
     "help": "Check that it is unbound from Huawei Health and not connected to another phone or app, that it is awake and close, and try Connect again. If it still refuses after a restart of the watch, a reset of the watch from its own Settings is the last resort. A reset erases the data stored on the watch (workouts and days that were never synced), so sync first if you can, and do not start here.",
@@ -69,7 +69,7 @@
     },
     "confirm": {
       "title": "Tap ✓ on your watch",
-      "body": "JoyoFit is connecting to {{name}}.",
+      "body": "Run Now is connecting to {{name}}.",
       "thisWatch": "your watch",
       "elapsed": "{{seconds}} s",
       "helpTitle": "Nothing on the watch?",
@@ -86,14 +86,14 @@
       "count_other": "{{count}} models",
       "none": "No model matches. A Huawei or Honor watch that is not listed is still tried: close this list and scan.",
       "promptTitle": "Not found yet?",
-      "prompt": "Pick your model to see how to put it in pairing mode. JoyoFit then scans again and marks your watch.",
+      "prompt": "Pick your model to see how to put it in pairing mode. Run Now then scans again and marks your watch.",
       "change": "Other model",
       "clear": "Clear"
     },
     "mode": {
       "title": "Pairing mode",
       "huaweiWatch": "A watch that is ready to pair shows a pairing screen (a QR code or its Bluetooth name) once its language is chosen. If it shows its normal watch face, it is still paired with a phone: unbind it in Huawei Health first, which usually resets it to that screen.",
-      "huaweiBand": "A band that is ready to pair shows a pairing screen once it is switched on and its language is chosen. If it shows the time, it is still paired with a phone: unbind it in Huawei Health first. Bands do not appear in the phone's Bluetooth settings; only JoyoFit's scan finds them.",
+      "huaweiBand": "A band that is ready to pair shows a pairing screen once it is switched on and its language is chosen. If it shows the time, it is still paired with a phone: unbind it in Huawei Health first. Bands do not appear in the phone's Bluetooth settings; only Run Now's scan finds them.",
       "honor": "Honor watches and bands work like Huawei ones: a pairing screen once the language is chosen. One that shows the time is still paired and has to be unbound in Honor Health or Huawei Health first. The newest Honor watches (Watch 5 and later) cannot be paired yet.",
       "then": "Then keep it next to the phone: it appears as a card here when the scan sees it.",
       "thenIos": "Then keep it next to the iPhone: it appears as a card here when the list sees it."
@@ -109,42 +109,42 @@
   "notifications": {
     "title": "Notifications on the watch",
     "introIos": "The watch shows your iPhone notifications itself, over Bluetooth. iOS only shares them once you allow it for the watch.",
-    "introAndroid": "JoyoFit can show your phone notifications on the watch. Android asks you to grant notification access to JoyoFit first.",
+    "introAndroid": "Run Now can show your phone notifications on the watch. Android asks you to grant notification access to Run Now first.",
     "iosNotice": "On the iPhone open Settings, Bluetooth, tap the i next to your watch and turn on Show Notifications. Which apps appear is chosen in iPhone Settings, Notifications.",
     "chooseApps": "Choose which apps are forwarded",
     "appsTitle": "Notification apps"
   },
   "health": {
     "title": "Share with {{store}}",
-    "intro": "JoyoFit can write your steps, heart rate, blood oxygen, sleep and workouts to {{store}} after every sync, so other apps such as JoyoRogo can read them. Nothing is shared until you switch it on and allow it."
+    "intro": "Run Now can write your steps, heart rate, blood oxygen, sleep and workouts to {{store}} after every sync, so other apps such as JoyoRogo can read them. Nothing is shared until you switch it on and allow it."
   },
   "weather": {
     "title": "Weather on the watch",
-    "intro": "JoyoFit can send the forecast to the watch. It needs this phone's location, or you can pick a city and share no location at all."
+    "intro": "Run Now can send the forecast to the watch. It needs this phone's location, or you can pick a city and share no location at all."
   },
   "background": {
     "title": "Stay connected in the background",
-    "intro": "With this on, JoyoFit keeps the watch connected and syncs on a timer while the app is closed, so Today is current when you open it.",
-    "notice": "Some phones (Huawei, Honor, Xiaomi, Oppo, Vivo, Samsung and others) stop background apps to save battery. If the watch keeps disconnecting while the screen is off, open JoyoFit's app settings, go to Battery and choose Unrestricted or No restrictions.",
+    "intro": "With this on, Run Now keeps the watch connected and syncs on a timer while the app is closed, so Today is current when you open it.",
+    "notice": "Some phones (Huawei, Honor, Xiaomi, Oppo, Vivo, Samsung and others) stop background apps to save battery. If the watch keeps disconnecting while the screen is off, open Run Now's app settings, go to Battery and choose Unrestricted or No restrictions.",
     "openSettings": "Open app settings"
   },
   "account": {
     "title": "Sign in with JoyoRogo",
-    "intro": "JoyoRogo is our food diary: photograph a meal and it counts the calories. Signing in connects the two apps. JoyoFit works fully without an account.",
+    "intro": "JoyoRogo is our food diary: photograph a meal and it counts the calories. Signing in connects the two apps. Run Now works fully without an account.",
     "givesTitle": "What it gives you",
     "gives1": "Your daily Recovery, Strain and Sleep scores appear next to what you ate in the JoyoRogo diary, with a short food tip for a day like this.",
     "gives2": "What you log in JoyoRogo can show on the watch's calorie card.",
     "gives3": "The option of a cloud backup of your watch data, which is part of JoyoRogo Pro (the next step).",
-    "note": "While you are signed in, JoyoFit sends your daily scores and body metrics (sleep, resting heart rate, HRV, VO2max) to JoyoRogo and exchanges meals and weight with it. Your watch data stays on this phone unless you turn on the Pro cloud backup. Sign out any time in More, Health and cloud.",
+    "note": "While you are signed in, Run Now sends your daily scores and body metrics (sleep, resting heart rate, HRV, VO2max) to JoyoRogo and exchanges meals and weight with it. Your watch data stays on this phone unless you turn on the Pro cloud backup. Sign out any time in More, Health and cloud.",
     "signedIn": "Signed in.",
     "signedInAs": "Signed in as {{email}}."
   },
   "pro": {
     "title": "JoyoRogo Pro",
-    "intro": "JoyoFit is free to use in full: pairing, sync, workouts, Strava and the health apps all work on this phone without paying. Pro is an optional plan on your JoyoRogo account.",
+    "intro": "Run Now is free to use in full: pairing, sync, workouts, Strava and the health apps all work on this phone without paying. Pro is an optional plan on your JoyoRogo account.",
     "addsTitle": "What Pro adds",
-    "adds1": "Cloud backup of your watch data (steps, heart rate, blood oxygen, sleep and workouts) to your own JoyoRogo account. JoyoFit uploads it today; restoring it into the app is not built yet.",
-    "adds2": "Meal suggestions in JoyoRogo built from today's JoyoFit scores. Without Pro the diary shows a short hint instead.",
+    "adds1": "Cloud backup of your watch data (steps, heart rate, blood oxygen, sleep and workouts) to your own JoyoRogo account. Run Now uploads it today; restoring it into the app is not built yet.",
+    "adds2": "Meal suggestions in JoyoRogo built from today's Run Now scores. Without Pro the diary shows a short hint instead.",
     "mention": "JoyoRogo Pro is available in JoyoRogo.",
     "managed": "JoyoRogo Pro is managed in the JoyoRogo app.",
     "active": "Cloud backup is on for this account.",
@@ -187,13 +187,13 @@
     "managedStore": "JoyoRogo Pro is managed in the JoyoRogo app.",
     "openOnPlay": "Open JoyoRogo on Google Play",
     "see": "See JoyoRogo Pro",
-    "signIn": "Sign in with your JoyoRogo account to use the cloud, or skip. JoyoFit works fully without an account.",
+    "signIn": "Sign in with your JoyoRogo account to use the cloud, or skip. Run Now works fully without an account.",
     "signInButton": "Sign in with JoyoRogo",
     "signInPrompt": "Sign in with"
   },
   "done": {
     "title": "You are set up",
-    "intro": "JoyoFit keeps syncing on its own from here. A few places worth knowing:",
+    "intro": "Run Now keeps syncing on its own from here. A few places worth knowing:",
     "open": "Still open: {{list}}.",
     "openItem": "{{name}} ({{where}})",
     "reopen": "Open this guide again from More, Setup guide.",

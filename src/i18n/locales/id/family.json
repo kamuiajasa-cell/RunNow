@@ -9,7 +9,7 @@
     "consent": "Izin",
     "me": "Dipantau"
   },
-  "disclaimer": "Ini bukan pantauan langsung. Data baru masuk setelah jam tersinkron ke ponsel dan ponselnya terhubung internet, jadi bisa telat dari beberapa menit sampai berjam-jam. JoyoFit bukan alat darurat dan tidak mendeteksi jatuh, serangan jantung, atau kondisi gawat. Kalau kamu khawatir, telepon langsung atau hubungi layanan darurat (112).",
+  "disclaimer": "Ini bukan pantauan langsung. Data baru masuk setelah jam tersinkron ke ponsel dan ponselnya terhubung internet, jadi bisa telat dari beberapa menit sampai berjam-jam. Run Now bukan alat darurat dan tidak mendeteksi jatuh, serangan jantung, atau kondisi gawat. Kalau kamu khawatir, telepon langsung atau hubungi layanan darurat (112).",
   "gate": {
     "signInTitle": "Masuk dengan JoyoRogo",
     "signInDescription": "Kabar keluarga memakai akun JoyoRogo kamu, akun yang sama dengan buku makan dan tab Social."
@@ -38,13 +38,13 @@
     "notFound": "Permintaan ini tidak ditemukan. Mungkin sudah dibatalkan."
   },
   "platform": {
-    "android": "Di Android, JoyoFit mengirim data di latar belakang setiap kali jam selesai tersinkron ke ponsel, juga saat JoyoFit tertutup. Kalau ponsel tidak ada internet, data menyusul saat tersambung lagi.",
-    "ios": "Di iPhone, iOS yang menentukan kapan JoyoFit boleh mengirim di latar belakang. Sering kali data baru terkirim saat JoyoFit kamu buka atau saat jam membangunkannya, jadi kabar bisa telat."
+    "android": "Di Android, Run Now mengirim data di latar belakang setiap kali jam selesai tersinkron ke ponsel, juga saat Run Now tertutup. Kalau ponsel tidak ada internet, data menyusul saat tersambung lagi.",
+    "ios": "Di iPhone, iOS yang menentukan kapan Run Now boleh mengirim di latar belakang. Sering kali data baru terkirim saat Run Now kamu buka atau saat jam membangunkannya, jadi kabar bisa telat."
   },
   "invite": {
-    "shareWatcherAsk": "Aku ingin ikut melihat kabarmu dari jam Huawei-mu lewat JoyoFit. Kamu yang menentukan apa yang dibagikan.",
-    "shareMonitoredAsk": "Aku mengundangmu melihat kabarku dari jam Huawei-ku lewat JoyoFit.",
-    "shareBody": "{{ask}}\nBuka {{url}} atau masukkan kode {{code}} di JoyoFit (Keluarga, Masukkan kode undangan). Berlaku 48 jam, sekali pakai.",
+    "shareWatcherAsk": "Aku ingin ikut melihat kabarmu dari jam Huawei-mu lewat Run Now. Kamu yang menentukan apa yang dibagikan.",
+    "shareMonitoredAsk": "Aku mengundangmu melihat kabarku dari jam Huawei-ku lewat Run Now.",
+    "shareBody": "{{ask}}\nBuka {{url}} atau masukkan kode {{code}} di Run Now (Keluarga, Masukkan kode undangan). Berlaku 48 jam, sekali pakai.",
     "previewWatcher": "{{name}} ingin ikut memantau kabarmu dari jam Huawei-mu.",
     "previewMonitored": "{{name}} mengundangmu memantau kabarnya dari jam Huawei-nya.",
     "sectionCode": "Kode undangan",
@@ -80,10 +80,10 @@
     "preMonitored": "Aktifkan notifikasi supaya kamu tahu kalau {{name}} menanyakan kabarmu. {{late}}",
     "section": "Notifikasi",
     "enabled": "Notifikasi aktif di ponsel ini. {{late}}",
-    "denied": "Notifikasi dimatikan untuk JoyoFit. Nyalakan di pengaturan ponsel kalau kamu berubah pikiran.",
+    "denied": "Notifikasi dimatikan untuk Run Now. Nyalakan di pengaturan ponsel kalau kamu berubah pikiran.",
     "openSettings": "Buka pengaturan ponsel",
-    "unavailable": "Ponsel ini tidak bisa menerima notifikasi dari JoyoFit.",
-    "unavailableWithHint": "Ponsel ini tidak bisa menerima notifikasi dari JoyoFit. {{hint}}",
+    "unavailable": "Ponsel ini tidak bisa menerima notifikasi dari Run Now.",
+    "unavailableWithHint": "Ponsel ini tidak bisa menerima notifikasi dari Run Now. {{hint}}",
     "enable": "Aktifkan notifikasi",
     "askTitle": "Aktifkan notifikasi?",
     "notNow": "Nanti saja",
@@ -145,7 +145,7 @@
     "snooze": "Senyapkan pemberitahuan",
     "snoozeDays_other": "{{count}} hari",
     "pokeSent": "Pesan \"Tanya kabar\" terkirim ke {{name}}. Notifikasi bisa terlambat.",
-    "pokeUnreached": "{{name}} belum bisa menerima notifikasi dari JoyoFit, jadi pesannya tidak sampai. Coba telepon langsung.",
+    "pokeUnreached": "{{name}} belum bisa menerima notifikasi dari Run Now, jadi pesannya tidak sampai. Coba telepon langsung.",
     "poke": "Tanya kabar",
     "manageRules": "Atur pemberitahuan",
     "manageRulesHint": "Aturan, jam tenang, notifikasi dan email"
@@ -272,6 +272,6 @@
     "notFound": "Tidak ditemukan. Mungkin sudah dihapus.",
     "server": "Server sedang bermasalah. Coba lagi sebentar.",
     "generic": "Terjadi kesalahan. Coba lagi.",
-    "notConfigured": "Server JoyoFit belum diatur di versi aplikasi ini."
+    "notConfigured": "Server Run Now belum diatur di versi aplikasi ini."
   }
 }

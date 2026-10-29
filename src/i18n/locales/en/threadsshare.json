@@ -27,11 +27,11 @@
     "question": "Question for readers",
     "noQuestion": "No question",
     "hashtag": {
-      "label": "#JoyoFit tag",
+      "label": "#Run Now tag",
       "hint": "Placed on the last line of the text."
     }
   },
-  "branding": "The JoyoFit logo always stays on Threads slides, Pro accounts included.",
+  "branding": "The Run Now logo always stays on Threads slides, Pro accounts included.",
   "actions": {
     "share": "Share to Threads",
     "saveOpen": "Save all and open Threads",

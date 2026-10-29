@@ -9,7 +9,7 @@
     "consent": "Permission",
     "me": "Watched"
   },
-  "disclaimer": "This is not live monitoring. Data only arrives after the watch has synced to the phone and the phone is online, so it can be anywhere from a few minutes to several hours late. JoyoFit is not an emergency tool and does not detect falls, heart attacks, or other serious conditions. If you are worried, call them directly or contact emergency services (112).",
+  "disclaimer": "This is not live monitoring. Data only arrives after the watch has synced to the phone and the phone is online, so it can be anywhere from a few minutes to several hours late. Run Now is not an emergency tool and does not detect falls, heart attacks, or other serious conditions. If you are worried, call them directly or contact emergency services (112).",
   "gate": {
     "signInTitle": "Sign in with JoyoRogo",
     "signInDescription": "Family updates use your JoyoRogo account, the same one as the food diary and the Social tab."
@@ -38,13 +38,13 @@
     "notFound": "This request was not found. It may have been cancelled."
   },
   "platform": {
-    "android": "On Android, JoyoFit sends data in the background every time the watch finishes syncing to the phone, even when JoyoFit is closed. If the phone is offline, the data follows once it reconnects.",
-    "ios": "On iPhone, iOS decides when JoyoFit may send in the background. Data often only goes out when you open JoyoFit or when the watch wakes it up, so updates can be late."
+    "android": "On Android, Run Now sends data in the background every time the watch finishes syncing to the phone, even when Run Now is closed. If the phone is offline, the data follows once it reconnects.",
+    "ios": "On iPhone, iOS decides when Run Now may send in the background. Data often only goes out when you open Run Now or when the watch wakes it up, so updates can be late."
   },
   "invite": {
-    "shareWatcherAsk": "I would like to see how you are doing through your Huawei watch, using JoyoFit. You decide what is shared.",
-    "shareMonitoredAsk": "I am inviting you to see how I am doing through my Huawei watch, using JoyoFit.",
-    "shareBody": "{{ask}}\nOpen {{url}} or enter the code {{code}} in JoyoFit (Family, Enter invite code). Valid for 48 hours, single use.",
+    "shareWatcherAsk": "I would like to see how you are doing through your Huawei watch, using Run Now. You decide what is shared.",
+    "shareMonitoredAsk": "I am inviting you to see how I am doing through my Huawei watch, using Run Now.",
+    "shareBody": "{{ask}}\nOpen {{url}} or enter the code {{code}} in Run Now (Family, Enter invite code). Valid for 48 hours, single use.",
     "previewWatcher": "{{name}} wants to keep an eye on how you are doing through your Huawei watch.",
     "previewMonitored": "{{name}} is inviting you to follow how they are doing through their Huawei watch.",
     "sectionCode": "Invite code",
@@ -80,10 +80,10 @@
     "preMonitored": "Turn on notifications so you know when {{name}} asks how you are. {{late}}",
     "section": "Notifications",
     "enabled": "Notifications are on for this phone. {{late}}",
-    "denied": "Notifications are turned off for JoyoFit. Turn them on in the phone settings if you change your mind.",
+    "denied": "Notifications are turned off for Run Now. Turn them on in the phone settings if you change your mind.",
     "openSettings": "Open phone settings",
-    "unavailable": "This phone cannot receive notifications from JoyoFit.",
-    "unavailableWithHint": "This phone cannot receive notifications from JoyoFit. {{hint}}",
+    "unavailable": "This phone cannot receive notifications from Run Now.",
+    "unavailableWithHint": "This phone cannot receive notifications from Run Now. {{hint}}",
     "enable": "Turn on notifications",
     "askTitle": "Turn on notifications?",
     "notNow": "Not now",
@@ -148,7 +148,7 @@
     "snoozeDays_one": "{{count}} day",
     "snoozeDays_other": "{{count}} days",
     "pokeSent": "Your \"Check in\" message was sent to {{name}}. Notifications can be late.",
-    "pokeUnreached": "{{name}} cannot receive notifications from JoyoFit yet, so the message did not arrive. Try calling instead.",
+    "pokeUnreached": "{{name}} cannot receive notifications from Run Now yet, so the message did not arrive. Try calling instead.",
     "poke": "Check in",
     "manageRules": "Manage alerts",
     "manageRulesHint": "Rules, quiet hours, notifications and email"
@@ -284,6 +284,6 @@
     "notFound": "Not found. It may have been removed.",
     "server": "The server is having problems. Try again in a moment.",
     "generic": "Something went wrong. Try again.",
-    "notConfigured": "The JoyoFit server is not set up in this version of the app."
+    "notConfigured": "The Run Now server is not set up in this version of the app."
   }
 }

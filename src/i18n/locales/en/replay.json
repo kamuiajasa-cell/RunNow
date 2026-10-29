@@ -49,7 +49,7 @@
     "offline": "The map could not be loaded, so your route is drawn on a plain background.",
     "noRoute": "This workout has no GPS route, so it cannot be replayed yet.",
     "tooShort": "Your route is too short to replay with route privacy on. Turn route privacy off to see it.",
-    "caption": "Replay of my workout on JoyoFit",
+    "caption": "Replay of my workout on Run Now",
     "length": "The video lasts about {{seconds}} seconds"
   },
   "export": {
@@ -65,8 +65,8 @@
     "share": "More",
     "saved": "Saved to your photos",
     "photosDialog": {
-      "save": "JoyoFit adds this video to your photos. Photos you already have are not read. Your phone will ask for permission next.",
-      "instagram": "Instagram opens videos from your photo library, so JoyoFit saves this video there first. Your phone will ask for permission next."
+      "save": "Run Now adds this video to your photos. Photos you already have are not read. Your phone will ask for permission next.",
+      "instagram": "Instagram opens videos from your photo library, so Run Now saves this video there first. Your phone will ask for permission next."
     },
     "errors": {
       "unsupported": "This phone cannot make MP4 videos yet.",

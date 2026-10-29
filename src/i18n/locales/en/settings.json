@@ -44,7 +44,7 @@
       },
       "importHuawei": {
         "title": "Import from Huawei Health",
-        "subtitle": "Bring your Huawei history into JoyoFit, free"
+        "subtitle": "Bring your Huawei history into Run Now, free"
       },
       "importAppleHealth": {
         "title": "Import from Apple Health",
@@ -82,12 +82,12 @@
     "courses": "Running courses",
     "coursesSubtitle": "Build a course and send it to the watch",
     "bleLink": "Bluetooth LE link (developer)",
-    "agnssLab": "JoyoFit HW_AGNSS satellite data (lab test)",
-    "agnssLabRisk": "Off by default. When on and the watch asks for the HW_AGNSS kind, JoyoFit sends satellite data that JoyoFit's server builds from public broadcast data (IGS/BKG), not from Huawei. The phone fetches it from JoyoFit's server with no personal data; the server sees the IP address. The watch does not check this data, and wrong data has wedged the GPS of other watches. A factory reset recovers the watch. Unproven on any watch: turn it on only to test.",
-    "pgnssLab": "JoyoFit HW_PGNSS_PRED predicted satellite data (lab test)",
-    "pgnssLabRisk": "Off by default, separate from the switch above. When on and the watch asks for the HW_PGNSS_PRED kind, JoyoFit sends six files of predicted satellite orbits for the next 3 days that JoyoFit's server computes from public data, laid out like Huawei's own files but not from Huawei. The phone fetches them (about 800 KB) from JoyoFit's server with no personal data; the server sees the IP address. Riskier than HW_AGNSS: the predictions are unverified, the watch keeps them for days and does not check them, and wrong data has wedged the GPS of other watches. A factory reset recovers the watch. Unproven on any watch: turn it on only to test.",
+    "agnssLab": "Run Now HW_AGNSS satellite data (lab test)",
+    "agnssLabRisk": "Off by default. When on and the watch asks for the HW_AGNSS kind, Run Now sends satellite data that Run Now's server builds from public broadcast data (IGS/BKG), not from Huawei. The phone fetches it from Run Now's server with no personal data; the server sees the IP address. The watch does not check this data, and wrong data has wedged the GPS of other watches. A factory reset recovers the watch. Unproven on any watch: turn it on only to test.",
+    "pgnssLab": "Run Now HW_PGNSS_PRED predicted satellite data (lab test)",
+    "pgnssLabRisk": "Off by default, separate from the switch above. When on and the watch asks for the HW_PGNSS_PRED kind, Run Now sends six files of predicted satellite orbits for the next 3 days that Run Now's server computes from public data, laid out like Huawei's own files but not from Huawei. The phone fetches them (about 800 KB) from Run Now's server with no personal data; the server sees the IP address. Riskier than HW_AGNSS: the predictions are unverified, the watch keeps them for days and does not check them, and wrong data has wedged the GPS of other watches. A factory reset recovers the watch. Unproven on any watch: turn it on only to test.",
     "details": "Running courses: unverified, the course format comes from static analysis of Huawei Health. The watch may refuse it.",
-    "detailsDev": "Running courses: unverified, the course format comes from static analysis of Huawei Health. The watch may refuse it. Bluetooth LE link: connect over Bluetooth LE GATT (service FE86) instead of the watch's own link. Disconnect and connect again to apply. Steps go to logcat tag JoyoFitBle."
+    "detailsDev": "Running courses: unverified, the course format comes from static analysis of Huawei Health. The watch may refuse it. Bluetooth LE link: connect over Bluetooth LE GATT (service FE86) instead of the watch's own link. Disconnect and connect again to apply. Steps go to logcat tag Run NowBle."
   },
   "log": {
     "filters": {
@@ -133,33 +133,33 @@
       "emergency": "Built into the app (the last update failed to load)",
       "embedded": "Built into the app"
     },
-    "hint": "Fixes to screens and logic arrive in the background and apply the next time JoyoFit opens. App Store and Play updates still carry anything native.",
+    "hint": "Fixes to screens and logic arrive in the background and apply the next time Run Now opens. App Store and Play updates still carry anything native.",
     "restart": "Restart to update",
     "checking": "Checking…",
     "check": "Check for updates",
     "banner": {
       "availableTitle": "New version available",
       "failed": "Couldn't start the update. Try again.",
-      "availableBody": "A JoyoFit update is ready to download.",
+      "availableBody": "A Run Now update is ready to download.",
       "downloading": "Downloading update…",
       "readyTitle": "Update ready to install",
-      "readyBody": "Restart JoyoFit to use the new version.",
+      "readyBody": "Restart Run Now to use the new version.",
       "later": "Later",
       "update": "Update",
       "newerTitle": "New version available",
-      "newerBody": "A newer JoyoFit is available in the store."
+      "newerBody": "A newer Run Now is available in the store."
     },
     "gate": {
       "title": "Update first",
-      "body": "The JoyoFit on your phone is out of date. Many problems you may be seeing are already fixed in the latest version, but the fixes only work once the app is updated.",
-      "steps": "Open the store, tap Update, then open JoyoFit again. Your data stays safe on your phone.",
+      "body": "The Run Now on your phone is out of date. Many problems you may be seeing are already fixed in the latest version, but the fixes only work once the app is updated.",
+      "steps": "Open the store, tap Update, then open Run Now again. Your data stays safe on your phone.",
       "build": "Installed version: {{build}}",
       "openPlay": "Update in Play Store",
       "openTestFlight": "Open TestFlight",
       "openAppStore": "Open App Store",
       "openWeb": "Open update page",
       "openTesting": "Open the testing page",
-      "failed": "Could not open the store page. Open the Play Store or TestFlight yourself and look for JoyoFit.",
+      "failed": "Could not open the store page. Open the Play Store or TestFlight yourself and look for Run Now.",
       "recheck": "Check again",
       "rechecking": "Checking…",
       "stillOld": "No newer version is installed yet. Update first, then check again."
@@ -199,7 +199,7 @@
     "autoSync": "Automatic sync",
     "autoSyncHint": "Sync after each watch sync and when you open the app.",
     "wipe": "Delete cloud data",
-    "deleteWarning": "Deletes your JoyoRogo account (the one JoyoRogo uses) and everything it holds in the cloud: your JoyoRogo diary, groups and photos, and the data JoyoFit backed up. Cannot be undone; you are signed out of both apps. Data on this phone stays.",
+    "deleteWarning": "Deletes your JoyoRogo account (the one JoyoRogo uses) and everything it holds in the cloud: your JoyoRogo diary, groups and photos, and the data Run Now backed up. Cannot be undone; you are signed out of both apps. Data on this phone stays.",
     "deleteApple": "Apple will ask you to confirm first.",
     "deletePermanently": "Delete permanently",
     "deleteAccount": "Delete JoyoRogo account",
@@ -207,7 +207,7 @@
     "mobileMessage": "Wi-Fi only is on and this phone is not on Wi-Fi. Syncing now can use a lot of mobile data when workouts are waiting.",
     "wipeTitle": "Delete cloud data?",
     "wipeMessage": "Removes your workouts, steps and sleep from the cloud. This phone's data and your account stay, and automatic sync is turned off so nothing is uploaded again until you turn it back on.",
-    "details": "Cloud sync is part of JoyoRogo Pro. With a Pro account every workout is uploaded to your JoyoRogo account as one compressed file: its GPS track, heart rate, speed, cadence and power, and the analysis the app shows, so it survives a lost phone, shows on the JoyoRogo web and restores onto a new phone after you sign in. Steps, heart rate, SpO2, sleep and the watch's Bluetooth address go to the JoyoFit cloud with the same account. Without Pro nothing is uploaded and your workouts stay on this phone. While you are signed in the app also reads from the cloud: it downloads workouts this phone does not have, and removes the ones you deleted from the cloud elsewhere. JoyoFit also exchanges meals, weight and daily scores with JoyoRogo. With Pro, the settings that follow the account (profile, goals, theme, language, weather, cycle calendar), sticker templates, saved routes, HRV, sleep scores, health metrics and cycle data follow your account too, so several phones show the same thing; cycle data can be switched off with the Sync cycle data switch, which deletes its copy in the cloud. Watch pairing, the watch key and each phone's own settings do not sync. Delete cloud data removes your workouts, steps, sleep and the data that follows the account from the cloud and keeps this phone's data and your account; Delete JoyoRogo account removes the account and everything else (details at fit.joyorogo.com/privasi).",
+    "details": "Cloud sync is part of JoyoRogo Pro. With a Pro account every workout is uploaded to your JoyoRogo account as one compressed file: its GPS track, heart rate, speed, cadence and power, and the analysis the app shows, so it survives a lost phone, shows on the JoyoRogo web and restores onto a new phone after you sign in. Steps, heart rate, SpO2, sleep and the watch's Bluetooth address go to the Run Now cloud with the same account. Without Pro nothing is uploaded and your workouts stay on this phone. While you are signed in the app also reads from the cloud: it downloads workouts this phone does not have, and removes the ones you deleted from the cloud elsewhere. Run Now also exchanges meals, weight and daily scores with JoyoRogo. With Pro, the settings that follow the account (profile, goals, theme, language, weather, cycle calendar), sticker templates, saved routes, HRV, sleep scores, health metrics and cycle data follow your account too, so several phones show the same thing; cycle data can be switched off with the Sync cycle data switch, which deletes its copy in the cloud. Watch pairing, the watch key and each phone's own settings do not sync. Delete cloud data removes your workouts, steps, sleep and the data that follows the account from the cloud and keeps this phone's data and your account; Delete JoyoRogo account removes the account and everything else (details at fit.joyorogo.com/privasi).",
     "onlyHere": "This data is only on this phone. Pro keeps it in the cloud.",
     "proSyncs": "Syncs: workouts, steps, sleep, gear, the coach plan, strength history, settings, sticker templates, routes and health data. Does not sync: watch pairing, the Health Connect or Apple Health connection, and each phone's own settings (Wi-Fi only, automatic sync, permissions).",
     "pairingNote": "Your history shows here, but the watch has to be paired on this phone. Watch pairing does not go to the cloud.",
@@ -283,27 +283,27 @@
     "limits": {
       "title": "Battery and background",
       "battery": "Battery optimization",
-      "exempt": "JoyoFit is exempt",
-      "limited": "Android may limit JoyoFit",
+      "exempt": "Run Now is exempt",
+      "limited": "Android may limit Run Now",
       "restriction": "Background restriction",
       "restricted": "Restricted",
       "notRestricted": "Not restricted",
-      "ok": "Android will not stop JoyoFit when the screen is off."
+      "ok": "Android will not stop Run Now when the screen is off."
     }
   },
   "appleImport": {
     "title": "Import history from Apple Health",
-    "intro": "Huawei Health on iPhone saves your steps, heart rate, sleep, blood oxygen and workouts in Apple Health. Bring that history into JoyoFit once. JoyoFit asks for permission to read Apple Health when you tap the button below, reads it on this phone and sends nothing anywhere.",
+    "intro": "Huawei Health on iPhone saves your steps, heart rate, sleep, blood oxygen and workouts in Apple Health. Bring that history into Run Now once. Run Now asks for permission to read Apple Health when you tap the button below, reads it on this phone and sends nothing anywhere.",
     "reading": "Reading Apple Health: {{percent}}%",
     "waiting": "Waiting for permission",
-    "footer": "Data your watch already stored in JoyoFit is never replaced, and importing again adds nothing new. Data JoyoFit itself saved to Apple Health is skipped. Imported days stay on this phone: they are not uploaded to the cloud, written back to Apple Health or sent to Strava.",
+    "footer": "Data your watch already stored in Run Now is never replaced, and importing again adds nothing new. Data Run Now itself saved to Apple Health is skipped. Imported days stay on this phone: they are not uploaded to the cloud, written back to Apple Health or sent to Strava.",
     "workoutsAdded": "Workouts added",
     "heartRate": "Heart rate readings",
     "sleepFound": "Sleep stages found",
     "stopped": "Import stopped",
     "finished": "Import finished",
     "stoppedNotice": "You stopped the import. What was read so far is saved; import again to continue.",
-    "nothing": "Nothing was found. Check that JoyoFit may read Apple Health (Health, your profile picture, Apps, JoyoFit) and that Huawei Health saves to Apple Health.",
+    "nothing": "Nothing was found. Check that Run Now may read Apple Health (Health, your profile picture, Apps, Run Now) and that Huawei Health saves to Apple Health.",
     "range": "{{from}} to {{to}}",
     "historyRead": "History read",
     "sleepAdded": "Sleep stages added",
@@ -331,8 +331,8 @@
     "choose": "Choose a .fit file",
     "openWorkout": "Open workout",
     "howTitle": "How does it work?",
-    "shareIos": "In Files or the app that has the file, choose Share, then JoyoFit.",
-    "shareAndroid": "In your file manager or the bike computer app, open the .fit file with JoyoFit, or share it to JoyoFit.",
+    "shareIos": "In Files or the app that has the file, choose Share, then Run Now.",
+    "shareAndroid": "In your file manager or the bike computer app, open the .fit file with Run Now, or share it to Run Now.",
     "details": "Works with the .fit files of iGPSPORT, Garmin, Wahoo, Bryton, Magene and XOSS. {{share}} Importing the same file twice adds nothing, and a file that overlaps a workout your watch already recorded is skipped: the workout from the watch is kept. Imported workouts count for strain, readiness and trends, stay on this phone and are not uploaded to the cloud, written to {{app}} or sent to Strava on their own."
   },
   "healthConnect": {
@@ -345,7 +345,7 @@
       "writing": "Writing stored data",
       "opening": "Opening"
     },
-    "noWrite": "No write permission was granted. Allow JoyoFit in {{store}} to turn this on.",
+    "noWrite": "No write permission was granted. Allow Run Now in {{store}} to turn this on.",
     "write": "Write to {{store}}",
     "lastFailed": "Last export failed: {{error}}",
     "permission": "Write permission",
@@ -409,7 +409,7 @@
       "4": "Wait for the email from Huawei. This can take up to 7 days, and the link works for 21 days. Large exports come as several ZIP parts of up to 5 GB each.",
       "5": "Before you unbind the watch from Huawei Health, open Huawei Health and pull down to sync once more. What is only on the watch and not yet in your account is lost when you unbind it.",
       "6Ios": "Download the ZIP (on iPhone it ends up in the Files app), then choose it below and enter the password.",
-      "6Android": "Download the ZIP, then tap it in your email or Files app and choose JoyoFit, or choose it below. Enter the password."
+      "6Android": "Download the ZIP, then tap it in your email or Files app and choose Run Now, or choose it below. Enter the password."
     },
     "otherRegion": "An account outside South-East Asia: use {{host}} instead. If the page fails for an Indonesian account, the button above is the one that works; the in-app Privacy Center does not.",
     "importTitle": "Import the file",
@@ -458,7 +458,7 @@
     "metrics": "HRV and other readings added",
     "dayTotals": "Days of steps added (daily totals)",
     "workoutsUpdated": "Workouts completed with route and totals",
-    "keepOpen": "Keep JoyoFit open until it finishes (a large file can take several minutes). The screen may dim; do not switch to another app.",
+    "keepOpen": "Keep Run Now open until it finishes (a large file can take several minutes). The screen may dim; do not switch to another app.",
     "unreadableTitle": "What was unreadable",
     "unreadableLine": "{{key}}: {{reason}}, {{count}} times (first: {{sample}})",
     "unreadableLineNoSample": "{{key}}: {{reason}}, {{count}} times",
@@ -470,7 +470,7 @@
       "bad-span": "impossible time span",
       "no-weight": "no usable weight"
     },
-    "leftOutTitle": "In the file but not stored by JoyoFit",
+    "leftOutTitle": "In the file but not stored by Run Now",
     "leftOutLine": "{{key}}: {{count}} readings",
     "filesFailed_one": "One file in the ZIP could not be read. The rest was imported; download the export again to fill the gap.",
     "filesFailed_other": "{{count}} files in the ZIP could not be read. The rest was imported; download the export again to fill the gap.",
@@ -483,7 +483,7 @@
   },
   "notifApps": {
     "iosTitle": "iOS chooses the apps",
-    "iosDesc": "JoyoFit does not forward notifications on iOS. The watch reads them from the iPhone, and which apps appear is set in iPhone Settings, Notifications.",
+    "iosDesc": "Run Now does not forward notifications on iOS. The watch reads them from the iPhone, and which apps appear is set in iPhone Settings, Notifications.",
     "filter": "Filter apps",
     "enabledFirst": "Enabled first",
     "onCount": "{{enabled}} of {{total}} on",
@@ -512,7 +512,7 @@
         "disconnected": "Connect the watch first.",
         "noGate": "This watch does not list per-app switches, so it cannot be tested."
       },
-      "probe": "Step {{step}} of {{steps}}. {{app}} is being turned off on the watch. Send one message to {{app}} now from another phone or person, not from this iPhone, and keep JoyoFit open: switching apps or screens cancels the test. Does the message still show up on the watch?",
+      "probe": "Step {{step}} of {{steps}}. {{app}} is being turned off on the watch. Send one message to {{app}} now from another phone or person, not from this iPhone, and keep Run Now open: switching apps or screens cancels the test. Does the message still show up on the watch?",
       "stillShown": "Still shows up",
       "hidden": "Does not show up",
       "confirm": "{{app}} is turned back on on the watch. Send one more message. Does it show up now?",
@@ -536,11 +536,11 @@
         "other": "Every other app. Not tested, it may have no effect.",
         "offline": "Sent to the watch when it connects"
       },
-      "details": "These switches work on the watch, not on the iPhone: JoyoFit never sees your notifications. The test sends one app only, never the whole list, and that app is turned back on afterwards, when the test is cancelled, or when the watch connects again. The test result holds the ways tried and your answers, no message content."
+      "details": "These switches work on the watch, not on the iPhone: Run Now never sees your notifications. The test sends one app only, never the whole list, and that app is turned back on afterwards, when the test is cancelled, or when the watch connects again. The test result holds the ways tried and your answers, no message content."
     }
   },
   "notifications": {
-    "disclosure": "JoyoFit reads the notifications on this phone (app name, title and text) so it can show them on your watch. They are sent to the watch over Bluetooth only. JoyoFit does not store them and does not send them over the internet. You can choose which apps are forwarded, and turn this off at any time.",
+    "disclosure": "Run Now reads the notifications on this phone (app name, title and text) so it can show them on your watch. They are sent to the watch over Bluetooth only. Run Now does not store them and does not send them over the internet. You can choose which apps are forwarded, and turn this off at any time.",
     "title": "Notifications",
     "access": "Notification access",
     "granted": "Granted",
@@ -560,14 +560,14 @@
       "notYet": "Not yet",
       "howTo": "iPhone Settings, Bluetooth, tap i next to the watch, turn on Show Notifications. Allow it if iOS asks.",
       "show": "Show notifications on the watch",
-      "details": "iOS does not let JoyoFit read or forward your notifications. The watch reads them from the iPhone itself, over Bluetooth, when iOS allows it; JoyoFit never sees their content. Which apps appear is chosen in iPhone Settings, Notifications.\n\nThe switch changes the watch's own notification setting, the one Huawei Health sets. It is left alone until you change it here.\n\nThe morning summary notification is not available on iOS yet."
+      "details": "iOS does not let Run Now read or forward your notifications. The watch reads them from the iPhone itself, over Bluetooth, when iOS allows it; Run Now never sees their content. Which apps appear is chosen in iPhone Settings, Notifications.\n\nThe switch changes the watch's own notification setting, the one Huawei Health sets. It is left alone until you change it here.\n\nThe morning summary notification is not available on iOS yet."
     }
   },
   "phone": {
     "title": "Phone and calls",
     "iosFind": "Find my phone from the watch: not possible on iOS.",
     "iosCalls": "Answering or rejecting calls from the watch: not possible on iOS.",
-    "iosDetails": "Find my phone: iOS suspends JoyoFit when it is not on screen and does not let it ring the phone on request, so the watch button cannot find this iPhone. Use Find My on another Apple device or iCloud.com instead.\n\nCalls: iOS does not let an app see, answer or reject phone calls. If the watch shows incoming calls at all, it does so itself through the notifications iOS shares with it (Notifications settings).",
+    "iosDetails": "Find my phone: iOS suspends Run Now when it is not on screen and does not let it ring the phone on request, so the watch button cannot find this iPhone. Use Find My on another Apple device or iCloud.com instead.\n\nCalls: iOS does not let an app see, answer or reject phone calls. If the watch shows incoming calls at all, it does so itself through the notifications iOS shares with it (Notifications settings).",
     "errPhoneState": "Phone state permission is required to see incoming calls.",
     "errAnswer": "Permission to answer phone calls is required.",
     "findPhone": "Find my phone from the watch",
@@ -583,7 +583,7 @@
     "allowLocation": "Allow location",
     "appSettings": "App settings",
     "callerIdDetails": "Without call log access Android hides the caller number. Without contacts access you see the number instead of the name.",
-    "noCallerIdDetails": "The watch shows that the phone is ringing. This version of JoyoFit does not read your call log or contacts, so it cannot show who is calling.",
+    "noCallerIdDetails": "The watch shows that the phone is ringing. This version of Run Now does not read your call log or contacts, so it cannot show who is calling.",
     "findDetails": "Find my phone: the watch button rings this phone loudly, even with the app closed. Stop it on the watch or from the notification."
   },
   "profile": {
@@ -645,7 +645,7 @@
     "unsynced_one": "{{count}} meal logged on the watch will be written to JoyoRogo the next time the app reads it.",
     "unsynced_other": "{{count}} meals logged on the watch will be written to JoyoRogo the next time the app reads it.",
     "pushNow": "Push now",
-    "details": "Your JoyoRogo food diary and calorie target feed the calorie card on the watch. JoyoFit reads them when it opens, after each sync and when the watch connects, and sends them again when the watch asks or logs a meal itself. While the app is closed the background service answers from the last day it stored; it cannot read JoyoRogo then, because the sign-in is kept for the app only. Untested on the Fit 4 Pro so far. While signed in, the app also sends your daily Recovery, Strain and Sleep to the JoyoRogo diary so they sit next to your food, plus today's body metrics once computed (hours slept, resting heart rate, HRV, VO2max, training status, recovery time). Whatever cannot be computed yet is not sent."
+    "details": "Your JoyoRogo food diary and calorie target feed the calorie card on the watch. Run Now reads them when it opens, after each sync and when the watch connects, and sends them again when the watch asks or logs a meal itself. While the app is closed the background service answers from the last day it stored; it cannot read JoyoRogo then, because the sign-in is kept for the app only. Untested on the Fit 4 Pro so far. While signed in, the app also sends your daily Recovery, Strain and Sleep to the JoyoRogo diary so they sit next to your food, plus today's body metrics once computed (hours slept, resting heart rate, HRV, VO2max, training status, recovery time). Whatever cannot be computed yet is not sent."
   },
   "signIn": {
     "label": "Sign in with JoyoRogo",
@@ -661,10 +661,10 @@
     },
     "sms": {
       "title": "Send SMS for SOS",
-      "message": "When your watch sends an SOS, JoyoFit sends the text message it asks for, from this phone and your SIM. It never sends anything else.",
+      "message": "When your watch sends an SOS, Run Now sends the text message it asks for, from this phone and your SIM. It never sends anything else.",
       "allow": "Allow",
       "notNow": "Not now",
-      "denied": "Without the SMS permission JoyoFit cannot send the SOS text. The relay stays off."
+      "denied": "Without the SMS permission Run Now cannot send the SOS text. The relay stays off."
     },
     "check": "Check without sending",
     "testReady": "Ready: an SOS from the watch would be sent as a text. Nothing was sent now.",
@@ -676,7 +676,7 @@
     "lastChanged": "Last changed",
     "askWatch": "Ask the watch",
     "fallDetailsSms": "After a hard fall the watch asks you if you are all right and can start an SOS.",
-    "fallDetails": "After a hard fall the watch asks you if you are all right. This version of JoyoFit cannot send the SOS text.",
+    "fallDetails": "After a hard fall the watch asks you if you are all right. This version of Run Now cannot send the SOS text.",
     "sosTitle": "SOS text messages",
     "sosSwitch": "Send SOS texts for the watch",
     "smsPermission": "Permission to send SMS",
@@ -690,11 +690,11 @@
     "yes": "Yes",
     "notListed": "Not in its capability list",
     "appSettings": "App settings",
-    "sosDetails": "When you start an SOS on the watch, the watch hands this phone a number and a message. With the switch on, JoyoFit sends that text from your SIM and tells the watch whether it went out. The watch (or its emergency contacts in the Huawei settings on it) decides who is texted; JoyoFit never picks a recipient and never sends anything the watch did not ask for. Off by default. Needs permission to send SMS and a ready SIM; costs whatever your plan charges per text. If an SOS would not be sent, the watch is told it failed.",
+    "sosDetails": "When you start an SOS on the watch, the watch hands this phone a number and a message. With the switch on, Run Now sends that text from your SIM and tells the watch whether it went out. The watch (or its emergency contacts in the Huawei settings on it) decides who is texted; Run Now never picks a recipient and never sends anything the watch did not ask for. Off by default. Needs permission to send SMS and a ready SIM; costs whatever your plan charges per text. If an SOS would not be sent, the watch is told it failed.",
     "iosNotice": "Not possible on iOS. Do not rely on the watch to text your contacts.",
-    "iosDetails": "iOS does not let an app send a text message by itself, so JoyoFit cannot text your contacts when the watch starts an SOS. JoyoFit tells the watch that nothing was sent.",
+    "iosDetails": "iOS does not let an app send a text message by itself, so Run Now cannot text your contacts when the watch starts an SOS. Run Now tells the watch that nothing was sent.",
     "playNotice": "Not in the Google Play version. Do not rely on the watch to text your contacts.",
-    "playDetails": "Google Play restricts apps that send text messages, so this version does not include the feature. An SOS started on the watch is not sent as an SMS from this phone: JoyoFit tells the watch that nothing was sent.",
+    "playDetails": "Google Play restricts apps that send text messages, so this version does not include the feature. An SOS started on the watch is not sent as an SMS from this phone: Run Now tells the watch that nothing was sent.",
     "sleepTitle": "Morning sleep report",
     "sleepShow": "Show last night's sleep",
     "sleepUnavailable": "Not available: the watch does not report the event channel it needs.",
@@ -706,9 +706,9 @@
   "strava": {
     "intro": "Send watch workouts to Strava. Free, no JoyoRogo Pro needed.",
     "howTitle": "How does it work?",
-    "how": "Workouts go to Strava with the distance, calories, heart rate and route the watch recorded. After you connect, workouts that finish from then on are sent after each sync; earlier ones stay on the phone unless you send them from the workout screen. JoyoFit only sends workouts to your own Strava account and never reads your Strava activities.",
+    "how": "Workouts go to Strava with the distance, calories, heart rate and route the watch recorded. After you connect, workouts that finish from then on are sent after each sync; earlier ones stay on the phone unless you send them from the workout screen. Run Now only sends workouts to your own Strava account and never reads your Strava activities.",
     "noCloud": "No cloud server URL in this build, which Strava needs. Deploy server/, set EXPO_PUBLIC_JOYOFIT_CLOUD_URL, rebuild.",
-    "serverNotReady": "Strava is not set up on the JoyoFit server yet.",
+    "serverNotReady": "Strava is not set up on the Run Now server yet.",
     "signInFirst": "Sign in with JoyoRogo first; it only keeps your Strava connection on the server.",
     "signIn": "Sign in with JoyoRogo",
     "connect": "Connect with Strava",
@@ -720,7 +720,7 @@
     "disconnect": "Disconnect Strava",
     "signInToDisconnect": "Sign in with JoyoRogo to disconnect or send.",
     "compatible": "Compatible with Strava",
-    "legal": "Compatible with Strava. JoyoFit is not made, sponsored or endorsed by Strava. What you send follows your Strava privacy settings; you can remove JoyoFit any time in Strava under Settings, My Apps."
+    "legal": "Compatible with Strava. Run Now is not made, sponsored or endorsed by Strava. What you send follows your Strava privacy settings; you can remove Run Now any time in Strava under Settings, My Apps."
   },
   "joyorogo": {
     "title": "Exercise energy to JoyoRogo",
@@ -801,7 +801,7 @@
       "city": "A city"
     },
     "deniedAndroid": "Location denied: weather for this phone cannot be fetched. Allow it, or choose a city.",
-    "deniedIos": "Location is off for JoyoFit. Turn it on in Settings > JoyoFit > Location (While Using the App), or choose a city.",
+    "deniedIos": "Location is off for Run Now. Turn it on in Settings > Run Now > Location (While Using the App), or choose a city.",
     "citySet": "City set to {{name}}.",
     "citySetDetail": "City set to {{name}} ({{detail}}).",
     "title": "Weather",
@@ -866,7 +866,7 @@
       "removeBody": "The photo you uploaded is deleted from your JoyoRogo account. If your account used a Google photo before, that photo is used again; otherwise your initials show.",
       "updated": "Profile photo updated.",
       "removed": "Profile photo removed.",
-      "denied": "JoyoFit cannot open the gallery. Allow photo access in settings, then try again.",
+      "denied": "Run Now cannot open the gallery. Allow photo access in settings, then try again.",
       "openSettings": "Open settings",
       "error": {
         "process": "The photo could not be prepared: {{error}}",
@@ -1016,7 +1016,7 @@
     "watch": {
       "noNative": "The watch takes zones once the app is updated from the store. Analysis on the phone already uses these zones.",
       "offline": "Zones go to the watch when it connects, and every time it connects again.",
-      "none": "This watch does not take zones from the app. They are used in JoyoFit's analysis only.",
+      "none": "This watch does not take zones from the app. They are used in Run Now's analysis only.",
       "ok": "This watch takes zones from the app."
     },
     "saved": {
@@ -1034,7 +1034,7 @@
       "label": "Lactate threshold heart rate",
       "estimate": "Huawei Health estimate (85 percent of the reserve)",
       "set": "Set by you",
-      "fromTest": "From the JoyoFit test ({{bpm}})",
+      "fromTest": "From the Run Now test ({{bpm}})",
       "fromWatch": "From the watch ({{bpm}})",
       "estimateChip": "Estimate ({{bpm}})",
       "runTest": "Measure it with the lactate threshold test",
@@ -1076,7 +1076,7 @@
       "workouts_other": "{{count}} workouts"
     },
     "health": {
-      "via": "JoyoFit writes to {{store}}; other apps read it from there",
+      "via": "Run Now writes to {{store}}; other apps read it from there",
       "unavailable": "{{store}} is not available on this phone.",
       "off": "Writing is off. Turn it on so JoyoRogo and other apps can read your watch data.",
       "neverWritten": "Nothing written yet",
@@ -1091,7 +1091,7 @@
       "permissions": "Write permission for {{granted}} of {{total}} types; the rest are skipped."
     },
     "strava": {
-      "via": "JoyoFit uploads your workouts to Strava; nothing is read back",
+      "via": "Run Now uploads your workouts to Strava; nothing is read back",
       "off": "Not connected. Connect to send finished workouts automatically.",
       "never": "Nothing uploaded yet",
       "lastUpload": "Last upload {{time}}",

@@ -12,7 +12,7 @@
   },
   "mapLabel": "Peta loop baru dari titik awalmu",
   "preparing": "Menyiapkan peta",
-  "unavailable": "Peta butuh versi JoyoFit yang terbaru",
+  "unavailable": "Peta butuh versi Run Now yang terbaru",
   "mapFailed": "Peta belum bisa dimuat, cek internetmu.",
   "activity": {
     "walk": "Jalan",
@@ -54,7 +54,7 @@
   },
   "permission": {
     "title": "Izinkan lokasi",
-    "body": "JoyoFit butuh lokasimu untuk membuat loop dari tempatmu berdiri. Lokasi dibaca di ponsel; titik awal rute baru dikirim ke layanan rute saat kamu mencari rute.",
+    "body": "Run Now butuh lokasimu untuk membuat loop dari tempatmu berdiri. Lokasi dibaca di ponsel; titik awal rute baru dikirim ke layanan rute saat kamu mencari rute.",
     "allow": "Lanjut",
     "denied": "Izin lokasi ditolak. Buka pengaturan untuk mengizinkannya, atau pakai titik Rumah.",
     "openSettings": "Buka pengaturan"

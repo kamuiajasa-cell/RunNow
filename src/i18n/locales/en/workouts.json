@@ -121,7 +121,7 @@
       },
       "outOf": "of 21",
       "addedToDay": "+{{value}} to the day",
-      "explain": "Relative Effort is JoyoFit's strain for this workout on a 0 to 21 scale: the longer your heart works at a high level, the higher it goes.",
+      "explain": "Relative Effort is Run Now's strain for this workout on a 0 to 21 scale: the longer your heart works at a high level, the higher it goes.",
       "a11y": "Relative effort {{value}} of 21, {{band}}"
     },
     "load": {
@@ -326,7 +326,7 @@
       "chartLabel": "{{metric}}, average per minute",
       "minute": "Minute {{n}}",
       "how": "Where do these numbers come from?",
-      "explain": "The watch sends these while you run, and JoyoFit averages them per minute. They only show when your watch sends them. For workouts synced before this feature, the figures can be fetched again from the watch for as long as it still holds them. Balance: the first figure is the left side as the watch sends it; we have not matched it against Huawei Health yet."
+      "explain": "The watch sends these while you run, and Run Now averages them per minute. They only show when your watch sends them. For workouts synced before this feature, the figures can be fetched again from the watch for as long as it still holds them. Balance: the first figure is the left side as the watch sends it; we have not matched it against Huawei Health yet."
     },
     "effect": {
       "title": "Training effect",
@@ -343,7 +343,7 @@
       "valueSource": "{{value}} ({{source}})",
       "how": "How is this calculated?",
       "explainWatch": "Figures from the watch are what the watch reported after this workout, as is. Training effect runs from 0 to 5. We have not confirmed the units of the watch training points and load, and the watch load is not TRIMP. VO2max from the watch is rounded down to a whole number; values outside 10 to 90 are not shown.",
-      "explainEstimate": "Figures from the watch are what the watch reported after this workout, as is. Training effect runs from 0 to 5. The watch did not report an aerobic effect, so this is a JoyoFit estimate from the TRIMP of this workout: 5 x (1 - e^(-TRIMP / 150)). We have not confirmed the units of the watch training points and load, and the watch load is not TRIMP. VO2max from the watch is rounded down to a whole number; values outside 10 to 90 are not shown."
+      "explainEstimate": "Figures from the watch are what the watch reported after this workout, as is. Training effect runs from 0 to 5. The watch did not report an aerobic effect, so this is a Run Now estimate from the TRIMP of this workout: 5 x (1 - e^(-TRIMP / 150)). We have not confirmed the units of the watch training points and load, and the watch load is not TRIMP. VO2max from the watch is rounded down to a whole number; values outside 10 to 90 are not shown."
     },
     "burn": {
       "title": "Fat and carbs burned",
@@ -352,7 +352,7 @@
       "zoneRow": "Zone {{zone}} {{label}}",
       "grams": "fat {{fat}} g, carbs {{carbs}} g",
       "how": "How is this calculated?",
-      "explain": "An estimate by JoyoFit, the watch does not measure it: the {{kcal}} kcal are split over the time you actually spent at each heart rate, with a maximum of {{maxHr}} bpm (from HR zones in Settings, 220 minus your age by default). Easier effort burns a larger share of fat.",
+      "explain": "An estimate by Run Now, the watch does not measure it: the {{kcal}} kcal are split over the time you actually spent at each heart rate, with a maximum of {{maxHr}} bpm (from HR zones in Settings, 220 minus your age by default). Easier effort burns a larger share of fat.",
       "below": "Below zones"
     },
     "more": {
@@ -577,7 +577,7 @@
       "noGpsNote": "No GPS. Distance and speed come from your sensors, if you have any.",
       "gnssHint": "Watch says GNSS data expired? That's normal. GPS still works, it just needs 30–60 seconds outdoors. Wait for the GPS icon before you start.",
       "gnssWhy": "Why?",
-      "gnssWhyBody": "Huawei watches only get GPS assistance data from Huawei Health. JoyoFit sends your phone's location and time to help the first fix. Nothing is wrong with the watch.",
+      "gnssWhyBody": "Huawei watches only get GPS assistance data from Huawei Health. Run Now sends your phone's location and time to help the first fix. Nothing is wrong with the watch.",
       "start": "Start",
       "prepareError": "Could not get the recording ready: {{error}}",
       "bluetoothOff": "Bluetooth is off. Turn it on so your sensors can connect."
@@ -612,7 +612,7 @@
       "hint": "You can start without waiting for GPS. Distance counts as soon as the signal is ready.",
       "hintNoGps": "Press Start when you are ready.",
       "noPhoneSteps": "The phone step counter is off, so cadence and steps are only recorded when a running pod is connected.",
-      "noService": "A dark screen can stop the recording. Allow notifications and turn off battery saver for JoyoFit in the phone's settings so it keeps running.",
+      "noService": "A dark screen can stop the recording. Allow notifications and turn off battery saver for Run Now in the phone's settings so it keeps running.",
       "start": "Start",
       "cancel": "Cancel"
     },
@@ -711,8 +711,8 @@
     "menu": "Workout menu",
     "action": "Delete workout",
     "title": "Delete this workout?",
-    "message": "{{sport}}, {{date}}. This workout is removed from JoyoFit on this phone, from the cloud and from the JoyoRogo diary, and your watch will not bring it back. The activity on Strava is not deleted.",
-    "withPost": "{{sport}}, {{date}}. This workout is removed from JoyoFit on this phone, from the cloud and from the JoyoRogo diary, and your watch will not bring it back. The activity on Strava is not deleted.\n\nAlso delete the post in the feed?",
+    "message": "{{sport}}, {{date}}. This workout is removed from Run Now on this phone, from the cloud and from the JoyoRogo diary, and your watch will not bring it back. The activity on Strava is not deleted.",
+    "withPost": "{{sport}}, {{date}}. This workout is removed from Run Now on this phone, from the cloud and from the JoyoRogo diary, and your watch will not bring it back. The activity on Strava is not deleted.\n\nAlso delete the post in the feed?",
     "confirm": "Delete",
     "withPostYes": "Delete workout and post",
     "withPostNo": "Delete workout only",
@@ -743,7 +743,7 @@
   },
   "refetch": {
     "action": "Fetch again from the watch",
-    "hint": "This run was synced before running dynamics were kept. If the watch still holds its data, JoyoFit can read it again.",
+    "hint": "This run was synced before running dynamics were kept. If the watch still holds its data, Run Now can read it again.",
     "running": "Fetching the run data from the watch...",
     "progress": "Fetching {{done}} of {{total}}",
     "single": {
@@ -767,7 +767,7 @@
       "none": "Nothing was fetched.",
       "stopped": "Stopped part way: {{message}}"
     },
-    "bulkHint": "For runs synced before running dynamics were kept: JoyoFit asks the watch to send their data again, only for the ones still on the watch. Only the dynamics figures are added, nothing else changes.",
+    "bulkHint": "For runs synced before running dynamics were kept: Run Now asks the watch to send their data again, only for the ones still on the watch. Only the dynamics figures are added, nothing else changes.",
     "bulkAction": "Fetch running dynamics again",
     "bulkCount_one": "{{count}} run can be tried",
     "bulkCount_other": "{{count}} runs can be tried",

@@ -1,6 +1,6 @@
 {
   "share": {
-    "caption": "Dicatat dengan JoyoFit · https://fit.joyorogo.com",
+    "caption": "Dicatat dengan Run Now · https://fit.joyorogo.com",
     "workout": {
       "heading": "Bagikan latihan"
     },
@@ -21,13 +21,13 @@
       "copy": "Tidak bisa menyalin gambar: {{error}}",
       "save": "Tidak bisa menyimpan gambar: {{error}}",
       "share": "Tidak bisa membagikan gambar: {{error}}",
-      "photosDenied": "Akses foto untuk JoyoFit sedang mati. Nyalakan di Pengaturan.",
+      "photosDenied": "Akses foto untuk Run Now sedang mati. Nyalakan di Pengaturan.",
       "openSettings": "Buka Pengaturan"
     },
     "photosDialog": {
       "title": "Akses foto",
-      "instagram": "Instagram membuka gambar dari galeri foto kamu, jadi JoyoFit menyimpan gambar ini di sana dulu. Setelah ini HP kamu akan meminta izin.",
-      "save": "JoyoFit menambahkan gambar ini ke foto kamu. Foto yang sudah ada tidak dibaca. Setelah ini HP kamu akan meminta izin.",
+      "instagram": "Instagram membuka gambar dari galeri foto kamu, jadi Run Now menyimpan gambar ini di sana dulu. Setelah ini HP kamu akan meminta izin.",
+      "save": "Run Now menambahkan gambar ini ke foto kamu. Foto yang sudah ada tidak dibaca. Setelah ini HP kamu akan meminta izin.",
       "confirm": "Lanjut",
       "cancel": "Nanti saja"
     }
@@ -119,8 +119,8 @@
     },
     "calc": {
       "title": "Bagaimana ini dihitung?",
-      "watch": "Perkiraan dari JoyoFit, jam tidak mengukurnya: setiap kalori dibagi berdasarkan detak jantung kamu saat itu, dengan maksimum {{max}} bpm (220 dikurangi usiamu dari profil). Usaha yang lebih ringan membakar porsi lemak lebih besar.",
-      "phone": "Perkiraan dari JoyoFit, jam tidak mengukurnya: setiap kalori dibagi berdasarkan detak jantung kamu saat itu, dengan maksimum {{max}} bpm (220 dikurangi usiamu dari profil). Usaha yang lebih ringan membakar porsi lemak lebih besar. Jam tidak mengirim kalori langsung ke JoyoFit, jadi kalori juga dihitung dari detak jantung langsung, berat badan, usia, dan jenis kelamin kamu (Keytel 2005); layar jam bisa berbeda."
+      "watch": "Perkiraan dari Run Now, jam tidak mengukurnya: setiap kalori dibagi berdasarkan detak jantung kamu saat itu, dengan maksimum {{max}} bpm (220 dikurangi usiamu dari profil). Usaha yang lebih ringan membakar porsi lemak lebih besar.",
+      "phone": "Perkiraan dari Run Now, jam tidak mengukurnya: setiap kalori dibagi berdasarkan detak jantung kamu saat itu, dengan maksimum {{max}} bpm (220 dikurangi usiamu dari profil). Usaha yang lebih ringan membakar porsi lemak lebih besar. Jam tidak mengirim kalori langsung ke Run Now, jadi kalori juga dihitung dari detak jantung langsung, berat badan, usia, dan jenis kelamin kamu (Keytel 2005); layar jam bisa berbeda."
     },
     "more": {
       "title": "Lainnya",

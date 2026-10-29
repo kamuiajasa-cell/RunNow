@@ -200,7 +200,7 @@
       "1200": "20 minutes",
       "3600": "60 minutes"
     },
-    "note": "The best average power for each duration in this ride. The dashed line is your best from the rides stored in JoyoFit.",
+    "note": "The best average power for each duration in this ride. The dashed line is your best from the rides stored in Run Now.",
     "watts": "{{value}} W",
     "a11yRow": "{{name}}, {{value}} watts"
   },

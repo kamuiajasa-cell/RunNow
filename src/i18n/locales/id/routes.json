@@ -31,10 +31,10 @@
     "emptyDescription": "Simpan rute di sini, lalu kirim ke jam supaya garis rute dan posisimu tampil saat lari, bersepeda, atau jalan di luar ruangan. Ada lima cara menambah rute:",
     "ways": {
       "w1": "Pilih berkas GPX atau TCX dari ponselmu dengan Impor GPX/TCX.",
-      "w2": "Buka berkas GPX atau TCX dari Strava, Garmin, Komoot, atau aplikasi lain, lalu pilih Bagikan atau Buka dengan JoyoFit.",
+      "w2": "Buka berkas GPX atau TCX dari Strava, Garmin, Komoot, atau aplikasi lain, lalu pilih Bagikan atau Buka dengan Run Now.",
       "w3": "Gambar rute sendiri di peta dengan Gambar di peta.",
       "w4": "Pakai rute dari latihan yang pernah direkam jam kamu dengan Dari latihan.",
-      "w5": "Buat loop baru dari pintumu dengan Loop baru dari rumah: pilih langkah, jarak, waktu, atau kalori, dan JoyoFit mencari jalan yang belum kamu lalui."
+      "w5": "Buat loop baru dari pintumu dengan Loop baru dari rumah: pilih langkah, jarak, waktu, atau kalori, dan Run Now mencari jalan yang belum kamu lalui."
     },
     "neverSent": "Belum pernah dikirim ke jam",
     "lastSent": "Terakhir dikirim ke jam {{date}}",
@@ -83,7 +83,7 @@
   },
   "parse": {
     "empty": "Berkasnya kosong.",
-    "unrecognized": "Ini bukan berkas GPX atau TCX, jadi JoyoFit tidak bisa membaca rutenya.",
+    "unrecognized": "Ini bukan berkas GPX atau TCX, jadi Run Now tidak bisa membaca rutenya.",
     "noPoints": "Tidak ada titik rute yang valid di berkas ini. Rute butuh minimal 2 titik dengan koordinat yang jelas.",
     "tooFewPoints_other": "Berkas ini cuma punya {{count}} titik rute yang valid. Rute butuh minimal 2 titik.",
     "tooFewForSave": "Rute butuh minimal 2 titik dengan koordinat yang valid."
@@ -121,7 +121,7 @@
     "needConnect": "Sambungkan jam kamu dulu untuk mengirim rute.",
     "openWatch": "Buka Jam",
     "unsupported": "Jam ini tidak mencantumkan dukungan rute, jadi rute belum bisa dikirim ke sini.",
-    "appOutdated": "Kirim rute butuh versi JoyoFit yang terbaru. Perbarui aplikasinya dulu.",
+    "appOutdated": "Kirim rute butuh versi Run Now yang terbaru. Perbarui aplikasinya dulu.",
     "preparing": "Menyiapkan",
     "sending": "Mengirim",
     "sendingPercent": "Mengirim, {{pct}}%",
@@ -143,13 +143,13 @@
     "recordFailed": "Rute sudah terkirim, tapi catatan \"terakhir dikirim\" tidak bisa disimpan: {{message}}",
     "errors": {
       "ERR_NOT_CONNECTED": "Jam tidak tersambung. Sambungkan jam dulu, lalu coba lagi.",
-      "ERR_UNSUPPORTED": "Jam ini belum bisa menerima rute dari JoyoFit.",
-      "ERR_INVALID_ARGUMENT": "JoyoFit tidak bisa membuat berkas rute dari rute ini: {{message}}",
+      "ERR_UNSUPPORTED": "Jam ini belum bisa menerima rute dari Run Now.",
+      "ERR_INVALID_ARGUMENT": "Run Now tidak bisa membuat berkas rute dari rute ini: {{message}}",
       "ERR_ROUTE_FULL": "Daftar rute di jam penuh. Hapus rute lama di jam (tekan lama rutenya di menu Rute), lalu kirim lagi.",
       "ERR_ROUTE_NAME": "Nama rute ini tidak bisa dipakai jam, biasanya karena terlalu panjang. Ganti dengan nama yang lebih pendek.",
       "ERR_UPLOAD_REJECTED": "Jam menolak berkas rutenya. {{message}}",
       "ERR_TIMEOUT": "Jam tidak menjawab. Dekatkan jam ke ponsel, nyalakan layarnya, lalu coba lagi.",
-      "ERR_BUSY": "Jam atau JoyoFit masih mengerjakan hal lain. Tunggu sebentar, lalu coba lagi.",
+      "ERR_BUSY": "Jam atau Run Now masih mengerjakan hal lain. Tunggu sebentar, lalu coba lagi.",
       "ERR_DISCONNECTED": "Sambungan ke jam terputus waktu mengirim. Sambungkan lagi, lalu coba lagi."
     }
   },
@@ -180,8 +180,8 @@
     "attribution": "Peta: © OpenFreeMap  © OpenMapTiles  Data dari OpenStreetMap",
     "routingCredit": "Rute jalan: OSRM / FOSSGIS",
     "searchCredit": "Pencarian: Nominatim / OpenStreetMap",
-    "unavailable": "Peta butuh versi JoyoFit yang terbaru",
-    "unavailableCaption": "Peta butuh versi JoyoFit yang terbaru. Ini gambar garis rutenya saja.",
+    "unavailable": "Peta butuh versi Run Now yang terbaru",
+    "unavailableCaption": "Peta butuh versi Run Now yang terbaru. Ini gambar garis rutenya saja.",
     "loadFailedCaption": "Peta belum bisa dimuat, cek internetmu. Ini gambar garis rutenya saja.",
     "mapLabel": "Peta rute, {{distance}}",
     "draw": {

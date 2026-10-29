@@ -152,10 +152,10 @@
   },
   "import": {
     "title": "Your JoyoRogo history",
-    "offer_one": "You logged {{count}} workout in JoyoRogo. Bring it into JoyoFit?",
-    "offer_other": "You logged {{count}} workouts in JoyoRogo. Bring them into JoyoFit?",
-    "offerRoutines_one": "You saved {{count}} routine in JoyoRogo. Bring it into JoyoFit?",
-    "offerRoutines_other": "You saved {{count}} routines in JoyoRogo. Bring them into JoyoFit?",
+    "offer_one": "You logged {{count}} workout in JoyoRogo. Bring it into Run Now?",
+    "offer_other": "You logged {{count}} workouts in JoyoRogo. Bring them into Run Now?",
+    "offerRoutines_one": "You saved {{count}} routine in JoyoRogo. Bring it into Run Now?",
+    "offerRoutines_other": "You saved {{count}} routines in JoyoRogo. Bring them into Run Now?",
     "note": "Your history stays read-only in JoyoRogo and nothing is deleted there.",
     "action": {
       "import": "Import",

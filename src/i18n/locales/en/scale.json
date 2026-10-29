@@ -18,7 +18,7 @@
     "needsKey": "Enter the scale key below first, then this scale can be read."
   },
   "problem": {
-    "permission": "JoyoFit is not allowed to use Bluetooth yet. Open settings to allow it.",
+    "permission": "Run Now is not allowed to use Bluetooth yet. Open settings to allow it.",
     "off": "Bluetooth is off. Turn it on, then try again.",
     "unavailable": "Bluetooth can't be used right now.",
     "openSettings": "Open settings"
@@ -32,11 +32,11 @@
     "forgetMessage": "Your weigh-in history stays.",
     "empty": "No scale yet. Find yours below.",
     "kindWeightOnly": "Type: {{label}} (weight only)",
-    "weightOnlyNote": "Weight only: this scale sends no body fat or impedance, so JoyoFit shows none."
+    "weightOnlyNote": "Weight only: this scale sends no body fat or impedance, so Run Now shows none."
   },
   "picker": {
     "title": "Find your scale",
-    "explain": "JoyoFit will scan for Bluetooth devices around you to find your scale. The scan results are only used on this phone.",
+    "explain": "Run Now will scan for Bluetooth devices around you to find your scale. The scan results are only used on this phone.",
     "continue": "Continue",
     "hint": "Step on the scale until its display lights up, then search. Many scales are only visible while they are awake.",
     "search": "Search for scale",
@@ -97,7 +97,7 @@
   },
   "record": {
     "title": "Record scale data",
-    "body": "Scale not recognised? Pick its device in the search list, start recording, then step on the scale. JoyoFit writes everything the scale sends to the app log. Copy or share the result so support for it can be added.",
+    "body": "Scale not recognised? Pick its device in the search list, start recording, then step on the scale. Run Now writes everything the scale sends to the app log. Copy or share the result so support for it can be added.",
     "connect": "Also connect to the device",
     "connectHint": "Also records the data sent over a connection. Nothing is sent to the scale.",
     "start": "Start recording",
@@ -110,11 +110,11 @@
     "share": "Share recording",
     "copied": "Copied",
     "lines": "{{count}} lines recorded",
-    "shareTitle": "JoyoFit scale recording"
+    "shareTitle": "Run Now scale recording"
   },
   "supported": {
     "title": "Supported scales",
-    "body": "JoyoFit reads scales with the protocols below. Others can be added through Record scale data."
+    "body": "Run Now reads scales with the protocols below. Others can be added through Record scale data."
   },
   "secret": {
     "title": "Scale key (advanced)",
@@ -126,7 +126,7 @@
     "length": "{{length}}/16 characters",
     "tuya-local-key": {
       "label": "Local key (16 characters)",
-      "explain": "Tuya scales encrypt their weight, so JoyoFit needs your scale's local key. It comes from the Tuya developer platform (iot.tuya.com): create a cloud project, link the app account the scale is paired in, then copy that device's local_key. This is a technical step. The key is stored encrypted on this phone and is not sent anywhere.",
+      "explain": "Tuya scales encrypt their weight, so Run Now needs your scale's local key. It comes from the Tuya developer platform (iot.tuya.com): create a cloud project, link the app account the scale is paired in, then copy that device's local_key. This is a technical step. The key is stored encrypted on this phone and is not sent anywhere.",
       "invalid": "The local key must be exactly 16 characters (letters, digits or plain symbols)."
     }
   }

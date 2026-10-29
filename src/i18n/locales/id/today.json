@@ -149,7 +149,7 @@
   "nightHrv": {
     "ios": {
       "message": "HRV malam belum dibaca di iPhone",
-      "detail": "JoyoFit di iPhone belum membaca HRV jam saat tidur, tetapi pengukuran 1 menit tetap bisa."
+      "detail": "Run Now di iPhone belum membaca HRV jam saat tidur, tetapi pengukuran 1 menit tetap bisa."
     },
     "unsupported": {
       "message": "HRV malam tidak tersedia di jam ini",
@@ -242,7 +242,7 @@
       "averageCycle": "Siklus rata-rata",
       "details": "Haid berikutnya dan masa subur sebelumnya diperkirakan dari rata-rata siklus yang kamu catat. Perkiraan ini tidak bisa mendeteksi siklus tidak teratur, sakit, stres, hormon, atau kehamilan.",
       "emptyHint": "Catat haid untuk mendapat perkiraan.",
-      "emptyDetails": "Catat hari pertama haid dan JoyoFit memperkirakan haid berikutnya. Dengan satu siklus dipakai 28 hari, dengan lebih banyak siklus dirata-rata. Perkiraan tidak bisa mendeteksi siklus tidak teratur, sakit, stres, hormon, atau kehamilan."
+      "emptyDetails": "Catat hari pertama haid dan Run Now memperkirakan haid berikutnya. Dengan satu siklus dipakai 28 hari, dengan lebih banyak siklus dirata-rata. Perkiraan tidak bisa mendeteksi siklus tidak teratur, sakit, stres, hormon, atau kehamilan."
     },
     "log": {
       "title": "Catat",

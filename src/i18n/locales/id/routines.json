@@ -148,8 +148,8 @@
   },
   "import": {
     "title": "Riwayat JoyoRogo kamu",
-    "offer_other": "Kamu mencatat {{count}} latihan di JoyoRogo. Mau dibawa ke JoyoFit?",
-    "offerRoutines_other": "Kamu menyimpan {{count}} rutinitas di JoyoRogo. Mau dibawa ke JoyoFit?",
+    "offer_other": "Kamu mencatat {{count}} latihan di JoyoRogo. Mau dibawa ke Run Now?",
+    "offerRoutines_other": "Kamu menyimpan {{count}} rutinitas di JoyoRogo. Mau dibawa ke Run Now?",
     "note": "Riwayatmu tetap bisa dibaca di JoyoRogo dan tidak ada yang dihapus di sana.",
     "action": {
       "import": "Impor",

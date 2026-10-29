@@ -1,9 +1,9 @@
 {
   "title": "Termometer kamar",
   "problem": {
-    "permission": "JoyoFit belum boleh memakai Bluetooth. Buka pengaturan untuk mengizinkan.",
+    "permission": "Run Now belum boleh memakai Bluetooth. Buka pengaturan untuk mengizinkan.",
     "off": "Bluetooth mati. Nyalakan dulu, lalu coba lagi.",
-    "notAllowed": "Android menolak layanan latar. Buka JoyoFit lalu coba lagi.",
+    "notAllowed": "Android menolak layanan latar. Buka Run Now lalu coba lagi.",
     "unavailable": "Bluetooth tidak bisa dipakai sekarang.",
     "openSettings": "Buka pengaturan"
   },
@@ -12,18 +12,18 @@
     "a11y": "{{temp}} °C, {{tempStatus}}. {{rh}}% RH, {{rhStatus}}.",
     "tempUnit": "°C",
     "rhUnit": "% RH",
-    "noReading": "Belum ada pembacaan. Dekatkan HP ke termometer dan biarkan JoyoFit terbuka sebentar.",
+    "noReading": "Belum ada pembacaan. Dekatkan HP ke termometer dan biarkan Run Now terbuka sebentar.",
     "lastAt": "Pembacaan terakhir {{ago}}",
     "lastAtBattery": "Pembacaan terakhir {{ago}} · {{battery}}",
     "forget": "Lupakan",
     "forgetTitle": "Lupakan termometer ini?",
     "forgetMessage": "Pembacaan suhu dan kelembapan yang tersimpan di HP ini ikut dihapus. Rata-rata malam yang sudah terkirim ke Wawasan tidur tidak berubah.",
-    "noReadingKey": "Belum ada pembacaan. Termometer menyiarkan suhu dan kelembapan terpisah; biasanya muncul dalam semenit kalau HP dekat dan JoyoFit terbuka.",
+    "noReadingKey": "Belum ada pembacaan. Termometer menyiarkan suhu dan kelembapan terpisah; biasanya muncul dalam semenit kalau HP dekat dan Run Now terbuka.",
     "noReadingGatt": "Belum ada pembacaan. Tekan Baca sekarang dengan HP dekat termometer.",
     "readNow": "Baca sekarang",
     "link": {
       "bindkey": "Dibaca dari siaran terenkripsi dengan bindkey-mu, tanpa menyambung.",
-      "gatt": "Dibaca lewat sambungan singkat tiap 10 menit selama JoyoFit terbuka."
+      "gatt": "Dibaca lewat sambungan singkat tiap 10 menit selama Run Now terbuka."
     }
   },
   "ideal": {
@@ -45,7 +45,7 @@
   },
   "picker": {
     "title": "Cari termometer",
-    "explain": "JoyoFit akan memindai perangkat Bluetooth di sekitar untuk menemukan termometermu. Hasil pindai hanya dipakai di HP ini.",
+    "explain": "Run Now akan memindai perangkat Bluetooth di sekitar untuk menemukan termometermu. Hasil pindai hanya dipakai di HP ini.",
     "continue": "Lanjut",
     "hint": "Taruh HP dekat termometer. Termometer yang bisa dibaca muncul dengan suhunya.",
     "search": "Cari termometer",
@@ -60,7 +60,7 @@
   },
   "firmware": {
     "title": "Syarat termometer",
-    "body": "JoyoFit membaca Xiaomi LYWSD03MMC (dan MHO-C401, CGG1 sejenis) dengan tiga cara. Firmware komunitas pvvx/ATC_MiThermometer (ATC1441, PVVX custom, BTHome v2): dari siarannya, tanpa menyambung. Firmware bawaan Xiaomi: siarannya terenkripsi dengan bindkey yang disimpan Xiaomi, jadi JoyoFit bisa membukanya kalau kamu memasukkan bindkey-nya, atau tersambung singkat tiap 10 menit selama aplikasi terbuka tanpa kunci. Firmware komunitas dipasang dari peramban lewat Bluetooth; cek versi hardware dulu, unit yang dijual sejak Maret 2025 (B1.5 dan B1.6) tidak disarankan oleh pembuat firmware."
+    "body": "Run Now membaca Xiaomi LYWSD03MMC (dan MHO-C401, CGG1 sejenis) dengan tiga cara. Firmware komunitas pvvx/ATC_MiThermometer (ATC1441, PVVX custom, BTHome v2): dari siarannya, tanpa menyambung. Firmware bawaan Xiaomi: siarannya terenkripsi dengan bindkey yang disimpan Xiaomi, jadi Run Now bisa membukanya kalau kamu memasukkan bindkey-nya, atau tersambung singkat tiap 10 menit selama aplikasi terbuka tanpa kunci. Firmware komunitas dipasang dari peramban lewat Bluetooth; cek versi hardware dulu, unit yang dijual sejak Maret 2025 (B1.5 dan B1.6) tidak disarankan oleh pembuat firmware."
   },
   "night": {
     "title": "Pantau semalaman",
@@ -69,13 +69,13 @@
     "idle": "Tidak berjalan",
     "start": "Pantau malam ini",
     "stop": "Berhenti",
-    "ios": "iPhone membatasi pemindaian Bluetooth di latar, jadi JoyoFit hanya membaca termometer saat aplikasi terbuka. Rata-rata malam baru terkumpul kalau JoyoFit dibiarkan terbuka semalaman.",
-    "oldBuild": "Pemantauan semalaman butuh pembaruan aplikasi dari toko, bukan pembaruan cepat. Sampai saat itu JoyoFit hanya membaca termometer saat aplikasi terbuka.",
+    "ios": "iPhone membatasi pemindaian Bluetooth di latar, jadi Run Now hanya membaca termometer saat aplikasi terbuka. Rata-rata malam baru terkumpul kalau Run Now dibiarkan terbuka semalaman.",
+    "oldBuild": "Pemantauan semalaman butuh pembaruan aplikasi dari toko, bukan pembaruan cepat. Sampai saat itu Run Now hanya membaca termometer saat aplikasi terbuka.",
     "auto": "Mulai otomatis malam hari",
-    "autoHint": "Kalau kamu membuka JoyoFit antara pukul 19.00 dan pagi, pemantauan mulai sendiri. Notifikasi tetap muncul selama berjalan.",
+    "autoHint": "Kalau kamu membuka Run Now antara pukul 19.00 dan pagi, pemantauan mulai sendiri. Notifikasi tetap muncul selama berjalan.",
     "until": "Berhenti pukul",
-    "gatt": "Termometer ini dibaca lewat sambungan dan hanya saat JoyoFit terbuka. Untuk memantau semalaman, pakai bindkey.",
-    "oldBuildKey": "Memantau semalaman dengan bindkey butuh pembaruan aplikasi dari toko, bukan pembaruan cepat. Sampai saat itu JoyoFit hanya membaca termometer saat aplikasi terbuka."
+    "gatt": "Termometer ini dibaca lewat sambungan dan hanya saat Run Now terbuka. Untuk memantau semalaman, pakai bindkey.",
+    "oldBuildKey": "Memantau semalaman dengan bindkey butuh pembaruan aplikasi dari toko, bukan pembaruan cepat. Sampai saat itu Run Now hanya membaca termometer saat aplikasi terbuka."
   },
   "privacy": {
     "title": "Data kamarmu",
@@ -84,7 +84,7 @@
   "capture": {
     "notification": {
       "title": "Memantau suhu kamar",
-      "text": "JoyoFit mendengarkan termometer kamarmu sampai pagi.",
+      "text": "Run Now mendengarkan termometer kamarmu sampai pagi.",
       "stop": "Berhenti"
     }
   },
@@ -98,7 +98,7 @@
       "noService": "Tersambung, tetapi termometer ini tidak punya layanan baca bawaan Xiaomi. Coba Pakai bindkey, atau pasang firmware komunitas.",
       "noData": "Tersambung, tetapi termometer tidak mengirim angka. Coba lagi sebentar lagi.",
       "bluetooth": "Bluetooth mati. Nyalakan dulu, lalu coba lagi.",
-      "permission": "JoyoFit belum boleh memakai Bluetooth. Buka pengaturan HP untuk mengizinkan.",
+      "permission": "Run Now belum boleh memakai Bluetooth. Buka pengaturan HP untuk mengizinkan.",
       "error": "Gagal membaca termometer. Coba lagi."
     },
     "key": {
@@ -120,13 +120,13 @@
       "openExtractor": "Buka Xiaomi Cloud Tokens Extractor",
       "flasher": "2. Telink Flasher (di Chrome, lewat Bluetooth): hubungkan termometer lalu pilih Get Mi Bind Key.",
       "openFlasher": "Buka Telink Flasher",
-      "warning": "Telink Flasher melepas termometer dari Mi Home. Sesudahnya Mi Home tidak lagi menampilkannya; kalau kamu mendaftarkannya lagi, Xiaomi membuat bindkey baru dan yang tersimpan di JoyoFit tidak berlaku lagi.",
-      "privacy": "Bindkey itu rahasia. JoyoFit hanya menyimpannya di Keychain / Keystore HP ini, tidak pernah mencatatnya di log, mengirimnya, atau ikut tersinkron."
+      "warning": "Telink Flasher melepas termometer dari Mi Home. Sesudahnya Mi Home tidak lagi menampilkannya; kalau kamu mendaftarkannya lagi, Xiaomi membuat bindkey baru dan yang tersimpan di Run Now tidak berlaku lagi.",
+      "privacy": "Bindkey itu rahasia. Run Now hanya menyimpannya di Keychain / Keystore HP ini, tidak pernah mencatatnya di log, mengirimnya, atau ikut tersinkron."
     },
     "compare": {
       "title": "Mana yang cocok?",
-      "direct": "Hubungkan langsung: tanpa kunci. JoyoFit tersambung beberapa detik tiap 10 menit selama aplikasi terbuka lalu melepasnya. Tidak berjalan semalaman, dan selama tersambung Mi Home tidak bisa membacanya.",
-      "bindkey": "Pakai bindkey: JoyoFit hanya mendengar siaran, tidak menyambung, sehingga Mi Home tetap bisa dipakai. Bisa juga semalaman dengan aplikasi dari toko. Butuh bindkey dari langkah di atas."
+      "direct": "Hubungkan langsung: tanpa kunci. Run Now tersambung beberapa detik tiap 10 menit selama aplikasi terbuka lalu melepasnya. Tidak berjalan semalaman, dan selama tersambung Mi Home tidak bisa membacanya.",
+      "bindkey": "Pakai bindkey: Run Now hanya mendengar siaran, tidak menyambung, sehingga Mi Home tetap bisa dipakai. Bisa juga semalaman dengan aplikasi dari toko. Butuh bindkey dari langkah di atas."
     }
   }
 }

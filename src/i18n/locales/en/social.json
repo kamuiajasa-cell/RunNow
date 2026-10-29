@@ -164,15 +164,15 @@
     "members": "Members",
     "inviteCode": "Invite code {{code}}",
     "sharingTitle": "Sharing with this group",
-    "shareFitness": "Share JoyoFit scores",
+    "shareFitness": "Share Run Now scores",
     "shareFitnessHint": "Today's recovery, strain, sleep and readiness, visible to the members.",
     "shareFood": "Share food names",
     "shareFoodHint": "Members see what you ate, not only the calories."
   },
   "member": {
     "you": "{{name}} (you)",
-    "noScores": "No JoyoFit scores today",
-    "notSharing": "Not sharing JoyoFit scores",
+    "noScores": "No Run Now scores today",
+    "notSharing": "Not sharing Run Now scores",
     "recovery": "Recovery",
     "strain": "Strain",
     "sleep": "Sleep",

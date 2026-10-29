@@ -31,10 +31,10 @@
     "emptyDescription": "Keep routes here and send them to your watch to see the route line and your position on outdoor runs, rides and walks. There are five ways to add one:",
     "ways": {
       "w1": "Pick a GPX or TCX file from your phone with Import GPX/TCX.",
-      "w2": "Open a GPX or TCX file from Strava, Garmin, Komoot or another app, then choose Share or Open with JoyoFit.",
+      "w2": "Open a GPX or TCX file from Strava, Garmin, Komoot or another app, then choose Share or Open with Run Now.",
       "w3": "Draw your own route on the map with Draw on map.",
       "w4": "Reuse the route of a workout your watch recorded with From a workout.",
-      "w5": "Make a new loop from your door with New loop from home: pick steps, distance, time or kcal, and JoyoFit finds streets you have not walked."
+      "w5": "Make a new loop from your door with New loop from home: pick steps, distance, time or kcal, and Run Now finds streets you have not walked."
     },
     "neverSent": "Never sent to the watch",
     "lastSent": "Last sent to the watch {{date}}",
@@ -84,7 +84,7 @@
   },
   "parse": {
     "empty": "The file is empty.",
-    "unrecognized": "This isn't a GPX or TCX file, so JoyoFit can't read a route from it.",
+    "unrecognized": "This isn't a GPX or TCX file, so Run Now can't read a route from it.",
     "noPoints": "This file has no valid route points. A route needs at least 2 points with clear coordinates.",
     "tooFewPoints_one": "This file has only {{count}} valid route point. A route needs at least 2 points.",
     "tooFewPoints_other": "This file has only {{count}} valid route points. A route needs at least 2 points.",
@@ -123,7 +123,7 @@
     "needConnect": "Connect your watch first to send a route.",
     "openWatch": "Open Watch",
     "unsupported": "This watch doesn't list route support, so a route can't be sent to it yet.",
-    "appOutdated": "Sending routes needs the latest JoyoFit. Update the app first.",
+    "appOutdated": "Sending routes needs the latest Run Now. Update the app first.",
     "preparing": "Preparing",
     "sending": "Sending",
     "sendingPercent": "Sending, {{pct}}%",
@@ -146,13 +146,13 @@
     "recordFailed": "The route was sent, but the \"last sent\" note couldn't be saved: {{message}}",
     "errors": {
       "ERR_NOT_CONNECTED": "The watch isn't connected. Connect it first, then try again.",
-      "ERR_UNSUPPORTED": "This watch can't receive routes from JoyoFit yet.",
-      "ERR_INVALID_ARGUMENT": "JoyoFit couldn't build a route file from this route: {{message}}",
+      "ERR_UNSUPPORTED": "This watch can't receive routes from Run Now yet.",
+      "ERR_INVALID_ARGUMENT": "Run Now couldn't build a route file from this route: {{message}}",
       "ERR_ROUTE_FULL": "The route list on the watch is full. Delete an old route on the watch (long-press it in the Routes menu), then send again.",
       "ERR_ROUTE_NAME": "The watch can't use this route name, usually because it's too long. Use a shorter name.",
       "ERR_UPLOAD_REJECTED": "The watch rejected the route file. {{message}}",
       "ERR_TIMEOUT": "The watch isn't answering. Bring it close to your phone, wake its screen, then try again.",
-      "ERR_BUSY": "The watch or JoyoFit is still busy with something else. Wait a moment, then try again.",
+      "ERR_BUSY": "The watch or Run Now is still busy with something else. Wait a moment, then try again.",
       "ERR_DISCONNECTED": "The watch disconnected while sending. Reconnect it, then try again."
     }
   },
@@ -183,8 +183,8 @@
     "attribution": "Map: © OpenFreeMap  © OpenMapTiles  Data from OpenStreetMap",
     "routingCredit": "Road routing: OSRM / FOSSGIS",
     "searchCredit": "Search: Nominatim / OpenStreetMap",
-    "unavailable": "The map needs the latest JoyoFit",
-    "unavailableCaption": "The map needs the latest JoyoFit. This is just the route line.",
+    "unavailable": "The map needs the latest Run Now",
+    "unavailableCaption": "The map needs the latest Run Now. This is just the route line.",
     "loadFailedCaption": "The map couldn't load, check your internet. This is just the route line.",
     "mapLabel": "Route map, {{distance}}",
     "draw": {
