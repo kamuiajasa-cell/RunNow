@@ -1,3 +1,5 @@
+# Catatan fork: job server, site, dan swift hanya jalan kalau dipicu manual (Run workflow).
+# Job app dan kotlin tetap jalan di setiap push dan pull request.
 # Checks for pull requests and pushes to master. No secrets, read-only token, so it is safe for forks.
 # Same commands as on the laptop (docs/ios.md "Commands", package.json scripts).
 #
@@ -58,6 +60,7 @@ jobs:
         run: bun test
 
   server:
+    if: github.event_name == 'workflow_dispatch'
     name: Server (tsrs, vitest)
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -85,6 +88,7 @@ jobs:
       - run: bunx vitest run
 
   site:
+    if: github.event_name == 'workflow_dispatch'
     name: Site (typecheck, build)
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -159,6 +163,7 @@ jobs:
         working-directory: android
 
   swift-protocol:
+    if: github.event_name == 'workflow_dispatch'
     name: Swift tests (HuaweiProtocol)
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -191,6 +196,7 @@ jobs:
         working-directory: modules/huawei-wear/ios/HuaweiProtocol
 
   swift-logic:
+    if: github.event_name == 'workflow_dispatch'
     name: Swift tests (ModuleLogicTests, inert shapes)
     runs-on: ubuntu-latest
     timeout-minutes: 30

@@ -1,0 +1,30 @@
+# Mengganti teks "JoyoFit" menjadi "Run Now" di terjemahan UI (src/i18n/locales). Hanya teks yang tampil di layar.
+# Hasilnya masuk ke cabang baru "rebrand-ui" untuk kamu periksa dan gabungkan lewat Pull request. Tidak mengubah cabang utama.
+name: Rebrand teks UI
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebrand:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Ganti JoyoFit menjadi Run Now di teks UI
+        run: |
+          grep -rl "JoyoFit" src/i18n/locales | xargs sed -i 's/JoyoFit/Run Now/g'
+          git diff --stat | tail -3
+
+      - name: Commit ke cabang rebrand-ui
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git checkout -b rebrand-ui
+          git add -A
+          if git diff --cached --quiet; then echo "Tidak ada perubahan"; exit 0; fi
+          git commit -m "Ganti nama JoyoFit di teks UI menjadi Run Now"
+          git push origin rebrand-ui

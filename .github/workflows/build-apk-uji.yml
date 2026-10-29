@@ -4,6 +4,15 @@ name: Build APK uji
 
 on:
   workflow_dispatch:
+    inputs:
+      minify:
+        description: "Kecilkan kode dan resource (R8). Matikan kalau aplikasi error setelah dipasang."
+        type: boolean
+        default: true
+      legacy_packaging:
+        description: "Kompres pustaka native di dalam APK. File APK lebih kecil, tapi ukuran terpasang di HP lebih besar."
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -70,14 +79,51 @@ jobs:
           echo "JOYOFIT_VERSION_CODE=$JOYOFIT_VERSION_CODE" >> "$GITHUB_ENV"
           bunx expo prebuild -p android --no-install
 
+      # Pustaka pihak ketiga (mis. MapLibre) bisa membawa ABI lain. Batasi paket ke arm64-v8a saja.
+      - name: Batasi ABI ke arm64
+        working-directory: android
+        run: |
+          if ! grep -q "abiFilters" app/build.gradle; then
+            sed -i '0,/defaultConfig {/s//defaultConfig {\n        ndk { abiFilters "arm64-v8a" }/' app/build.gradle
+          fi
+          grep -n -B1 -A1 "abiFilters" app/build.gradle || echo "PERINGATAN: abiFilters tidak terpasang"
+
+      - name: Cek pengaturan ukuran
+        working-directory: android
+        run: |
+          echo "minify=${{ inputs.minify }} legacy_packaging=${{ inputs.legacy_packaging }}"
+          grep -n "enableMinify\|enableShrink\|useLegacyPackaging" app/build.gradle gradle.properties || echo "Tidak ada baris cocok; cek template build.gradle"
+
       - name: Build APK
         working-directory: android
-        run: ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a
+        run: >
+          ./gradlew assembleRelease
+          -PreactNativeArchitectures=arm64-v8a
+          -Pandroid.enableMinifyInReleaseBuilds=${{ inputs.minify }}
+          -Pandroid.enableShrinkResourcesInReleaseBuilds=${{ inputs.minify }}
+          -Pexpo.useLegacyPackaging=${{ inputs.legacy_packaging }}
+
+      - name: Isi APK
+        run: |
+          APK=android/app/build/outputs/apk/release/app-release.apk
+          {
+            echo "### Ukuran APK"
+            ls -l "$APK" | awk '{printf "File APK: %.1f MB\n", $5/1048576}'
+            echo
+            echo "Per folder (MB tidak terkompres / terkompres):"
+            echo '```'
+            unzip -lv "$APK" | awk 'NR>3 && $1 ~ /^[0-9]+$/ {split($NF,p,"/"); d=p[1]; if(p[1]=="lib") d=p[1]"/"p[2]; s[d]+=$1; c[d]+=$3} END{for(k in s) printf "%8.1f / %8.1f  %s\n", s[k]/1048576, c[k]/1048576, k}' | sort -rn
+            echo '```'
+            echo "15 file terbesar:"
+            echo '```'
+            unzip -lv "$APK" | awk 'NR>3 && $1 ~ /^[0-9]+$/ {printf "%8.1f MB  %s\n", $1/1048576, $NF}' | sort -rn | head -15
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Ringkasan
         run: |
           mkdir -p dist
-          cp android/app/build/outputs/apk/release/app-release.apk dist/runnow-${JOYOFIT_VERSION_CODE}.apk
+          cp android/app/build/outputs/apk/release/app-release.apk "dist/runnow-${JOYOFIT_VERSION_CODE}-min${{ inputs.minify }}-leg${{ inputs.legacy_packaging }}.apk"
           ls -la dist
           sha256sum dist/*.apk | tee -a "$GITHUB_STEP_SUMMARY"
 
