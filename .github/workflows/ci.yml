@@ -39,7 +39,7 @@ jobs:
           path: ~/.bun/install/cache
           key: bun-${{ runner.os }}-${{ hashFiles('bun.lock', 'packages/hwt/bun.lock') }}
           restore-keys: bun-${{ runner.os }}-
-      - run: bun install --frozen-lockfile
+      - run: bun install
       - run: bun scripts/i18n-check.ts
       - run: bunx tsrs --noEmit
       - run: bun test ./src/
@@ -81,7 +81,7 @@ jobs:
           key: bun-${{ runner.os }}-${{ hashFiles('bun.lock', 'server/bun.lock') }}
           restore-keys: bun-${{ runner.os }}-
       # The ride relay imports the wire protocol from ../src/features/ride; esbuild reads the root tsconfig (extends expo) for those files.
-      - run: bun install --frozen-lockfile
+      - run: bun install
         working-directory: .
       - run: bun install --frozen-lockfile
       - run: bunx tsrs --noEmit
@@ -109,7 +109,7 @@ jobs:
           key: bun-${{ runner.os }}-${{ hashFiles('bun.lock', 'site/bun.lock') }}
           restore-keys: bun-${{ runner.os }}-
       # site/tsconfig.json extends expo/tsconfig.base from the root node_modules.
-      - run: bun install --frozen-lockfile
+      - run: bun install
         working-directory: .
       - run: bun install --frozen-lockfile
       - run: bun run build
@@ -152,7 +152,7 @@ jobs:
       - uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
         with:
           cache-read-only: ${{ github.event_name == 'pull_request' }}
-      - run: bun install --frozen-lockfile
+      - run: bun install
       # android/ is generated (gitignored); the module tests need the Gradle project.
       - run: bunx expo prebuild -p android --no-install
       - run: ./gradlew :huawei-wear:testDebugUnitTest :ble-sensors:testDebugUnitTest :replay-encoder:testDebugUnitTest :metronome-click:testDebugUnitTest
@@ -241,7 +241,7 @@ jobs:
           swift test
       # The JS shapes the iOS module returns must type-check against the TypeScript declarations
       # in modules/huawei-wear/src.
-      - run: bun install --frozen-lockfile
+      - run: bun install
       - name: Inert shapes vs TypeScript declarations
         run: node modules/huawei-wear/ios/ModuleLogicTests/check-inert-shapes.mjs "$RUNNER_TEMP/shapes.json"
       # The sensor module's pure logic (GATT plan table, reconnect backoff); the CoreBluetooth and CoreLocation files cannot build on Linux.
