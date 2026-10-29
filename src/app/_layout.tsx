@@ -205,6 +205,8 @@ function RootNavigator() {
                     screenOptions={{
                       headerShown: false,
                       sceneStyle: { backgroundColor: colors.background },
+                      // Aplikasi pembungkus Run Now: tab bar disembunyikan di semua layar (Back Android yang dipakai untuk kembali).
+                      tabBarStyle: { display: 'none' },
                       // FloatingTabBar draws the bar from the theme; `tabBarStyle: { display: 'none' }` on a route hides it.
                     }}>
                     <Tabs.Screen

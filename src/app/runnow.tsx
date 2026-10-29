@@ -1,8 +1,8 @@
 import { useSQLiteContext } from 'expo-sqlite';
 import { useEventListener } from 'expo';
-import { useRouter, type Href } from 'expo-router';
+import { useFocusEffect, useRouter, type Href } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Linking } from 'react-native';
+import { BackHandler, Linking } from 'react-native';
 import { View } from 'react-native';
 import { WebView, type WebViewMessageEvent, type WebViewNavigation } from 'react-native-webview';
 
@@ -95,13 +95,31 @@ export default function RunNowScreen() {
     );
   }, [live]);
 
+  // Tombol Kembali Android: halaman web yang memutuskan (tutup detail, kembali ke halaman sebelumnya di dalam web).
+  // Kalau web sudah di halaman awal (atau tidak menjawab), aplikasi ditutup, bukan membuka layar aplikasi lain.
+  useFocusEffect(
+    useCallback(() => {
+      const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+        webRef.current?.injectJavaScript(
+          `(function(){var h=false;try{h=!!(window.nativeBack&&window.nativeBack())}catch(e){}window.ReactNativeWebView.postMessage(JSON.stringify({type:'back',handled:h}))})();true;`,
+        );
+        return true;
+      });
+      return () => sub.remove();
+    }, []),
+  );
+
   // Panggilan dari index.html (pengaturan jam). Hanya metode yang diizinkan di rpcRules.ts yang dijalankan.
   const onMessage = useCallback((e: WebViewMessageEvent) => {
     // Navigasi WebView sudah dikunci ke halaman tepercaya (onShouldStart), jadi pesan datang dari sana.
-    let msg: { type?: unknown; id?: unknown; method?: unknown; args?: unknown };
+    let msg: { type?: unknown; id?: unknown; method?: unknown; args?: unknown; handled?: unknown };
     try {
       msg = JSON.parse(e.nativeEvent.data);
     } catch {
+      return;
+    }
+    if (msg.type === 'back') {
+      if (msg.handled !== true) BackHandler.exitApp();
       return;
     }
     if (msg.type !== 'rpc' || typeof msg.id !== 'number' || typeof msg.method !== 'string') return;
