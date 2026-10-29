@@ -1,4 +1,6 @@
 import { useSQLiteContext } from 'expo-sqlite';
+import { useEventListener } from 'expo';
+import { useRouter, type Href } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Linking } from 'react-native';
 import { View } from 'react-native';
@@ -13,6 +15,7 @@ import { loadWellness, type WellnessRow } from '@/features/runnow/wellness';
 import { useLiveHeartRate } from '@/features/today/useLiveHeartRate';
 import { sportCategory } from '@/features/workouts/sportCategory';
 import { useWatch } from '@/state/WatchProvider';
+import { HuaweiWear } from '@/wear';
 import { useTheme } from '@/theme';
 
 /** Alamat halaman yang bisa diubah tanpa build APK. Hanya alamat ini (dan versi bawaan) yang boleh dibuka dan dipercaya. */
@@ -34,7 +37,8 @@ function toAct(w: WorkoutRow): Act | null {
 
 export default function RunNowScreen() {
   const db = useSQLiteContext();
-  const { dataVersion, linkState } = useWatch();
+  const { dataVersion, linkState, sync } = useWatch();
+  const router = useRouter();
   const { colors } = useTheme();
   const webRef = useRef<WebView>(null);
   const [loadCount, setLoadCount] = useState(0);
@@ -47,7 +51,6 @@ export default function RunNowScreen() {
     !!url && (url.startsWith(BUNDLED_ORIGIN) || (USE_REMOTE_PAGE && url.startsWith(REMOTE_PAGE)));
   // Mode bawaan: konten milik kita dan navigasinya dikunci, jadi semua pesan dari sini dipercaya.
   // Mode online: hanya pesan dari alamat online yang dipercaya.
-  const fromTrusted = (url: string | undefined) => (remote ? !!url && url.startsWith(REMOTE_PAGE) : true);
 
   // Hanya halaman tepercaya yang boleh dibuka di layar ini. Tautan lain dibuka di browser.
   const onShouldStart = useCallback((req: WebViewNavigation | { url: string }) => {
@@ -94,8 +97,7 @@ export default function RunNowScreen() {
 
   // Panggilan dari index.html (pengaturan jam). Hanya metode yang diizinkan di rpcRules.ts yang dijalankan.
   const onMessage = useCallback((e: WebViewMessageEvent) => {
-    // Jembatan hanya menerima pesan dari halaman tepercaya.
-    if (!fromTrusted(e.nativeEvent.url)) return;
+    // Navigasi WebView sudah dikunci ke halaman tepercaya (onShouldStart), jadi pesan datang dari sana.
     let msg: { type?: unknown; id?: unknown; method?: unknown; args?: unknown };
     try {
       msg = JSON.parse(e.nativeEvent.data);
@@ -107,11 +109,16 @@ export default function RunNowScreen() {
     const args = Array.isArray(msg.args) ? msg.args : [];
     const reply = (ok: boolean, value: unknown) =>
       webRef.current?.injectJavaScript(`window.__rn && window.__rn(${id}, ${ok}, ${JSON.stringify(value ?? null)}); true;`);
-    runRpc(msg.method, args).then(
+    runRpc(msg.method, args, { sync: () => sync(), open: (route) => router.push(route as Href) }).then(
       (value) => reply(true, value),
       (err: unknown) => reply(false, err instanceof Error ? err.message : String(err)),
     );
-  }, [remote]);
+  }, [sync, router]);
+
+  // Progres hitung mundur HRV dari jam, diteruskan ke halaman.
+  useEventListener(HuaweiWear, 'onHrvProgress', (ev) => {
+    webRef.current?.injectJavaScript(`window.__hrvTick && window.__hrvTick(${Number(ev.secondsLeft)}); true;`);
+  });
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
