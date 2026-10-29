@@ -50,7 +50,11 @@ const SKIP_DIR = new Set(['node_modules', 'locales', '__fixtures__']);
  * bindings, not words; `templates.test.ts` fails on any letter outside a binding or an i18n key.
  */
 const SKIP_PATH = /src[\\/]features[\\/]stickers[\\/](core|testing|tools|templates)$/;
-const SKIP_FILE = /(\.test\.[tj]sx?|\.d\.ts|[Ff]ixtures?\.tsx?)$/;
+/**
+ * `runnowHtml.ts` is generated from the Run Now web page (its own Indonesian copy, not the app's i18n). It is one big string, so
+ * object keys inside the page's JavaScript (an icon map with a `body:` key, say) look like UI props to the patterns below.
+ */
+const SKIP_FILE = /(\.test\.[tj]sx?|\.d\.ts|[Ff]ixtures?\.tsx?|runnowHtml\.ts)$/;
 
 function* walk(dir: string): Generator<string> {
   for (const name of readdirSync(dir)) {
