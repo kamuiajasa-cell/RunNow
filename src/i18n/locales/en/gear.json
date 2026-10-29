@@ -38,7 +38,7 @@
     "brand": "Brand",
     "model": "Model",
     "startDistance": "Starting distance (km)",
-    "startDistanceHint": "Distance done before you added it to JoyoFit.",
+    "startDistanceHint": "Distance done before you added it to Run Now.",
     "retireAt": "Retire at (km)",
     "retireAtHint": "Leave empty for no limit. Running shoes usually last 500 to 800 km.",
     "photo": {
@@ -94,10 +94,10 @@
     "error": "Strava gear could not be loaded: {{error}}",
     "notConnected": "Connect Strava first in More, Strava.",
     "otherNoLink": "Gear of type Other has no counterpart on Strava.",
-    "note": "After a workout is sent, JoyoFit puts this gear on its Strava activity.",
+    "note": "After a workout is sent, Run Now puts this gear on its Strava activity.",
     "gearAccess": {
       "title": "Strava gear",
-      "off": "To link gear, JoyoFit needs permission to read your Strava profile. Your shoes and bikes are only read to show them here and are not shared.",
+      "off": "To link gear, Run Now needs permission to read your Strava profile. Your shoes and bikes are only read to show them here and are not shared.",
       "on": "Permission to read gear is granted.",
       "grant": "Allow reading gear"
     }

@@ -8,17 +8,17 @@
   },
   "join": {
     "title": "Join the game",
-    "steps": "Open {{url}} in a laptop or TV browser and type the 6 digit code shown there. Or scan its QR with the phone camera and JoyoFit opens right away.",
+    "steps": "Open {{url}} in a laptop or TV browser and type the 6 digit code shown there. Or scan its QR with the phone camera and Run Now opens right away.",
     "codeLabel": "Code from the screen",
     "codePlaceholder": "000000",
     "action": "Join",
     "fromLink": "The code from the QR is filled in. Check it matches the screen, then tap Join.",
-    "account": "Needs a JoyoRogo account signed in to JoyoFit. Free, no Pro needed.",
+    "account": "Needs a JoyoRogo account signed in to Run Now. Free, no Pro needed.",
     "ride": "Joining gets an indoor ride recording ready on your phone. It saves like any ride, with the game's distance and climb."
   },
   "error": {
     "notSignedIn": "Sign in to JoyoRogo first to use Ride on the web.",
-    "notConfigured": "This build has no JoyoFit server set up.",
+    "notConfigured": "This build has no Run Now server set up.",
     "notFound": "Code not found or expired. A code lasts 10 minutes, ask for a new one on the screen.",
     "taken": "Another phone already uses this room.",
     "rateLimited": "Too many tries. Wait a moment, then try again.",
@@ -53,7 +53,7 @@
   },
   "lobby": {
     "title": "Ready to ride",
-    "hint": "Start from the game, or tap Start here. The recording runs on the phone, so keep JoyoFit open.",
+    "hint": "Start from the game, or tap Start here. The recording runs on the phone, so keep Run Now open.",
     "start": "Start",
     "noSensors": "No cadence or heart rate sensor is paired. Add one under Sensors first.",
     "manageSensors": "Manage sensors",

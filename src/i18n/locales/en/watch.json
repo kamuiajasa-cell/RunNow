@@ -63,15 +63,15 @@
     "connectFirst": "Connect your watch first.",
     "guide": "Open the setup guide",
     "hint": {
-      "busy": "Could not connect to the watch. If it is still connected to another phone or app (Huawei Health, or JoyoFit on another phone), disconnect it there first. Keep the watch awake and close to this phone, then tap Retry.",
+      "busy": "Could not connect to the watch. If it is still connected to another phone or app (Huawei Health, or Run Now on another phone), disconnect it there first. Keep the watch awake and close to this phone, then tap Retry.",
       "noWatchIos": "Watch not found. If it is still connected to another phone, disconnect it there first. Make sure the watch is on and close to this phone, then tap Refresh.",
-      "noWatchScan": "No watch found nearby. If it is still connected to another phone or app (Huawei Health, or JoyoFit on another phone), disconnect it there first. Make sure the watch is on and close to this phone, then scan again.",
-      "notPaired": "Android has no Bluetooth pairing with this watch (it was removed, or the watch refused to pair again). Open Android's Bluetooth settings and pair the watch, then tap Try again. If the watch does not show up there, remove this phone once in the watch's own Bluetooth settings. JoyoFit deletes nothing."
+      "noWatchScan": "No watch found nearby. If it is still connected to another phone or app (Huawei Health, or Run Now on another phone), disconnect it there first. Make sure the watch is on and close to this phone, then scan again.",
+      "notPaired": "Android has no Bluetooth pairing with this watch (it was removed, or the watch refused to pair again). Open Android's Bluetooth settings and pair the watch, then tap Try again. If the watch does not show up there, remove this phone once in the watch's own Bluetooth settings. Run Now deletes nothing."
     },
     "silent": {
       "short": "The watch connected over Bluetooth but does not answer. What to try is under More, Watch.",
       "title": "The watch connected but does not answer",
-      "intro": "JoyoFit reached the watch over Bluetooth, but the watch did not reply to the first request. Usually another app or phone is using it. Try these one at a time, then tap Retry.",
+      "intro": "Run Now reached the watch over Bluetooth, but the watch did not reply to the first request. Usually another app or phone is using it. Try these one at a time, then tap Retry.",
       "step": {
         "release": "Disconnect the watch from Huawei Health and from any other phone, then close that app completely.",
         "forgetIos": "On the iPhone, open Settings > Bluetooth, tap the (i) icon next to the watch, then choose Forget This Device.",
@@ -82,13 +82,13 @@
       "report": "Send report"
     },
     "limits": {
-      "optimized": "Android can stop JoyoFit when the screen is off or the app is closed to save battery. That is a common reason a watch disconnects by itself. Let JoyoFit run without battery limits.",
-      "restricted": "JoyoFit's background battery use is Restricted, so Android shuts it down when the screen is off and the watch disconnects. Open the app settings, choose Battery, then Unrestricted.",
-      "vendor": "{{maker}} phones also keep a list of apps that may start by themselves (auto-start). Turn JoyoFit on there too, or the watch can still disconnect with the battery setting right.",
+      "optimized": "Android can stop Run Now when the screen is off or the app is closed to save battery. That is a common reason a watch disconnects by itself. Let Run Now run without battery limits.",
+      "restricted": "Run Now's background battery use is Restricted, so Android shuts it down when the screen is off and the watch disconnects. Open the app settings, choose Battery, then Unrestricted.",
+      "vendor": "{{maker}} phones also keep a list of apps that may start by themselves (auto-start). Turn Run Now on there too, or the watch can still disconnect with the battery setting right.",
       "openBattery": "Open battery settings",
       "openAutoStart": "Open auto-start",
       "dismiss": "Dismiss",
-      "error": "That settings screen did not open on this phone. Open Settings, Apps, JoyoFit, then Battery."
+      "error": "That settings screen did not open on this phone. Open Settings, Apps, Run Now, then Battery."
     },
     "status": {
       "linkA11y": "Link state: {{label}}",
@@ -103,13 +103,13 @@
     "bonded": {
       "forgetTitle": "Forget pairing?",
       "forgetMessage": "This deletes the watch's authentication key from this phone and removes the watch from your list. Health data already stored stays. The next connection is a first pairing and has to be confirmed on the watch. The Android Bluetooth pairing does not change.",
-      "forgetMessageIos": "This deletes the watch's authentication key from this phone and removes the watch from your list. Health data already stored stays. JoyoFit cannot remove the watch's side: to use Huawei Health again, also reset or unbind the watch (watch Settings > System > Reset, or remove the phone in the watch's own Bluetooth settings), then pair it in Huawei Health. If the watch is listed in the iPhone's Settings > Bluetooth, tap the (i) icon and choose Forget This Device.",
+      "forgetMessageIos": "This deletes the watch's authentication key from this phone and removes the watch from your list. Health data already stored stays. Run Now cannot remove the watch's side: to use Huawei Health again, also reset or unbind the watch (watch Settings > System > Reset, or remove the phone in the watch's own Bluetooth settings), then pair it in Huawei Health. If the watch is listed in the iPhone's Settings > Bluetooth, tap the (i) icon and choose Forget This Device.",
       "forget": "Forget",
       "forgetPairing": "Forget pairing",
       "unnamed": "Unnamed device",
       "systemConnected": "Already connected to this iPhone. Tap Connect to use it here.",
       "notInReach": "Not in reach. If it is on another phone, disconnect it there first.",
-      "notPairedRemembered": "Remembered by JoyoFit, but Android no longer lists it as paired. Connect uses the saved address and asks Android to pair again if needed.",
+      "notPairedRemembered": "Remembered by Run Now, but Android no longer lists it as paired. Connect uses the saved address and asks Android to pair again if needed.",
       "disconnect": "Disconnect",
       "connect": "Connect",
       "switchHere": "Switch here"
@@ -141,10 +141,10 @@
     },
     "bind": {
       "title": "Pair this watch with this phone?",
-      "messageIos": "This watch is not paired with this iPhone yet. A watch keeps one phone pairing, so continuing replaces the pairing with your other phone or app (Huawei Health, or JoyoFit on another phone), which will have to pair again. You will then confirm on the watch.",
-      "messageAndroid": "This watch is not paired with this phone yet. A watch keeps one phone pairing, so continuing replaces the pairing with your other phone or app (Huawei Health, or JoyoFit on another phone), which will have to pair again. You will then confirm on the watch.",
-      "lostAndroid": "JoyoFit was paired with this watch, but the watch no longer knows this phone: another app or phone paired it again while JoyoFit was not connected. Often that is Huawei Health: while it is enabled, it reconnects to the watch and pairs it again by itself, even when you are not using it. Disable or uninstall Huawei Health first (Settings, Apps, Huawei Health, Disable or Uninstall), then continue and confirm on the watch. Unpairing the watch in Huawei Health instead may reset the watch.",
-      "lostIos": "JoyoFit was paired with this watch, but the watch no longer knows this iPhone: another app or phone paired it again while JoyoFit was not connected, for example Huawei Health. Stop that app or phone from connecting to the watch first, then continue and confirm on the watch.",
+      "messageIos": "This watch is not paired with this iPhone yet. A watch keeps one phone pairing, so continuing replaces the pairing with your other phone or app (Huawei Health, or Run Now on another phone), which will have to pair again. You will then confirm on the watch.",
+      "messageAndroid": "This watch is not paired with this phone yet. A watch keeps one phone pairing, so continuing replaces the pairing with your other phone or app (Huawei Health, or Run Now on another phone), which will have to pair again. You will then confirm on the watch.",
+      "lostAndroid": "Run Now was paired with this watch, but the watch no longer knows this phone: another app or phone paired it again while Run Now was not connected. Often that is Huawei Health: while it is enabled, it reconnects to the watch and pairs it again by itself, even when you are not using it. Disable or uninstall Huawei Health first (Settings, Apps, Huawei Health, Disable or Uninstall), then continue and confirm on the watch. Unpairing the watch in Huawei Health instead may reset the watch.",
+      "lostIos": "Run Now was paired with this watch, but the watch no longer knows this iPhone: another app or phone paired it again while Run Now was not connected, for example Huawei Health. Stop that app or phone from connecting to the watch first, then continue and confirm on the watch.",
       "continue": "Continue"
     },
     "sync": {
@@ -161,16 +161,16 @@
       "stop": "Stop"
     },
     "support": {
-      "shareTitle": "JoyoFit support report",
+      "shareTitle": "Run Now support report",
       "title": "Help support your watch",
-      "intro": "JoyoFit is tested on the Huawei Watch Fit 4 Pro. Other Huawei and Honor watches are experimental. If something does not work, connect once, then send a report. It lists what your watch answered on its last connect, without Bluetooth addresses or the serial number.",
+      "intro": "Run Now is tested on the Huawei Watch Fit 4 Pro. Other Huawei and Honor watches are experimental. If something does not work, connect once, then send a report. It lists what your watch answered on its last connect, without Bluetooth addresses or the serial number.",
       "copied": "The full report is on your clipboard. On GitHub, say what works and what does not, then paste the report into the Log field.",
       "github": "GitHub report",
       "share": "Share text",
       "atur": {
         "send": "Send report",
         "messageLabel": "What happened? (optional)",
-        "messageHint": "The Bluetooth log, phone and watch details and the disconnect history go to the JoyoFit team, without Bluetooth addresses or the serial number.",
+        "messageHint": "The Bluetooth log, phone and watch details and the disconnect history go to the Run Now team, without Bluetooth addresses or the serial number.",
         "messagePlaceholder": "For example: the watch will not connect after a restart, or steps do not sync.",
         "emailLabel": "Email for a reply (optional)",
         "emailHint": "Only used to reply to this report.",
@@ -249,7 +249,7 @@
     "unsignedBody": "This watch only accepts watch faces signed by Huawei. This file will likely be rejected after sending. Photo faces still work.",
     "unsignedTryAnyway": "Try anyway",
     "unsignedUsePhoto": "Use Photo face",
-    "signatureRefused": "The watch rejected this face because it is not signed by Huawei. Try another face from the JoyoFit gallery.",
+    "signatureRefused": "The watch rejected this face because it is not signed by Huawei. Try another face from the Run Now gallery.",
     "deleteTitle": "Delete watch face",
     "deleteMessage": "Delete \"{{name}}\" from the watch?",
     "screenSize": "Screen {{width}} x {{height}} px",
@@ -715,23 +715,23 @@
     "refresh": "Update now",
     "cancel": "Cancel",
     "phoneCopy": "Copy on this phone",
-    "details": "Your watch uses satellite data to find its GPS position quickly. The data is good for about 7 days. If your watch asks for the Broadcom kind, JoyoFit downloads it from Broadcom's public server, with no account, and gives it to the watch. Other kinds are prepared only by Huawei's own app; JoyoFit never sends the watch anything it did not ask for.",
-    "detailsLab": "An experiment you turned on in Settings > About & advanced: your watch asks for the HW_AGNSS kind, and JoyoFit sends satellite data that JoyoFit's server builds from public broadcast data (IGS/BKG), not from Huawei. It is good for about 4 hours. The watch does not check this data and no watch has been shown to accept it. Note how long the watch's GPS takes to find its position before and after. If the watch's GPS misbehaves, turn the experiment off; a factory reset recovers the watch.",
-    "detailsPgnss": "An experiment you turned on in Settings > About & advanced: your watch asks for the HW_PGNSS_PRED kind, and JoyoFit sends six files of predicted satellite orbits for 3 days that JoyoFit's server computes from public data, not from Huawei. The watch does not check this data and no watch has been shown to accept it. Note how long the watch's GPS takes to find its position before and after. If the watch's GPS misbehaves, turn the experiment off; a factory reset recovers the watch.",
+    "details": "Your watch uses satellite data to find its GPS position quickly. The data is good for about 7 days. If your watch asks for the Broadcom kind, Run Now downloads it from Broadcom's public server, with no account, and gives it to the watch. Other kinds are prepared only by Huawei's own app; Run Now never sends the watch anything it did not ask for.",
+    "detailsLab": "An experiment you turned on in Settings > About & advanced: your watch asks for the HW_AGNSS kind, and Run Now sends satellite data that Run Now's server builds from public broadcast data (IGS/BKG), not from Huawei. It is good for about 4 hours. The watch does not check this data and no watch has been shown to accept it. Note how long the watch's GPS takes to find its position before and after. If the watch's GPS misbehaves, turn the experiment off; a factory reset recovers the watch.",
+    "detailsPgnss": "An experiment you turned on in Settings > About & advanced: your watch asks for the HW_PGNSS_PRED kind, and Run Now sends six files of predicted satellite orbits for 3 days that Run Now's server computes from public data, not from Huawei. The watch does not check this data and no watch has been shown to accept it. Note how long the watch's GPS takes to find its position before and after. If the watch's GPS misbehaves, turn the experiment off; a factory reset recovers the watch.",
     "retryAt": "Next automatic try around {{time}}.",
     "sizeValue": "{{kb}} KB",
     "status": {
-      "never": "Your watch has not taken satellite data from JoyoFit yet.",
+      "never": "Your watch has not taken satellite data from Run Now yet.",
       "delivered": "Your watch has the latest satellite data.",
-      "deliveredLab": "Your watch took JoyoFit's experimental satellite data (HW_AGNSS). Whether the watch uses it is unproven; note how long GPS takes to find its position.",
-      "deliveredPgnss": "Your watch took JoyoFit's experimental predicted satellite data (HW_PGNSS_PRED, 3 days). Whether the watch uses it is unproven; note how long GPS takes to find its position.",
+      "deliveredLab": "Your watch took Run Now's experimental satellite data (HW_AGNSS). Whether the watch uses it is unproven; note how long GPS takes to find its position.",
+      "deliveredPgnss": "Your watch took Run Now's experimental predicted satellite data (HW_PGNSS_PRED, 3 days). Whether the watch uses it is unproven; note how long GPS takes to find its position.",
       "expired": "The satellite data on your watch has expired. Tap Update now.",
       "stored": "The data is downloaded to this phone. It goes to your watch when the watch connects and asks for it.",
       "watchSilent": "The data is ready on this phone, but your watch did not respond. It will be sent when your watch asks.",
       "noNetwork": "This phone has no internet. Try again when it is connected.",
       "downloadFailed": "The satellite data could not be downloaded.",
       "invalidFile": "What was downloaded is not valid satellite data, so it was not sent to your watch.",
-      "unsupported": "Your watch needs satellite data that only Huawei's own app can prepare, and JoyoFit cannot provide it.",
+      "unsupported": "Your watch needs satellite data that only Huawei's own app can prepare, and Run Now cannot provide it.",
       "watchRefused": "Your watch did not take part in the exchange. It starts the update itself.",
       "timeout": "The transfer to your watch stopped halfway, so it was dropped.",
       "cancelled": "The update was cancelled.",

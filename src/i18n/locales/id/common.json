@@ -99,7 +99,7 @@
     "appleNoCode": "Apple tidak mengirim kode otorisasi. Coba lagi.",
     "appleFailed": "Masuk dengan Apple gagal. Coba lagi sebentar lagi.",
     "signInFailed": "Gagal masuk.",
-    "deleteCloudFailed": "Gagal menghapus data cloud JoyoFit ({{status}}). Coba lagi sebentar lagi.",
+    "deleteCloudFailed": "Gagal menghapus data cloud Run Now ({{status}}). Coba lagi sebentar lagi.",
     "deleteAccountFailed": "Gagal menghapus akun ({{status}}). Coba lagi sebentar lagi.",
     "workoutGone": "Latihan ini sudah tidak tersimpan.",
     "dbNewer": "Skema database v{{current}} lebih baru dari yang didukung aplikasi ini (v{{max}})."
@@ -110,7 +110,7 @@
     "rateLimit": "Batas permintaan Strava tercapai; akan dicoba lagi nanti.",
     "answered": "Strava menjawab {{status}}.",
     "accessDenied": "Strava tidak terhubung: akses ditolak.",
-    "scopeMissing": "Strava tidak terhubung: JoyoFit butuh izin \"unggah aktivitasmu\". Hubungkan lagi dan biarkan izinnya tercentang.",
+    "scopeMissing": "Strava tidak terhubung: Run Now butuh izin \"unggah aktivitasmu\". Hubungkan lagi dan biarkan izinnya tercentang.",
     "invalidState": "Penghubungan Strava terlalu lama. Coba lagi.",
     "failed": "Strava tidak bisa dihubungkan. Coba lagi."
   },
@@ -122,7 +122,7 @@
   },
   "gps": {
     "title": "GPS HP untuk latihan outdoor",
-    "body": "Saat kamu memulai latihan outdoor di jam, jam akan meminta GPS HP ini. JoyoFit lalu membaca lokasi presisimu selama latihan berjalan dan mengirimnya ke jam lewat Bluetooth. Lokasi tidak disimpan atau diunggah, dan JoyoFit tidak meminta akses lokasi di latar belakang.",
+    "body": "Saat kamu memulai latihan outdoor di jam, jam akan meminta GPS HP ini. Run Now lalu membaca lokasi presisimu selama latihan berjalan dan mengirimnya ke jam lewat Bluetooth. Lokasi tidak disimpan atau diunggah, dan Run Now tidak meminta akses lokasi di latar belakang.",
     "notNow": "Nanti saja",
     "continue": "Lanjut"
   },
@@ -213,7 +213,7 @@
   },
   "notFound": {
     "title": "Halaman tidak ditemukan",
-    "description": "Tautan ini tidak mengarah ke halaman mana pun di JoyoFit. Kalau baru ada pembaruan, tutup aplikasi lalu buka lagi.",
+    "description": "Tautan ini tidak mengarah ke halaman mana pun di Run Now. Kalau baru ada pembaruan, tutup aplikasi lalu buka lagi.",
     "home": "Ke beranda"
   },
   "chart": {

@@ -1,9 +1,9 @@
 {
   "title": "Room thermometer",
   "problem": {
-    "permission": "JoyoFit is not allowed to use Bluetooth yet. Open settings to allow it.",
+    "permission": "Run Now is not allowed to use Bluetooth yet. Open settings to allow it.",
     "off": "Bluetooth is off. Turn it on, then try again.",
-    "notAllowed": "Android refused the background service. Open JoyoFit and try again.",
+    "notAllowed": "Android refused the background service. Open Run Now and try again.",
     "unavailable": "Bluetooth cannot be used right now.",
     "openSettings": "Open settings"
   },
@@ -12,18 +12,18 @@
     "a11y": "{{temp}} °C, {{tempStatus}}. {{rh}}% RH, {{rhStatus}}.",
     "tempUnit": "°C",
     "rhUnit": "% RH",
-    "noReading": "No reading yet. Bring your phone close to the thermometer and keep JoyoFit open for a moment.",
+    "noReading": "No reading yet. Bring your phone close to the thermometer and keep Run Now open for a moment.",
     "lastAt": "Last reading {{ago}}",
     "lastAtBattery": "Last reading {{ago}} · {{battery}}",
     "forget": "Forget",
     "forgetTitle": "Forget this thermometer?",
     "forgetMessage": "The temperature and humidity readings kept on this phone are deleted too. Nightly averages already sent to Sleep insights stay as they are.",
-    "noReadingKey": "No reading yet. The thermometer broadcasts temperature and humidity separately; it usually appears within a minute with your phone close and JoyoFit open.",
+    "noReadingKey": "No reading yet. The thermometer broadcasts temperature and humidity separately; it usually appears within a minute with your phone close and Run Now open.",
     "noReadingGatt": "No reading yet. Tap Read now with your phone close to the thermometer.",
     "readNow": "Read now",
     "link": {
       "bindkey": "Read from its encrypted broadcasts with your bind key, without connecting.",
-      "gatt": "Read over a short connection every 10 minutes while JoyoFit is open."
+      "gatt": "Read over a short connection every 10 minutes while Run Now is open."
     }
   },
   "ideal": {
@@ -45,9 +45,9 @@
   },
   "picker": {
     "title": "Find thermometer",
-    "explain": "JoyoFit will scan nearby Bluetooth devices to find your thermometer. Scan results are only used on this phone.",
+    "explain": "Run Now will scan nearby Bluetooth devices to find your thermometer. Scan results are only used on this phone.",
     "continue": "Continue",
-    "hint": "Hold your phone close to the thermometer. Thermometers JoyoFit can read show up with their temperature.",
+    "hint": "Hold your phone close to the thermometer. Thermometers Run Now can read show up with their temperature.",
     "search": "Find thermometer",
     "stopSearch": "Stop searching",
     "searching": "Searching…",
@@ -60,7 +60,7 @@
   },
   "firmware": {
     "title": "What the thermometer needs",
-    "body": "JoyoFit reads a Xiaomi LYWSD03MMC (and the similar MHO-C401, CGG1) in three ways. Community firmware pvvx/ATC_MiThermometer (ATC1441, PVVX custom, BTHome v2): from its broadcasts, without connecting. Stock Xiaomi firmware: its broadcasts are encrypted with a bind key Xiaomi holds, so JoyoFit can open them if you enter that bind key, or it connects briefly every 10 minutes while the app is open, without a key. The community firmware is flashed from a browser over Bluetooth; check the hardware version first, units sold since March 2025 (B1.5 and B1.6) are not recommended by the firmware author."
+    "body": "Run Now reads a Xiaomi LYWSD03MMC (and the similar MHO-C401, CGG1) in three ways. Community firmware pvvx/ATC_MiThermometer (ATC1441, PVVX custom, BTHome v2): from its broadcasts, without connecting. Stock Xiaomi firmware: its broadcasts are encrypted with a bind key Xiaomi holds, so Run Now can open them if you enter that bind key, or it connects briefly every 10 minutes while the app is open, without a key. The community firmware is flashed from a browser over Bluetooth; check the hardware version first, units sold since March 2025 (B1.5 and B1.6) are not recommended by the firmware author."
   },
   "night": {
     "title": "Watch overnight",
@@ -69,13 +69,13 @@
     "idle": "Not running",
     "start": "Watch tonight",
     "stop": "Stop",
-    "ios": "iPhone limits Bluetooth scanning in the background, so JoyoFit only reads the thermometer while the app is open. A night's average only builds up if JoyoFit stays open all night.",
-    "oldBuild": "Overnight watching needs an app update from the store, not a quick update. Until then JoyoFit only reads the thermometer while the app is open.",
+    "ios": "iPhone limits Bluetooth scanning in the background, so Run Now only reads the thermometer while the app is open. A night's average only builds up if Run Now stays open all night.",
+    "oldBuild": "Overnight watching needs an app update from the store, not a quick update. Until then Run Now only reads the thermometer while the app is open.",
     "auto": "Start automatically at night",
-    "autoHint": "When you open JoyoFit between 7 PM and the morning, watching starts by itself. A notification stays up while it runs.",
+    "autoHint": "When you open Run Now between 7 PM and the morning, watching starts by itself. A notification stays up while it runs.",
     "until": "Stop at",
-    "gatt": "This thermometer is read over a connection, only while JoyoFit is open. To watch overnight, use a bind key.",
-    "oldBuildKey": "Overnight watching with a bind key needs an app update from the store, not a quick update. Until then JoyoFit only reads the thermometer while the app is open."
+    "gatt": "This thermometer is read over a connection, only while Run Now is open. To watch overnight, use a bind key.",
+    "oldBuildKey": "Overnight watching with a bind key needs an app update from the store, not a quick update. Until then Run Now only reads the thermometer while the app is open."
   },
   "privacy": {
     "title": "Your room data",
@@ -84,7 +84,7 @@
   "capture": {
     "notification": {
       "title": "Watching the room temperature",
-      "text": "JoyoFit is listening to your room thermometer until morning.",
+      "text": "Run Now is listening to your room thermometer until morning.",
       "stop": "Stop"
     }
   },
@@ -98,7 +98,7 @@
       "noService": "Connected, but this thermometer has no stock Xiaomi reading service. Try Use bind key, or flash the community firmware.",
       "noData": "Connected, but the thermometer sent no numbers. Try again in a moment.",
       "bluetooth": "Bluetooth is off. Turn it on, then try again.",
-      "permission": "JoyoFit is not allowed to use Bluetooth yet. Open your phone's settings to allow it.",
+      "permission": "Run Now is not allowed to use Bluetooth yet. Open your phone's settings to allow it.",
       "error": "Could not read the thermometer. Try again."
     },
     "key": {
@@ -120,13 +120,13 @@
       "openExtractor": "Open Xiaomi Cloud Tokens Extractor",
       "flasher": "2. Telink Flasher (in Chrome, over Bluetooth): connect the thermometer and choose Get Mi Bind Key.",
       "openFlasher": "Open Telink Flasher",
-      "warning": "Telink Flasher unpairs the thermometer from Mi Home. Afterwards Mi Home no longer shows it; if you add it again, Xiaomi makes a new bind key and the one saved in JoyoFit stops working.",
-      "privacy": "The bind key is a secret. JoyoFit keeps it only in this phone's Keychain / Keystore and never writes it to the log, sends it or syncs it."
+      "warning": "Telink Flasher unpairs the thermometer from Mi Home. Afterwards Mi Home no longer shows it; if you add it again, Xiaomi makes a new bind key and the one saved in Run Now stops working.",
+      "privacy": "The bind key is a secret. Run Now keeps it only in this phone's Keychain / Keystore and never writes it to the log, sends it or syncs it."
     },
     "compare": {
       "title": "Which one fits?",
-      "direct": "Connect directly: no key. JoyoFit connects for a few seconds every 10 minutes while the app is open, then lets go. It does not run overnight, and while it is connected Mi Home cannot read the thermometer.",
-      "bindkey": "Use bind key: JoyoFit only listens to broadcasts and never connects, so Mi Home keeps working. It also runs overnight with the store app. You need the bind key from the steps above."
+      "direct": "Connect directly: no key. Run Now connects for a few seconds every 10 minutes while the app is open, then lets go. It does not run overnight, and while it is connected Mi Home cannot read the thermometer.",
+      "bindkey": "Use bind key: Run Now only listens to broadcasts and never connects, so Mi Home keeps working. It also runs overnight with the store app. You need the bind key from the steps above."
     }
   }
 }

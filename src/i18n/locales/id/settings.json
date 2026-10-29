@@ -44,7 +44,7 @@
       },
       "importHuawei": {
         "title": "Impor dari Huawei Health",
-        "subtitle": "Bawa riwayat Huawei kamu ke JoyoFit, gratis"
+        "subtitle": "Bawa riwayat Huawei kamu ke Run Now, gratis"
       },
       "importAppleHealth": {
         "title": "Impor dari Apple Health",
@@ -82,12 +82,12 @@
     "courses": "Rute lari",
     "coursesSubtitle": "Buat rute lalu kirim ke jam",
     "bleLink": "Tautan Bluetooth LE (developer)",
-    "agnssLab": "Data satelit HW_AGNSS dari JoyoFit (uji lab)",
-    "agnssLabRisk": "Mati secara bawaan. Kalau dinyalakan dan jam meminta jenis HW_AGNSS, JoyoFit mengirim data satelit yang dibuat server JoyoFit dari data siaran publik (IGS/BKG), bukan dari Huawei. HP mengambilnya dari server JoyoFit tanpa data pribadi apa pun; server melihat alamat IP. Jam tidak memeriksa data ini, dan data yang salah pernah membuat GPS jam lain macet. Reset pabrik memulihkan jam. Belum terbukti di jam mana pun: nyalakan hanya untuk uji coba.",
-    "pgnssLab": "Data satelit prediksi HW_PGNSS_PRED dari JoyoFit (uji lab)",
-    "pgnssLabRisk": "Mati secara bawaan, terpisah dari saklar di atas. Kalau dinyalakan dan jam meminta jenis HW_PGNSS_PRED, JoyoFit mengirim enam berkas prediksi orbit satelit untuk 3 hari ke depan yang dihitung server JoyoFit dari data publik, disusun seperti berkas Huawei tetapi bukan dari Huawei. HP mengambilnya (sekitar 800 KB) dari server JoyoFit tanpa data pribadi apa pun; server melihat alamat IP. Lebih berisiko daripada HW_AGNSS: prediksinya belum terverifikasi, jam menyimpannya berhari-hari tanpa memeriksanya, dan data yang salah pernah membuat GPS jam lain macet. Reset pabrik memulihkan jam. Belum terbukti di jam mana pun: nyalakan hanya untuk uji coba.",
+    "agnssLab": "Data satelit HW_AGNSS dari Run Now (uji lab)",
+    "agnssLabRisk": "Mati secara bawaan. Kalau dinyalakan dan jam meminta jenis HW_AGNSS, Run Now mengirim data satelit yang dibuat server Run Now dari data siaran publik (IGS/BKG), bukan dari Huawei. HP mengambilnya dari server Run Now tanpa data pribadi apa pun; server melihat alamat IP. Jam tidak memeriksa data ini, dan data yang salah pernah membuat GPS jam lain macet. Reset pabrik memulihkan jam. Belum terbukti di jam mana pun: nyalakan hanya untuk uji coba.",
+    "pgnssLab": "Data satelit prediksi HW_PGNSS_PRED dari Run Now (uji lab)",
+    "pgnssLabRisk": "Mati secara bawaan, terpisah dari saklar di atas. Kalau dinyalakan dan jam meminta jenis HW_PGNSS_PRED, Run Now mengirim enam berkas prediksi orbit satelit untuk 3 hari ke depan yang dihitung server Run Now dari data publik, disusun seperti berkas Huawei tetapi bukan dari Huawei. HP mengambilnya (sekitar 800 KB) dari server Run Now tanpa data pribadi apa pun; server melihat alamat IP. Lebih berisiko daripada HW_AGNSS: prediksinya belum terverifikasi, jam menyimpannya berhari-hari tanpa memeriksanya, dan data yang salah pernah membuat GPS jam lain macet. Reset pabrik memulihkan jam. Belum terbukti di jam mana pun: nyalakan hanya untuk uji coba.",
     "details": "Rute lari: belum terverifikasi, format rute berasal dari analisis statis Huawei Health. Jam bisa saja menolaknya.",
-    "detailsDev": "Rute lari: belum terverifikasi, format rute berasal dari analisis statis Huawei Health. Jam bisa saja menolaknya. Tautan Bluetooth LE: terhubung lewat Bluetooth LE GATT (layanan FE86), bukan tautan bawaan jam. Putuskan lalu hubungkan lagi agar berlaku. Langkahnya masuk ke logcat dengan tag JoyoFitBle."
+    "detailsDev": "Rute lari: belum terverifikasi, format rute berasal dari analisis statis Huawei Health. Jam bisa saja menolaknya. Tautan Bluetooth LE: terhubung lewat Bluetooth LE GATT (layanan FE86), bukan tautan bawaan jam. Putuskan lalu hubungkan lagi agar berlaku. Langkahnya masuk ke logcat dengan tag Run NowBle."
   },
   "log": {
     "filters": {
@@ -133,33 +133,33 @@
       "emergency": "Bawaan aplikasi (update terakhir gagal dimuat)",
       "embedded": "Bawaan aplikasi"
     },
-    "hint": "Perbaikan tampilan dan logika datang di latar belakang dan berlaku saat JoyoFit dibuka berikutnya. Update dari App Store dan Play tetap membawa semua yang bersifat native.",
+    "hint": "Perbaikan tampilan dan logika datang di latar belakang dan berlaku saat Run Now dibuka berikutnya. Update dari App Store dan Play tetap membawa semua yang bersifat native.",
     "restart": "Mulai ulang untuk update",
     "checking": "Memeriksa…",
     "check": "Periksa update",
     "banner": {
       "availableTitle": "Versi baru tersedia",
       "failed": "Update gagal dimulai. Coba lagi.",
-      "availableBody": "Update JoyoFit siap diunduh.",
+      "availableBody": "Update Run Now siap diunduh.",
       "downloading": "Mengunduh update…",
       "readyTitle": "Update siap dipasang",
-      "readyBody": "Mulai ulang JoyoFit untuk memakai versi baru.",
+      "readyBody": "Mulai ulang Run Now untuk memakai versi baru.",
       "later": "Nanti",
       "update": "Update",
       "newerTitle": "Ada versi baru",
-      "newerBody": "Versi JoyoFit yang lebih baru sudah tersedia di toko."
+      "newerBody": "Versi Run Now yang lebih baru sudah tersedia di toko."
     },
     "gate": {
       "title": "Update dulu ya",
-      "body": "Versi JoyoFit di HP kamu sudah lama. Banyak masalah yang kamu alami sudah kami perbaiki di versi terbaru, tapi perbaikannya cuma jalan kalau aplikasinya diperbarui.",
-      "steps": "Buka toko, ketuk Update, lalu buka JoyoFit lagi. Data kamu tetap aman di HP.",
+      "body": "Versi Run Now di HP kamu sudah lama. Banyak masalah yang kamu alami sudah kami perbaiki di versi terbaru, tapi perbaikannya cuma jalan kalau aplikasinya diperbarui.",
+      "steps": "Buka toko, ketuk Update, lalu buka Run Now lagi. Data kamu tetap aman di HP.",
       "build": "Versi terpasang: {{build}}",
       "openPlay": "Perbarui di Play Store",
       "openTestFlight": "Buka TestFlight",
       "openAppStore": "Buka App Store",
       "openWeb": "Buka halaman update",
       "openTesting": "Buka halaman uji coba",
-      "failed": "Halaman toko tidak bisa dibuka. Buka Play Store atau TestFlight sendiri dan cari JoyoFit.",
+      "failed": "Halaman toko tidak bisa dibuka. Buka Play Store atau TestFlight sendiri dan cari Run Now.",
       "recheck": "Cek lagi",
       "rechecking": "Memeriksa…",
       "stillOld": "Belum ada versi baru yang terpasang. Update dulu, lalu cek lagi."
@@ -196,7 +196,7 @@
     "autoSync": "Sinkron otomatis",
     "autoSyncHint": "Sinkron setiap kali jam selesai sinkron dan saat kamu membuka aplikasi.",
     "wipe": "Hapus data cloud",
-    "deleteWarning": "Menghapus akun JoyoRogo kamu (yang dipakai JoyoRogo) beserta semua isinya di cloud: catatan makan JoyoRogo, grup, foto, dan data yang dicadangkan JoyoFit. Tidak bisa dibatalkan; kamu keluar dari kedua aplikasi. Data di ponsel ini tetap ada.",
+    "deleteWarning": "Menghapus akun JoyoRogo kamu (yang dipakai JoyoRogo) beserta semua isinya di cloud: catatan makan JoyoRogo, grup, foto, dan data yang dicadangkan Run Now. Tidak bisa dibatalkan; kamu keluar dari kedua aplikasi. Data di ponsel ini tetap ada.",
     "deleteApple": "Apple akan meminta konfirmasi dulu.",
     "deletePermanently": "Hapus permanen",
     "deleteAccount": "Hapus akun JoyoRogo",
@@ -204,7 +204,7 @@
     "mobileMessage": "Hanya Wi-Fi sedang nyala dan ponsel ini tidak tersambung Wi-Fi. Sinkron sekarang bisa memakai banyak data seluler kalau ada latihan yang menunggu.",
     "wipeTitle": "Hapus data cloud?",
     "wipeMessage": "Menghapus latihan, langkah, dan tidurmu dari cloud. Data di ponsel ini dan akunmu tetap ada, dan sinkron otomatis dimatikan supaya tidak ada yang diunggah lagi sampai kamu menyalakannya kembali.",
-    "details": "Sinkron cloud adalah bagian dari JoyoRogo Pro. Dengan akun Pro, setiap latihan diunggah ke akun JoyoRogo kamu sebagai satu file terkompresi: jalur GPS, detak jantung, kecepatan, kadensi, daya, dan analisis yang ditampilkan aplikasi, sehingga aman kalau ponsel hilang, tampil di web JoyoRogo, dan dipulihkan ke ponsel baru setelah kamu masuk. Langkah, detak jantung, SpO2, tidur, dan alamat Bluetooth jam masuk ke cloud JoyoFit dengan akun yang sama. Tanpa Pro tidak ada yang diunggah dan latihanmu tetap di ponsel ini. Selama kamu masuk, aplikasi juga membaca dari cloud: mengunduh latihan yang belum ada di ponsel ini, dan menghapus yang sudah kamu hapus dari cloud di tempat lain. JoyoFit juga bertukar makanan, berat badan, dan skor harian dengan JoyoRogo. Dengan Pro, pengaturan yang ikut akun (profil, target, tema, bahasa, cuaca, kalender siklus), template stiker, rute tersimpan, HRV, skor tidur, metrik kesehatan, dan data siklus juga ikut akun, supaya beberapa HP menampilkan hal yang sama; data siklus bisa dimatikan lewat saklar Sinkron data siklus, yang menghapus salinannya di cloud. Pairing jam, kunci jam, dan pengaturan tiap HP tidak ikut. Hapus data cloud menghapus latihan, langkah, tidur, dan data yang ikut akun dari cloud dan menyimpan data di ponsel ini serta akunmu; Hapus akun JoyoRogo menghapus akun dan semua yang lain (detail di fit.joyorogo.com/privasi).",
+    "details": "Sinkron cloud adalah bagian dari JoyoRogo Pro. Dengan akun Pro, setiap latihan diunggah ke akun JoyoRogo kamu sebagai satu file terkompresi: jalur GPS, detak jantung, kecepatan, kadensi, daya, dan analisis yang ditampilkan aplikasi, sehingga aman kalau ponsel hilang, tampil di web JoyoRogo, dan dipulihkan ke ponsel baru setelah kamu masuk. Langkah, detak jantung, SpO2, tidur, dan alamat Bluetooth jam masuk ke cloud Run Now dengan akun yang sama. Tanpa Pro tidak ada yang diunggah dan latihanmu tetap di ponsel ini. Selama kamu masuk, aplikasi juga membaca dari cloud: mengunduh latihan yang belum ada di ponsel ini, dan menghapus yang sudah kamu hapus dari cloud di tempat lain. Run Now juga bertukar makanan, berat badan, dan skor harian dengan JoyoRogo. Dengan Pro, pengaturan yang ikut akun (profil, target, tema, bahasa, cuaca, kalender siklus), template stiker, rute tersimpan, HRV, skor tidur, metrik kesehatan, dan data siklus juga ikut akun, supaya beberapa HP menampilkan hal yang sama; data siklus bisa dimatikan lewat saklar Sinkron data siklus, yang menghapus salinannya di cloud. Pairing jam, kunci jam, dan pengaturan tiap HP tidak ikut. Hapus data cloud menghapus latihan, langkah, tidur, dan data yang ikut akun dari cloud dan menyimpan data di ponsel ini serta akunmu; Hapus akun JoyoRogo menghapus akun dan semua yang lain (detail di fit.joyorogo.com/privasi).",
     "onlyHere": "Data ini hanya di HP ini. Pro menyimpannya di cloud.",
     "proSyncs": "Ikut cloud: latihan, langkah, tidur, perlengkapan, rencana pelatih, angkat beban, pengaturan, template stiker, rute, dan data kesehatan. Tidak ikut: pairing jam, koneksi Health Connect atau Apple Health, dan pengaturan tiap HP (Hanya Wi-Fi, sinkron otomatis, izin).",
     "pairingNote": "Riwayat tampil di sini, tapi jam harus dipasangkan sendiri di HP ini. Pairing jam tidak ikut cloud.",
@@ -278,27 +278,27 @@
     "limits": {
       "title": "Baterai dan latar belakang",
       "battery": "Optimasi baterai",
-      "exempt": "JoyoFit dikecualikan",
-      "limited": "Android bisa membatasi JoyoFit",
+      "exempt": "Run Now dikecualikan",
+      "limited": "Android bisa membatasi Run Now",
       "restriction": "Pembatasan latar belakang",
       "restricted": "Dibatasi (Restricted)",
       "notRestricted": "Tidak dibatasi",
-      "ok": "Android tidak akan menghentikan JoyoFit saat layar mati."
+      "ok": "Android tidak akan menghentikan Run Now saat layar mati."
     }
   },
   "appleImport": {
     "title": "Impor riwayat dari Apple Health",
-    "intro": "Huawei Health di iPhone menyimpan langkah, detak jantung, tidur, oksigen darah, dan latihanmu di Apple Health. Bawa riwayat itu ke JoyoFit sekali saja. JoyoFit meminta izin membaca Apple Health saat kamu menekan tombol di bawah, membacanya di ponsel ini, dan tidak mengirim apa pun ke mana pun.",
+    "intro": "Huawei Health di iPhone menyimpan langkah, detak jantung, tidur, oksigen darah, dan latihanmu di Apple Health. Bawa riwayat itu ke Run Now sekali saja. Run Now meminta izin membaca Apple Health saat kamu menekan tombol di bawah, membacanya di ponsel ini, dan tidak mengirim apa pun ke mana pun.",
     "reading": "Membaca Apple Health: {{percent}}%",
     "waiting": "Menunggu izin",
-    "footer": "Data yang sudah disimpan jam kamu di JoyoFit tidak pernah diganti, dan mengimpor lagi tidak menambah apa pun. Data yang disimpan JoyoFit sendiri ke Apple Health dilewati. Hari yang diimpor tetap di ponsel ini: tidak diunggah ke cloud, tidak ditulis balik ke Apple Health, dan tidak dikirim ke Strava.",
+    "footer": "Data yang sudah disimpan jam kamu di Run Now tidak pernah diganti, dan mengimpor lagi tidak menambah apa pun. Data yang disimpan Run Now sendiri ke Apple Health dilewati. Hari yang diimpor tetap di ponsel ini: tidak diunggah ke cloud, tidak ditulis balik ke Apple Health, dan tidak dikirim ke Strava.",
     "workoutsAdded": "Latihan ditambahkan",
     "heartRate": "Pembacaan detak jantung",
     "sleepFound": "Tahap tidur ditemukan",
     "stopped": "Impor dihentikan",
     "finished": "Impor selesai",
     "stoppedNotice": "Kamu menghentikan impor. Yang sudah terbaca tersimpan; impor lagi untuk melanjutkan.",
-    "nothing": "Tidak ada yang ditemukan. Pastikan JoyoFit boleh membaca Apple Health (Kesehatan, foto profil kamu, Aplikasi, JoyoFit) dan Huawei Health menyimpan ke Apple Health.",
+    "nothing": "Tidak ada yang ditemukan. Pastikan Run Now boleh membaca Apple Health (Kesehatan, foto profil kamu, Aplikasi, Run Now) dan Huawei Health menyimpan ke Apple Health.",
     "range": "{{from}} sampai {{to}}",
     "historyRead": "Riwayat terbaca",
     "sleepAdded": "Tahap tidur ditambahkan",
@@ -326,8 +326,8 @@
     "choose": "Pilih file .fit",
     "openWorkout": "Buka latihan",
     "howTitle": "Bagaimana caranya?",
-    "shareIos": "Di Files atau aplikasi yang menyimpan file-nya, pilih Bagikan, lalu JoyoFit.",
-    "shareAndroid": "Di pengelola file atau aplikasi komputer sepeda, buka file .fit dengan JoyoFit, atau bagikan ke JoyoFit.",
+    "shareIos": "Di Files atau aplikasi yang menyimpan file-nya, pilih Bagikan, lalu Run Now.",
+    "shareAndroid": "Di pengelola file atau aplikasi komputer sepeda, buka file .fit dengan Run Now, atau bagikan ke Run Now.",
     "details": "Bisa dipakai untuk file .fit dari iGPSPORT, Garmin, Wahoo, Bryton, Magene, dan XOSS. {{share}} Mengimpor file yang sama dua kali tidak menambah apa pun, dan file yang tumpang tindih dengan latihan yang sudah direkam jam kamu dilewati: latihan dari jam yang dipertahankan. Latihan hasil impor dihitung untuk strain, kesiapan, dan tren, tetap di ponsel ini, dan tidak diunggah ke cloud, ditulis ke {{app}}, atau dikirim ke Strava dengan sendirinya."
   },
   "healthConnect": {
@@ -340,7 +340,7 @@
       "writing": "Menulis data tersimpan",
       "opening": "Membuka"
     },
-    "noWrite": "Izin tulis tidak diberikan. Izinkan JoyoFit di {{store}} untuk menyalakan ini.",
+    "noWrite": "Izin tulis tidak diberikan. Izinkan Run Now di {{store}} untuk menyalakan ini.",
     "write": "Tulis ke {{store}}",
     "lastFailed": "Ekspor terakhir gagal: {{error}}",
     "permission": "Izin tulis",
@@ -404,7 +404,7 @@
       "4": "Tunggu email dari Huawei. Bisa sampai 7 hari, dan tautannya berlaku 21 hari. Ekspor besar datang sebagai beberapa bagian ZIP masing-masing sampai 5 GB.",
       "5": "Sebelum melepas pasangan jam dari Huawei Health, buka Huawei Health dan tarik ke bawah untuk sinkron sekali lagi. Data yang hanya ada di jam dan belum masuk ke akunmu akan hilang saat dilepas.",
       "6Ios": "Unduh ZIP-nya (di iPhone tersimpan di aplikasi Files), lalu pilih di bawah dan masukkan kata sandinya.",
-      "6Android": "Unduh ZIP-nya, lalu ketuk di email atau aplikasi file kamu dan pilih JoyoFit, atau pilih di bawah. Masukkan kata sandinya."
+      "6Android": "Unduh ZIP-nya, lalu ketuk di email atau aplikasi file kamu dan pilih Run Now, atau pilih di bawah. Masukkan kata sandinya."
     },
     "otherRegion": "Akun di luar Asia Tenggara: pakai {{host}}. Kalau halaman gagal dibuka untuk akun Indonesia, tombol di atas yang berfungsi; Privacy Center di dalam aplikasi tidak.",
     "importTitle": "Impor file",
@@ -452,7 +452,7 @@
     "metrics": "HRV dan bacaan lain ditambahkan",
     "dayTotals": "Hari langkah ditambahkan (total harian)",
     "workoutsUpdated": "Latihan dilengkapi rute dan totalnya",
-    "keepOpen": "Biarkan JoyoFit tetap terbuka sampai selesai (bisa beberapa menit untuk file besar). Layar boleh redup, jangan pindah aplikasi.",
+    "keepOpen": "Biarkan Run Now tetap terbuka sampai selesai (bisa beberapa menit untuk file besar). Layar boleh redup, jangan pindah aplikasi.",
     "unreadableTitle": "Yang tidak terbaca",
     "unreadableLine": "{{key}}: {{reason}}, {{count}} kali (pertama: {{sample}})",
     "unreadableLineNoSample": "{{key}}: {{reason}}, {{count}} kali",
@@ -464,7 +464,7 @@
       "bad-span": "rentang waktu tidak mungkin",
       "no-weight": "tanpa berat yang bisa dipakai"
     },
-    "leftOutTitle": "Ada di file tapi tidak disimpan JoyoFit",
+    "leftOutTitle": "Ada di file tapi tidak disimpan Run Now",
     "leftOutLine": "{{key}}: {{count}} bacaan",
     "unreadable": "Tak terbaca, dilewati",
     "filesFailed_other": "{{count}} file di dalam ZIP tidak bisa dibaca. Sisanya sudah diimpor; unduh ulang ekspornya untuk menutup celahnya.",
@@ -477,7 +477,7 @@
   },
   "notifApps": {
     "iosTitle": "iOS yang memilih aplikasinya",
-    "iosDesc": "JoyoFit tidak meneruskan notifikasi di iOS. Jam membacanya dari iPhone, dan aplikasi mana yang muncul diatur di Pengaturan iPhone, Notifikasi.",
+    "iosDesc": "Run Now tidak meneruskan notifikasi di iOS. Jam membacanya dari iPhone, dan aplikasi mana yang muncul diatur di Pengaturan iPhone, Notifikasi.",
     "filter": "Saring aplikasi",
     "enabledFirst": "Yang aktif dulu",
     "onCount": "{{enabled}} dari {{total}} aktif",
@@ -506,7 +506,7 @@
         "disconnected": "Hubungkan jam dulu.",
         "noGate": "Jam ini tidak menyebut dukungan saklar per aplikasi, jadi tidak bisa diuji."
       },
-      "probe": "Langkah {{step}} dari {{steps}}. {{app}} sedang dimatikan di jam. Kirim satu pesan ke {{app}} sekarang dari ponsel atau orang lain, bukan dari iPhone ini, dan biarkan JoyoFit terbuka: pindah aplikasi atau layar membatalkan uji. Apakah pesannya masih muncul di jam?",
+      "probe": "Langkah {{step}} dari {{steps}}. {{app}} sedang dimatikan di jam. Kirim satu pesan ke {{app}} sekarang dari ponsel atau orang lain, bukan dari iPhone ini, dan biarkan Run Now terbuka: pindah aplikasi atau layar membatalkan uji. Apakah pesannya masih muncul di jam?",
       "stillShown": "Masih muncul",
       "hidden": "Tidak muncul",
       "confirm": "{{app}} sudah dinyalakan lagi di jam. Kirim satu pesan lagi. Apakah sekarang muncul?",
@@ -530,11 +530,11 @@
         "other": "Semua aplikasi lain. Belum diuji, mungkin tidak berpengaruh.",
         "offline": "Dikirim ke jam saat terhubung"
       },
-      "details": "Saklar ini bekerja di jam, bukan di iPhone: JoyoFit tidak pernah melihat notifikasimu. Uji hanya mengirim satu aplikasi, tidak pernah seluruh daftar, dan aplikasi itu dinyalakan lagi sesudahnya, saat uji dibatalkan, atau saat jam terhubung lagi. Hasil uji berisi cara yang dicoba dan jawabanmu, tanpa isi pesan."
+      "details": "Saklar ini bekerja di jam, bukan di iPhone: Run Now tidak pernah melihat notifikasimu. Uji hanya mengirim satu aplikasi, tidak pernah seluruh daftar, dan aplikasi itu dinyalakan lagi sesudahnya, saat uji dibatalkan, atau saat jam terhubung lagi. Hasil uji berisi cara yang dicoba dan jawabanmu, tanpa isi pesan."
     }
   },
   "notifications": {
-    "disclosure": "JoyoFit membaca notifikasi di ponsel ini (nama aplikasi, judul, dan teks) agar bisa menampilkannya di jam kamu. Notifikasi dikirim ke jam lewat Bluetooth saja. JoyoFit tidak menyimpannya dan tidak mengirimnya lewat internet. Kamu bisa memilih aplikasi mana yang diteruskan, dan mematikannya kapan saja.",
+    "disclosure": "Run Now membaca notifikasi di ponsel ini (nama aplikasi, judul, dan teks) agar bisa menampilkannya di jam kamu. Notifikasi dikirim ke jam lewat Bluetooth saja. Run Now tidak menyimpannya dan tidak mengirimnya lewat internet. Kamu bisa memilih aplikasi mana yang diteruskan, dan mematikannya kapan saja.",
     "title": "Notifikasi",
     "access": "Akses notifikasi",
     "granted": "Diberikan",
@@ -554,14 +554,14 @@
       "notYet": "Belum",
       "howTo": "Pengaturan iPhone, Bluetooth, ketuk i di samping jam, nyalakan Tampilkan Notifikasi. Izinkan kalau iOS bertanya.",
       "show": "Tampilkan notifikasi di jam",
-      "details": "iOS tidak mengizinkan JoyoFit membaca atau meneruskan notifikasi kamu. Jam membacanya sendiri dari iPhone lewat Bluetooth, kalau iOS mengizinkan; JoyoFit tidak pernah melihat isinya. Aplikasi mana yang muncul dipilih di Pengaturan iPhone, Notifikasi.\n\nSakelar ini mengubah pengaturan notifikasi bawaan jam, yang diatur Huawei Health. Pengaturan itu dibiarkan sampai kamu mengubahnya di sini.\n\nNotifikasi ringkasan pagi belum tersedia di iOS."
+      "details": "iOS tidak mengizinkan Run Now membaca atau meneruskan notifikasi kamu. Jam membacanya sendiri dari iPhone lewat Bluetooth, kalau iOS mengizinkan; Run Now tidak pernah melihat isinya. Aplikasi mana yang muncul dipilih di Pengaturan iPhone, Notifikasi.\n\nSakelar ini mengubah pengaturan notifikasi bawaan jam, yang diatur Huawei Health. Pengaturan itu dibiarkan sampai kamu mengubahnya di sini.\n\nNotifikasi ringkasan pagi belum tersedia di iOS."
     }
   },
   "phone": {
     "title": "Ponsel dan panggilan",
     "iosFind": "Cari ponsel dari jam: tidak bisa di iOS.",
     "iosCalls": "Menjawab atau menolak panggilan dari jam: tidak bisa di iOS.",
-    "iosDetails": "Cari ponsel: iOS menangguhkan JoyoFit saat tidak di layar dan tidak mengizinkannya membunyikan ponsel atas permintaan, jadi tombol di jam tidak bisa mencari iPhone ini. Pakai Find My di perangkat Apple lain atau iCloud.com.\n\nPanggilan: iOS tidak mengizinkan aplikasi melihat, menjawab, atau menolak panggilan telepon. Kalau jam menampilkan panggilan masuk, itu dilakukan jam sendiri lewat notifikasi yang dibagikan iOS (pengaturan Notifikasi).",
+    "iosDetails": "Cari ponsel: iOS menangguhkan Run Now saat tidak di layar dan tidak mengizinkannya membunyikan ponsel atas permintaan, jadi tombol di jam tidak bisa mencari iPhone ini. Pakai Find My di perangkat Apple lain atau iCloud.com.\n\nPanggilan: iOS tidak mengizinkan aplikasi melihat, menjawab, atau menolak panggilan telepon. Kalau jam menampilkan panggilan masuk, itu dilakukan jam sendiri lewat notifikasi yang dibagikan iOS (pengaturan Notifikasi).",
     "errPhoneState": "Izin status telepon diperlukan untuk melihat panggilan masuk.",
     "errAnswer": "Izin menjawab panggilan telepon diperlukan.",
     "findPhone": "Cari ponsel dari jam",
@@ -577,7 +577,7 @@
     "allowLocation": "Izinkan lokasi",
     "appSettings": "Pengaturan aplikasi",
     "callerIdDetails": "Tanpa akses log panggilan, Android menyembunyikan nomor penelepon. Tanpa akses kontak, kamu melihat nomor, bukan nama.",
-    "noCallerIdDetails": "Jam menunjukkan bahwa ponsel sedang berdering. Versi JoyoFit ini tidak membaca log panggilan atau kontak, jadi tidak bisa menampilkan siapa yang menelepon.",
+    "noCallerIdDetails": "Jam menunjukkan bahwa ponsel sedang berdering. Versi Run Now ini tidak membaca log panggilan atau kontak, jadi tidak bisa menampilkan siapa yang menelepon.",
     "findDetails": "Cari ponsel: tombol di jam membunyikan ponsel ini dengan keras, bahkan saat aplikasi ditutup. Hentikan dari jam atau dari notifikasi."
   },
   "profile": {
@@ -636,7 +636,7 @@
     "nothing": "tidak ada",
     "unsynced_other": "{{count}} makanan yang dicatat di jam akan ditulis ke JoyoRogo saat aplikasi membacanya berikutnya.",
     "pushNow": "Kirim sekarang",
-    "details": "Catatan makan JoyoRogo dan target kalori kamu mengisi kartu kalori di jam. JoyoFit membacanya saat dibuka, setelah tiap sinkron, dan saat jam tersambung, lalu mengirimnya lagi saat jam meminta atau mencatat makanan sendiri. Saat aplikasi ditutup, layanan latar belakang menjawab dari hari terakhir yang tersimpan; ia tidak bisa membaca JoyoRogo saat itu karena sesi masuk hanya disimpan untuk aplikasi. Sejauh ini belum diuji di Fit 4 Pro. Selama kamu masuk, aplikasi juga mengirim Recovery, Strain, dan Tidur harianmu ke catatan JoyoRogo supaya berdampingan dengan makananmu, plus ukuran tubuh hari ini yang sudah dihitung (jam tidur, detak jantung istirahat, HRV, VO2max, status latihan, waktu pemulihan). Yang belum bisa dihitung tidak dikirim."
+    "details": "Catatan makan JoyoRogo dan target kalori kamu mengisi kartu kalori di jam. Run Now membacanya saat dibuka, setelah tiap sinkron, dan saat jam tersambung, lalu mengirimnya lagi saat jam meminta atau mencatat makanan sendiri. Saat aplikasi ditutup, layanan latar belakang menjawab dari hari terakhir yang tersimpan; ia tidak bisa membaca JoyoRogo saat itu karena sesi masuk hanya disimpan untuk aplikasi. Sejauh ini belum diuji di Fit 4 Pro. Selama kamu masuk, aplikasi juga mengirim Recovery, Strain, dan Tidur harianmu ke catatan JoyoRogo supaya berdampingan dengan makananmu, plus ukuran tubuh hari ini yang sudah dihitung (jam tidur, detak jantung istirahat, HRV, VO2max, status latihan, waktu pemulihan). Yang belum bisa dihitung tidak dikirim."
   },
   "signIn": {
     "label": "Masuk dengan JoyoRogo",
@@ -652,10 +652,10 @@
     },
     "sms": {
       "title": "Kirim SMS untuk SOS",
-      "message": "Saat jam kamu mengirim SOS, JoyoFit mengirim pesan teks yang diminta, dari ponsel ini dan SIM kamu. Tidak pernah mengirim yang lain.",
+      "message": "Saat jam kamu mengirim SOS, Run Now mengirim pesan teks yang diminta, dari ponsel ini dan SIM kamu. Tidak pernah mengirim yang lain.",
       "allow": "Izinkan",
       "notNow": "Nanti",
-      "denied": "Tanpa izin SMS, JoyoFit tidak bisa mengirim teks SOS. Relay tetap mati."
+      "denied": "Tanpa izin SMS, Run Now tidak bisa mengirim teks SOS. Relay tetap mati."
     },
     "check": "Periksa tanpa mengirim",
     "testReady": "Siap: SOS dari jam akan dikirim sebagai pesan teks. Tidak ada yang dikirim sekarang.",
@@ -667,7 +667,7 @@
     "lastChanged": "Terakhir diubah",
     "askWatch": "Tanya jam",
     "fallDetailsSms": "Setelah jatuh keras, jam menanyakan apakah kamu baik-baik saja dan bisa memulai SOS.",
-    "fallDetails": "Setelah jatuh keras, jam menanyakan apakah kamu baik-baik saja. Versi JoyoFit ini tidak bisa mengirim teks SOS.",
+    "fallDetails": "Setelah jatuh keras, jam menanyakan apakah kamu baik-baik saja. Versi Run Now ini tidak bisa mengirim teks SOS.",
     "sosTitle": "Pesan teks SOS",
     "sosSwitch": "Kirim teks SOS untuk jam",
     "smsPermission": "Izin mengirim SMS",
@@ -681,11 +681,11 @@
     "yes": "Ya",
     "notListed": "Tidak ada di daftar kemampuannya",
     "appSettings": "Pengaturan aplikasi",
-    "sosDetails": "Saat kamu memulai SOS di jam, jam memberi ponsel ini sebuah nomor dan pesan. Dengan sakelar menyala, JoyoFit mengirim teks itu dari SIM kamu dan memberi tahu jam apakah terkirim. Jam (atau kontak daruratnya di pengaturan Huawei di jam) yang menentukan siapa yang dikirimi teks; JoyoFit tidak pernah memilih penerima dan tidak pernah mengirim apa pun yang tidak diminta jam. Mati secara bawaan. Perlu izin mengirim SMS dan SIM yang siap; biayanya sesuai tarif paketmu per teks. Kalau SOS tidak akan terkirim, jam diberi tahu bahwa gagal.",
+    "sosDetails": "Saat kamu memulai SOS di jam, jam memberi ponsel ini sebuah nomor dan pesan. Dengan sakelar menyala, Run Now mengirim teks itu dari SIM kamu dan memberi tahu jam apakah terkirim. Jam (atau kontak daruratnya di pengaturan Huawei di jam) yang menentukan siapa yang dikirimi teks; Run Now tidak pernah memilih penerima dan tidak pernah mengirim apa pun yang tidak diminta jam. Mati secara bawaan. Perlu izin mengirim SMS dan SIM yang siap; biayanya sesuai tarif paketmu per teks. Kalau SOS tidak akan terkirim, jam diberi tahu bahwa gagal.",
     "iosNotice": "Tidak bisa di iOS. Jangan mengandalkan jam untuk mengirim teks ke kontakmu.",
-    "iosDetails": "iOS tidak mengizinkan aplikasi mengirim pesan teks sendiri, jadi JoyoFit tidak bisa mengirim teks ke kontakmu saat jam memulai SOS. JoyoFit memberi tahu jam bahwa tidak ada yang terkirim.",
+    "iosDetails": "iOS tidak mengizinkan aplikasi mengirim pesan teks sendiri, jadi Run Now tidak bisa mengirim teks ke kontakmu saat jam memulai SOS. Run Now memberi tahu jam bahwa tidak ada yang terkirim.",
     "playNotice": "Tidak ada di versi Google Play. Jangan mengandalkan jam untuk mengirim teks ke kontakmu.",
-    "playDetails": "Google Play membatasi aplikasi yang mengirim pesan teks, jadi versi ini tidak menyertakan fiturnya. SOS yang dimulai di jam tidak dikirim sebagai SMS dari ponsel ini: JoyoFit memberi tahu jam bahwa tidak ada yang terkirim.",
+    "playDetails": "Google Play membatasi aplikasi yang mengirim pesan teks, jadi versi ini tidak menyertakan fiturnya. SOS yang dimulai di jam tidak dikirim sebagai SMS dari ponsel ini: Run Now memberi tahu jam bahwa tidak ada yang terkirim.",
     "sleepTitle": "Laporan tidur pagi",
     "sleepShow": "Tampilkan tidur semalam",
     "sleepUnavailable": "Tidak tersedia: jam tidak melaporkan kanal event yang dibutuhkan.",
@@ -697,9 +697,9 @@
   "strava": {
     "intro": "Kirim latihan dari jam ke Strava. Gratis, tidak perlu JoyoRogo Pro.",
     "howTitle": "Bagaimana caranya?",
-    "how": "Latihan dikirim ke Strava beserta jarak, kalori, detak jantung, dan rute yang direkam jam. Setelah kamu terhubung, latihan yang selesai sejak saat itu dikirim setelah tiap sinkron; yang lebih lama tetap di ponsel kecuali kamu mengirimnya dari layar latihan. JoyoFit hanya mengirim latihan ke akun Strava kamu sendiri dan tidak pernah membaca aktivitas Strava kamu.",
+    "how": "Latihan dikirim ke Strava beserta jarak, kalori, detak jantung, dan rute yang direkam jam. Setelah kamu terhubung, latihan yang selesai sejak saat itu dikirim setelah tiap sinkron; yang lebih lama tetap di ponsel kecuali kamu mengirimnya dari layar latihan. Run Now hanya mengirim latihan ke akun Strava kamu sendiri dan tidak pernah membaca aktivitas Strava kamu.",
     "noCloud": "Build ini tidak punya URL server cloud, yang dibutuhkan Strava. Deploy server/, atur EXPO_PUBLIC_JOYOFIT_CLOUD_URL, lalu build ulang.",
-    "serverNotReady": "Strava belum diatur di server JoyoFit.",
+    "serverNotReady": "Strava belum diatur di server Run Now.",
     "signInFirst": "Masuk dengan JoyoRogo dulu; ini hanya menyimpan koneksi Strava kamu di server.",
     "signIn": "Masuk dengan JoyoRogo",
     "connect": "Hubungkan dengan Strava",
@@ -711,7 +711,7 @@
     "disconnect": "Putuskan Strava",
     "signInToDisconnect": "Masuk dengan JoyoRogo untuk memutuskan atau mengirim.",
     "compatible": "Kompatibel dengan Strava",
-    "legal": "Kompatibel dengan Strava. JoyoFit tidak dibuat, disponsori, atau didukung oleh Strava. Yang kamu kirim mengikuti pengaturan privasi Strava kamu; kamu bisa menghapus JoyoFit kapan saja di Strava lewat Settings, My Apps."
+    "legal": "Kompatibel dengan Strava. Run Now tidak dibuat, disponsori, atau didukung oleh Strava. Yang kamu kirim mengikuti pengaturan privasi Strava kamu; kamu bisa menghapus Run Now kapan saja di Strava lewat Settings, My Apps."
   },
   "joyorogo": {
     "title": "Kalori olahraga ke JoyoRogo",
@@ -789,7 +789,7 @@
       "city": "Sebuah kota"
     },
     "deniedAndroid": "Lokasi ditolak: cuaca untuk ponsel ini tidak bisa diambil. Izinkan, atau pilih kota.",
-    "deniedIos": "Lokasi mati untuk JoyoFit. Nyalakan di Pengaturan > JoyoFit > Lokasi (Saat Aplikasi Digunakan), atau pilih kota.",
+    "deniedIos": "Lokasi mati untuk Run Now. Nyalakan di Pengaturan > Run Now > Lokasi (Saat Aplikasi Digunakan), atau pilih kota.",
     "citySet": "Kota diatur ke {{name}}.",
     "citySetDetail": "Kota diatur ke {{name}} ({{detail}}).",
     "title": "Cuaca",
@@ -854,7 +854,7 @@
       "removeBody": "Foto yang kamu unggah dihapus dari akun JoyoRogo-mu. Kalau akunmu sebelumnya memakai foto Google, foto itu dipakai lagi; kalau tidak, yang tampil inisial namamu.",
       "updated": "Foto profil diperbarui.",
       "removed": "Foto profil dihapus.",
-      "denied": "JoyoFit tidak bisa membuka galeri. Izinkan akses foto di pengaturan, lalu coba lagi.",
+      "denied": "Run Now tidak bisa membuka galeri. Izinkan akses foto di pengaturan, lalu coba lagi.",
       "openSettings": "Buka pengaturan",
       "error": {
         "process": "Foto tidak bisa disiapkan: {{error}}",
@@ -1000,7 +1000,7 @@
     "watch": {
       "noNative": "Jam menerima zona setelah aplikasi diperbarui dari toko. Analisis di HP sudah memakai zona ini.",
       "offline": "Zona dikirim ke jam saat tersambung, dan tiap kali tersambung lagi.",
-      "none": "Jam ini tidak menerima zona dari aplikasi. Zona hanya dipakai di analisis JoyoFit.",
+      "none": "Jam ini tidak menerima zona dari aplikasi. Zona hanya dipakai di analisis Run Now.",
       "ok": "Jam ini menerima zona dari aplikasi."
     },
     "saved": {
@@ -1018,7 +1018,7 @@
       "label": "Detak jantung ambang laktat",
       "estimate": "Perkiraan Huawei Health (85 persen cadangan HR)",
       "set": "Kamu yang atur",
-      "fromTest": "Dari tes JoyoFit ({{bpm}})",
+      "fromTest": "Dari tes Run Now ({{bpm}})",
       "fromWatch": "Dari jam ({{bpm}})",
       "fromRun": "Dari lari terberat ({{bpm}})",
       "fromRunNote": "Perkiraan: 95% dari rata-rata detak 20 menit terberat, lari {{date}}. Tes 30 menit tetap paling tepat.",
@@ -1057,7 +1057,7 @@
       "workouts_other": "{{count}} latihan"
     },
     "health": {
-      "via": "JoyoFit menulis ke {{store}}; aplikasi lain membacanya dari sana",
+      "via": "Run Now menulis ke {{store}}; aplikasi lain membacanya dari sana",
       "unavailable": "{{store}} tidak tersedia di ponsel ini.",
       "off": "Penulisan mati. Nyalakan agar JoyoRogo dan aplikasi lain bisa membaca data jammu.",
       "neverWritten": "Belum ada yang ditulis",
@@ -1071,7 +1071,7 @@
       "permissions": "Izin tulis untuk {{granted}} dari {{total}} jenis; sisanya dilewati."
     },
     "strava": {
-      "via": "JoyoFit mengunggah latihanmu ke Strava; tidak ada yang dibaca balik",
+      "via": "Run Now mengunggah latihanmu ke Strava; tidak ada yang dibaca balik",
       "off": "Belum terhubung. Hubungkan agar latihan selesai terkirim otomatis.",
       "never": "Belum ada yang diunggah",
       "lastUpload": "Terakhir diunggah {{time}}",

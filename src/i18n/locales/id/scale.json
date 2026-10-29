@@ -18,7 +18,7 @@
     "needsKey": "Masukkan kunci timbangan di bawah dulu, baru timbangan ini bisa dibaca."
   },
   "problem": {
-    "permission": "JoyoFit belum boleh memakai Bluetooth. Buka pengaturan untuk mengizinkan.",
+    "permission": "Run Now belum boleh memakai Bluetooth. Buka pengaturan untuk mengizinkan.",
     "off": "Bluetooth mati. Nyalakan dulu, lalu coba lagi.",
     "unavailable": "Bluetooth tidak bisa dipakai sekarang.",
     "openSettings": "Buka pengaturan"
@@ -32,11 +32,11 @@
     "forgetMessage": "Riwayat timbangmu tetap tersimpan.",
     "empty": "Belum ada timbangan. Cari timbanganmu di bawah.",
     "kindWeightOnly": "Jenis: {{label}} (berat saja)",
-    "weightOnlyNote": "Berat saja: timbangan ini tidak mengirim lemak tubuh atau impedansi, jadi JoyoFit tidak menampilkannya."
+    "weightOnlyNote": "Berat saja: timbangan ini tidak mengirim lemak tubuh atau impedansi, jadi Run Now tidak menampilkannya."
   },
   "picker": {
     "title": "Cari timbangan",
-    "explain": "JoyoFit akan memindai perangkat Bluetooth di sekitar untuk menemukan timbanganmu. Hasil pindai hanya dipakai di HP ini.",
+    "explain": "Run Now akan memindai perangkat Bluetooth di sekitar untuk menemukan timbanganmu. Hasil pindai hanya dipakai di HP ini.",
     "continue": "Lanjut",
     "hint": "Naik ke timbangan sampai layarnya menyala, lalu cari. Banyak timbangan baru terlihat saat sedang menyala.",
     "search": "Cari timbangan",
@@ -97,7 +97,7 @@
   },
   "record": {
     "title": "Rekam data timbangan",
-    "body": "Timbanganmu belum dikenali? Pilih perangkatnya di daftar pencarian, mulai merekam, lalu naik ke timbangan. JoyoFit mencatat semua yang dikirim timbangan ke log aplikasi. Salin atau bagikan hasilnya supaya dukungannya bisa ditambahkan.",
+    "body": "Timbanganmu belum dikenali? Pilih perangkatnya di daftar pencarian, mulai merekam, lalu naik ke timbangan. Run Now mencatat semua yang dikirim timbangan ke log aplikasi. Salin atau bagikan hasilnya supaya dukungannya bisa ditambahkan.",
     "connect": "Sambungkan juga ke perangkatnya",
     "connectHint": "Ikut mencatat data yang dikirim lewat sambungan. Tidak ada yang dikirim ke timbangan.",
     "start": "Mulai merekam",
@@ -110,11 +110,11 @@
     "share": "Bagikan rekaman",
     "copied": "Disalin",
     "lines": "{{count}} baris tercatat",
-    "shareTitle": "Rekaman timbangan JoyoFit"
+    "shareTitle": "Rekaman timbangan Run Now"
   },
   "supported": {
     "title": "Timbangan yang didukung",
-    "body": "JoyoFit membaca timbangan dengan protokol berikut. Timbangan lain bisa ditambahkan lewat Rekam data timbangan."
+    "body": "Run Now membaca timbangan dengan protokol berikut. Timbangan lain bisa ditambahkan lewat Rekam data timbangan."
   },
   "secret": {
     "title": "Kunci timbangan (lanjutan)",
@@ -126,7 +126,7 @@
     "length": "{{length}}/16 karakter",
     "tuya-local-key": {
       "label": "Local key (16 karakter)",
-      "explain": "Timbangan Tuya mengenkripsi beratnya, jadi JoyoFit butuh local key milik timbanganmu. Kuncinya ada di platform pengembang Tuya (iot.tuya.com): buat proyek cloud, tautkan akun aplikasi tempat timbangan terdaftar, lalu salin local_key perangkat itu. Ini langkah untuk yang paham teknis. Kunci disimpan terenkripsi di HP ini dan tidak dikirim ke mana pun.",
+      "explain": "Timbangan Tuya mengenkripsi beratnya, jadi Run Now butuh local key milik timbanganmu. Kuncinya ada di platform pengembang Tuya (iot.tuya.com): buat proyek cloud, tautkan akun aplikasi tempat timbangan terdaftar, lalu salin local_key perangkat itu. Ini langkah untuk yang paham teknis. Kunci disimpan terenkripsi di HP ini dan tidak dikirim ke mana pun.",
       "invalid": "Local key harus tepat 16 karakter (huruf, angka, atau simbol biasa)."
     }
   }

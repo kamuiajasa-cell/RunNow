@@ -138,7 +138,7 @@
   },
   "noStages": {
     "title": "Kenapa tidur ini tanpa fase?",
-    "unsupported": "Jam memberi tahu kapan kamu tidur tapi tanpa fase, dan jam ini tidak punya sakelar TruSleep yang bisa diatur JoyoFit.",
+    "unsupported": "Jam memberi tahu kapan kamu tidur tapi tanpa fase, dan jam ini tidak punya sakelar TruSleep yang bisa diatur Run Now.",
     "turnOn": "Nyalakan TruSleep agar jam mencatat fase tidur, lalu tidur semalam dan sinkronkan.",
     "unknown": "Jam memberi tahu kapan kamu tidur tapi tanpa fase. Jam yang lebih baru mengirimnya saat TruSleep nyala. Sebagian jam lama tidak bisa, dan mungkin memberi tidur ringan dan dalam saat TruSleep mati.",
     "openSetting": "Buka pengaturan TruSleep"
@@ -217,7 +217,7 @@
       "energyLine": "{{word}} - perkiraan",
       "energySeries": "Energi Tubuh sejak bangun tidur",
       "howTitle": "Cara dihitung",
-      "howEnergy": "Perkiraan JoyoFit, bukan angka dari jam. Level bangun tidur = 30 + 60 x (tidurmu / kebutuhan tidur, maksimal 1) + sampai 10 poin dari HRV malam. Lalu berkurang 0,8 per jam terjaga, sampai 55 poin dari strain sejak bangun, dan sampai 1 poin per jam saat stres di atas 40. Bertambah 5 per jam tidur siang dan 0,4 per jam saat diam dengan detak jantung dekat istirahat. Hasilnya dibatasi 0 sampai 100.",
+      "howEnergy": "Perkiraan Run Now, bukan angka dari jam. Level bangun tidur = 30 + 60 x (tidurmu / kebutuhan tidur, maksimal 1) + sampai 10 poin dari HRV malam. Lalu berkurang 0,8 per jam terjaga, sampai 55 poin dari strain sejak bangun, dan sampai 1 poin per jam saat stres di atas 40. Bertambah 5 per jam tidur siang dan 0,4 per jam saat diam dengan detak jantung dekat istirahat. Hasilnya dibatasi 0 sampai 100.",
       "howEnergyNow": "Sekarang: bangun {{wake}}, terjaga {{awake}}, strain {{strain}}, stres {{stress}}, tidur siang {{naps}}, istirahat {{rest}}.",
       "recoveryLabel": "Waktu pulih",
       "recoveryNone": "Belum ada latihan atau data detak jantung",
@@ -225,9 +225,9 @@
       "estimate": "perkiraan",
       "howRecoveryTitle": "Cara dihitung waktu pulih",
       "howRecoveryWatch": "Dari jam: waktu pemulihan dari latihan terakhir yang dilaporkan jam, dihitung mundur sejak latihan selesai. Kalau ada beberapa latihan, yang terlama yang dipakai.",
-      "howRecoveryEstimate": "Perkiraan JoyoFit: tidak ada waktu pemulihan dari jam, jadi dihitung dari strain hari ini dan kemarin. Di bawah strain 5 tidak ada waktu pulih, di strain 5 sekitar 6 jam, naik lurus sampai 48 jam di strain 21. Strain kemarin dihitung mundur sejak tengah malam.",
+      "howRecoveryEstimate": "Perkiraan Run Now: tidak ada waktu pemulihan dari jam, jadi dihitung dari strain hari ini dan kemarin. Di bawah strain 5 tidak ada waktu pulih, di strain 5 sekitar 6 jam, naik lurus sampai 48 jam di strain 21. Strain kemarin dihitung mundur sejak tengah malam.",
       "howNeedTitle": "Cara dihitung kebutuhan tidur",
-      "howNeed": "Perkiraan JoyoFit: dasar 7 j 30 mnt, ditambah sampai 1 jam dari strain hari ini (strain / 21), ditambah seperempat utang tidur 7 malam terakhir (kurangnya dari 7 j 30 mnt per malam), maksimal 1 jam.",
+      "howNeed": "Perkiraan Run Now: dasar 7 j 30 mnt, ditambah sampai 1 jam dari strain hari ini (strain / 21), ditambah seperempat utang tidur 7 malam terakhir (kurangnya dari 7 j 30 mnt per malam), maksimal 1 jam.",
       "howNeedStrain": "Hari ini menambah {{duration}}.",
       "howNeedDebt": "Utang tidur menambah {{duration}}.",
       "howNeedNoDebt": "Utang tidur belum dihitung: butuh minimal 3 malam tercatat.",
@@ -250,8 +250,8 @@
         "unit": "ml/kg/mnt",
         "delta": "{{delta}} sejak {{date}}",
         "trend": "Tren VO2max",
-        "none": "Belum ada VO2max. Jam melaporkannya setelah latihan lari atau jalan dengan GPS, atau JoyoFit memperkirakannya dari detak jantung istirahat setelah 5 hari tercatat.",
-        "how": "Dari jam: nilai VO2max yang dilaporkan jam pada latihan terakhir (90 hari). Jam mengirim METs maksimal; JoyoFit mengalikannya 3,5 ml/kg/mnt per MET, dengan pembulatan ke bawah ke bilangan bulat, jadi bisa 1 di bawah angka di jam. Nilai di luar 10 sampai 90 diabaikan. Perkiraan (kalau jam tidak melaporkan): Uth-Sorensen 2004, VO2max = 15,3 x detak jantung maksimal / detak jantung istirahat. Maksimal dihitung 220 dikurangi umur dari profil, istirahat adalah median detak jantung terendah harian 14 hari terakhir. Kasar: angka sebenarnya bisa meleset beberapa poin."
+        "none": "Belum ada VO2max. Jam melaporkannya setelah latihan lari atau jalan dengan GPS, atau Run Now memperkirakannya dari detak jantung istirahat setelah 5 hari tercatat.",
+        "how": "Dari jam: nilai VO2max yang dilaporkan jam pada latihan terakhir (90 hari). Jam mengirim METs maksimal; Run Now mengalikannya 3,5 ml/kg/mnt per MET, dengan pembulatan ke bawah ke bilangan bulat, jadi bisa 1 di bawah angka di jam. Nilai di luar 10 sampai 90 diabaikan. Perkiraan (kalau jam tidak melaporkan): Uth-Sorensen 2004, VO2max = 15,3 x detak jantung maksimal / detak jantung istirahat. Maksimal dihitung 220 dikurangi umur dari profil, istirahat adalah median detak jantung terendah harian 14 hari terakhir. Kasar: angka sebenarnya bisa meleset beberapa poin."
       },
       "load": {
         "title": "Status latihan",
@@ -262,13 +262,13 @@
         "chart": "TRIMP per hari, 28 hari terakhir",
         "short_other": "Butuh minimal {{need}} hari dengan detak jantung tersimpan: baru {{count}} hari.",
         "none": "Tidak ada beban latihan dalam 28 hari terakhir.",
-        "how": "Perkiraan JoyoFit dari detak jantung yang disimpan jam. Beban harian = TRIMP Edwards (menit di zona 1 sampai 5 dikali 1 sampai 5). Rasio = rata-rata TRIMP 7 hari terakhir dibagi rata-rata 28 hari terakhir (Gabbett 2016), hari ini tidak ikut. Di atas 1,5 terlalu berat, 1,1 sampai 1,5 produktif, 0,8 sampai 1,1 menjaga, 0,5 sampai 0,8 pemulihan, di bawah 0,5 menurun. Angka yang sama dipakai di Kesiapan. Hari tanpa data dianggap istirahat."
+        "how": "Perkiraan Run Now dari detak jantung yang disimpan jam. Beban harian = TRIMP Edwards (menit di zona 1 sampai 5 dikali 1 sampai 5). Rasio = rata-rata TRIMP 7 hari terakhir dibagi rata-rata 28 hari terakhir (Gabbett 2016), hari ini tidak ikut. Di atas 1,5 terlalu berat, 1,1 sampai 1,5 produktif, 0,8 sampai 1,1 menjaga, 0,5 sampai 0,8 pemulihan, di bawah 0,5 menurun. Angka yang sama dipakai di Kesiapan. Hari tanpa data dianggap istirahat."
       },
       "races": {
         "title": "Prediksi lomba",
         "note": "Perkiraan, dari catatan terbaikmu di lari 90 hari terakhir.",
         "short_other": "Butuh minimal {{need}} lari dengan jarak 5 km atau lebih dalam 90 hari terakhir (GPS): baru {{count}}.",
-        "how": "Perkiraan JoyoFit dengan rumus Riegel (1981): T2 = T1 x (D2 / D1)^1,06. T1 adalah catatan tercepat 5K, 10K, atau setengah maraton dari lari 90 hari terakhir (sama dengan rekor terbaik di rincian latihan). Tiap jarak memakai catatan dengan jarak terdekat. Maraton dari catatan 5K cenderung terlalu optimis kalau kamu belum latihan lari panjang."
+        "how": "Perkiraan Run Now dengan rumus Riegel (1981): T2 = T1 x (D2 / D1)^1,06. T1 adalah catatan tercepat 5K, 10K, atau setengah maraton dari lari 90 hari terakhir (sama dengan rekor terbaik di rincian latihan). Tiap jarak memakai catatan dengan jarak terdekat. Maraton dari catatan 5K cenderung terlalu optimis kalau kamu belum latihan lari panjang."
       },
       "hrv": {
         "title": "Status HRV",
@@ -279,7 +279,7 @@
         "avg": "Rata-rata 7 malam",
         "avgValue_other": "{{value}} ms ({{count}} malam)",
         "missing": "Belum ada status: {{reason}}.",
-        "how": "Perkiraan JoyoFit dari HRV malam (RMSSD) yang dicatat jam saat tidur, hanya di Android. Rata-rata ln(RMSSD) 7 malam terakhir dibandingkan dengan rentang normalmu: rata-rata 60 hari sebelum minggu itu, plus minus 1 simpangan baku (Plews 2013, Buchheit 2014). Di dalam rentang: seimbang. Di bawah: rendah. Di atas: tidak seimbang. Butuh 14 malam baseline dan 3 malam dalam 7 hari terakhir."
+        "how": "Perkiraan Run Now dari HRV malam (RMSSD) yang dicatat jam saat tidur, hanya di Android. Rata-rata ln(RMSSD) 7 malam terakhir dibandingkan dengan rentang normalmu: rata-rata 60 hari sebelum minggu itu, plus minus 1 simpangan baku (Plews 2013, Buchheit 2014). Di dalam rentang: seimbang. Di bawah: rendah. Di atas: tidak seimbang. Butuh 14 malam baseline dan 3 malam dalam 7 hari terakhir."
       },
       "intensity": {
         "title": "Menit intensitas",
@@ -288,7 +288,7 @@
         "breakdown": "{{moderate}} menit sedang + 2 x {{vigorous}} menit berat. Perkiraan.",
         "chart": "Menit intensitas per hari, Senin sampai Minggu",
         "endLabel": "Minggu",
-        "how": "Perkiraan JoyoFit dari detak jantung per menit yang disimpan jam (maksimal {{maxHr}} bpm). Menit di 60 sampai 80 persen maksimal (zona 2 dan 3) dihitung 1, menit di 80 persen ke atas (zona 4 dan 5) dihitung 2. Batasnya persentase tetap dari maksimalmu, apa pun zona detak jantung yang kamu atur. Minggu dihitung Senin sampai Minggu. Target 150 menit per minggu mengikuti anjuran WHO 2020 dan ACSM 2018.",
+        "how": "Perkiraan Run Now dari detak jantung per menit yang disimpan jam (maksimal {{maxHr}} bpm). Menit di 60 sampai 80 persen maksimal (zona 2 dan 3) dihitung 1, menit di 80 persen ke atas (zona 4 dan 5) dihitung 2. Batasnya persentase tetap dari maksimalmu, apa pun zona detak jantung yang kamu atur. Minggu dihitung Senin sampai Minggu. Target 150 menit per minggu mengikuti anjuran WHO 2020 dan ACSM 2018.",
         "minutes": "{{value}} mnt"
       }
     }
@@ -298,7 +298,7 @@
     "intro": "Tes ini mengukur ambang laktatmu dari satu lari sungguhan, bukan dari rekor pribadi. Hasilnya LTHR (detak jantung di ambang) dan pace ambang.",
     "how": {
       "title": "Cara tesnya",
-      "body": "1. Pilih rute datar atau lintasan tanpa berhenti. Istirahat cukup dan jangan lakukan setelah hari berat. Pasang jam atau strap detak jantung dengan rapat.\n2. Lari pelan 15 menit sebagai pemanasan.\n3. Lari 30 menit sendirian, sekeras yang bisa kamu tahan rata dari awal sampai akhir. Jangan mulai terlalu cepat.\n4. 10 menit pertama tidak dihitung. Rata-rata detak jantung dan pace dari 20 menit terakhir adalah hasilnya (protokol Joe Friel).\n5. Lari atau jalan pelan 10 menit untuk pendinginan.\nRekam larinya di jam atau lewat Rekam di JoyoFit (GPS ponsel dan strap). Panduan di sini hanya memberi tahu kapan mulai."
+      "body": "1. Pilih rute datar atau lintasan tanpa berhenti. Istirahat cukup dan jangan lakukan setelah hari berat. Pasang jam atau strap detak jantung dengan rapat.\n2. Lari pelan 15 menit sebagai pemanasan.\n3. Lari 30 menit sendirian, sekeras yang bisa kamu tahan rata dari awal sampai akhir. Jangan mulai terlalu cepat.\n4. 10 menit pertama tidak dihitung. Rata-rata detak jantung dan pace dari 20 menit terakhir adalah hasilnya (protokol Joe Friel).\n5. Lari atau jalan pelan 10 menit untuk pendinginan.\nRekam larinya di jam atau lewat Rekam di Run Now (GPS ponsel dan strap). Panduan di sini hanya memberi tahu kapan mulai."
     },
     "start": "Mulai panduan",
     "cancel": "Batalkan panduan",
@@ -312,7 +312,7 @@
       "left": "tersisa"
     },
     "say": {
-      "warmup": "Lari pelan. Mulai rekam lari di jam atau di JoyoFit sekarang.",
+      "warmup": "Lari pelan. Mulai rekam lari di jam atau di Run Now sekarang.",
       "settle": "Naikkan ke tempo yang bisa kamu tahan 30 menit. Jangan terlalu cepat di awal. Bagian ini belum dihitung.",
       "measure": "Tahan tempo yang sama. Detak jantung dan pace sekarang dihitung.",
       "cooldown": "Perlambat, lari atau jalan pelan. Setelah selesai, simpan latihannya (sinkronkan jam) lalu kembali ke sini.",
@@ -367,7 +367,7 @@
       "title": "Ambang laktat",
       "lthr": "LTHR",
       "pace": "Pace ambang",
-      "fromTest": "Dari tes JoyoFit, {{date}}",
+      "fromTest": "Dari tes Run Now, {{date}}",
       "fromWatch": "Dari jam, {{date}}",
       "other": "{{source}}: {{lthr}} bpm",
       "otherPace": "{{source}}: {{lthr}} bpm, {{pace}}",
@@ -375,7 +375,7 @@
       "sourceWatch": "Jam",
       "empty": "Belum ada. Ukur dengan lari 30 menit, bukan dari rekor pribadi.",
       "open": "Tes ambang laktat",
-      "note": "Jam yang mendukung mengirim nilai ambang laktatnya sendiri; JoyoFit memakai yang terbaru."
+      "note": "Jam yang mendukung mengirim nilai ambang laktatnya sendiri; Run Now memakai yang terbaru."
     },
     "clear": "Hapus hasil tes",
     "unit": {

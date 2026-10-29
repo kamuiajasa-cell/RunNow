@@ -63,7 +63,7 @@
       "hint": "Cuts the first and last 200 m so your home does not show."
     },
     "watermark": {
-      "label": "Show the JoyoFit logo",
+      "label": "Show the Run Now logo",
       "hintPro": "You can turn it off because you are Pro.",
       "hintFree": "Only Pro users can turn it off."
     },

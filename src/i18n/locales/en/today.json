@@ -158,7 +158,7 @@
   "nightHrv": {
     "ios": {
       "message": "Night HRV is not read on iPhone yet",
-      "detail": "JoyoFit on iPhone does not read the watch's overnight HRV yet, but a 1-minute reading still works."
+      "detail": "Run Now on iPhone does not read the watch's overnight HRV yet, but a 1-minute reading still works."
     },
     "unsupported": {
       "message": "Night HRV not available on this watch",
@@ -257,7 +257,7 @@
       "averageCycle": "Average cycle",
       "details": "The next period and the fertile window before it are estimated from the average of your logged cycles. They cannot tell irregular cycles, illness, stress, hormones or pregnancy.",
       "emptyHint": "Log a period to get an estimate.",
-      "emptyDetails": "Log the first day of a period and JoyoFit estimates the next one. With one cycle it assumes 28 days, with more it averages them. Estimates cannot tell irregular cycles, illness, stress, hormones or pregnancy."
+      "emptyDetails": "Log the first day of a period and Run Now estimates the next one. With one cycle it assumes 28 days, with more it averages them. Estimates cannot tell irregular cycles, illness, stress, hormones or pregnancy."
     },
     "log": {
       "title": "Log",

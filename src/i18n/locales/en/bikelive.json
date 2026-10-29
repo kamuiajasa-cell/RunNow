@@ -25,7 +25,7 @@
     "ended": "Ride finished. The link no longer works.",
     "error": {
       "not-signed-in": "Sign in to your JoyoRogo account first to share your location.",
-      "not-configured": "The JoyoFit server is not set up, so your location cannot be shared yet.",
+      "not-configured": "The Run Now server is not set up, so your location cannot be shared yet.",
       "unauthorized": "The server rejected the link key. Turn this off and on again to create a new link.",
       "expired": "The link expired because nothing was sent for a long time. Turn this off and on again to create a new link.",
       "session-full": "The link is full. Turn this off and on again to create a new link.",

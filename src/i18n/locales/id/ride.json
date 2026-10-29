@@ -8,17 +8,17 @@
   },
   "join": {
     "title": "Gabung ke game",
-    "steps": "Buka {{url}} di browser laptop atau TV, lalu ketik kode 6 angka yang muncul di sana. Atau scan QR-nya pakai kamera HP, JoyoFit langsung terbuka.",
+    "steps": "Buka {{url}} di browser laptop atau TV, lalu ketik kode 6 angka yang muncul di sana. Atau scan QR-nya pakai kamera HP, Run Now langsung terbuka.",
     "codeLabel": "Kode dari layar",
     "codePlaceholder": "000000",
     "action": "Gabung",
     "fromLink": "Kode dari QR sudah terisi. Cocokkan angkanya dengan layar, lalu tekan Gabung.",
-    "account": "Butuh akun JoyoRogo yang masuk di JoyoFit. Gratis, tidak perlu Pro.",
+    "account": "Butuh akun JoyoRogo yang masuk di Run Now. Gratis, tidak perlu Pro.",
     "ride": "Gabung memasang rekaman ride indoor di HP-mu. Hasilnya tersimpan seperti ride biasa, dengan jarak dan tanjakan dari game."
   },
   "error": {
     "notSignedIn": "Masuk ke JoyoRogo dulu untuk memakai Main di web.",
-    "notConfigured": "Server JoyoFit belum diatur di build ini.",
+    "notConfigured": "Server Run Now belum diatur di build ini.",
     "notFound": "Kode tidak ketemu atau sudah kedaluwarsa. Kode berlaku 10 menit, minta kode baru di layar.",
     "taken": "Ruang ini sudah dipakai HP lain.",
     "rateLimited": "Terlalu banyak percobaan. Tunggu sebentar, lalu coba lagi.",
@@ -52,7 +52,7 @@
   },
   "lobby": {
     "title": "Siap main",
-    "hint": "Mulai dari game, atau tekan Mulai di sini. Rekaman jalan di HP, jadi biarkan JoyoFit terbuka.",
+    "hint": "Mulai dari game, atau tekan Mulai di sini. Rekaman jalan di HP, jadi biarkan Run Now terbuka.",
     "start": "Mulai",
     "noSensors": "Belum ada sensor kadens atau detak jantung yang dipasangkan. Tambahkan dulu di Sensor.",
     "manageSensors": "Atur sensor",

@@ -142,7 +142,7 @@
   },
   "noStages": {
     "title": "Why does this sleep have no stages?",
-    "unsupported": "The watch told us when you slept but not the stages, and it has no TruSleep switch that JoyoFit can set.",
+    "unsupported": "The watch told us when you slept but not the stages, and it has no TruSleep switch that Run Now can set.",
     "turnOn": "Turn on TruSleep so the watch records sleep stages, then sleep a night and sync.",
     "unknown": "The watch told us when you slept but not the stages. Newer watches send them with TruSleep on. Some older ones cannot, and may give light and deep sleep with TruSleep off instead.",
     "openSetting": "Open TruSleep setting"
@@ -221,7 +221,7 @@
       "energyLine": "{{word}} - estimate",
       "energySeries": "Body Energy since waking up",
       "howTitle": "How it is calculated",
-      "howEnergy": "A JoyoFit estimate, not a watch figure. Wake-up level = 30 + 60 x (your sleep / sleep need, at most 1) + up to 10 points from overnight HRV. It then drops 0.8 per hour awake, up to 55 points from strain since waking, and up to 1 point per hour when stress is above 40. It rises 5 per hour of naps and 0.4 per hour of resting with a heart rate near your resting rate. The result is capped between 0 and 100.",
+      "howEnergy": "A Run Now estimate, not a watch figure. Wake-up level = 30 + 60 x (your sleep / sleep need, at most 1) + up to 10 points from overnight HRV. It then drops 0.8 per hour awake, up to 55 points from strain since waking, and up to 1 point per hour when stress is above 40. It rises 5 per hour of naps and 0.4 per hour of resting with a heart rate near your resting rate. The result is capped between 0 and 100.",
       "howEnergyNow": "Right now: wake-up {{wake}}, awake {{awake}}, strain {{strain}}, stress {{stress}}, naps {{naps}}, rest {{rest}}.",
       "recoveryLabel": "Recovery time",
       "recoveryNone": "No workouts or heart rate data yet",
@@ -229,9 +229,9 @@
       "estimate": "estimate",
       "howRecoveryTitle": "How recovery time is calculated",
       "howRecoveryWatch": "From the watch: the recovery time of the latest workout the watch reported, counted down from when the workout ended. With several workouts, the longest one is used.",
-      "howRecoveryEstimate": "A JoyoFit estimate: the watch gave no recovery time, so it is worked out from today's and yesterday's strain. Below strain 5 there is no recovery time, at strain 5 about 6 hours, rising in a straight line to 48 hours at strain 21. Yesterday's strain counts down from midnight.",
+      "howRecoveryEstimate": "A Run Now estimate: the watch gave no recovery time, so it is worked out from today's and yesterday's strain. Below strain 5 there is no recovery time, at strain 5 about 6 hours, rising in a straight line to 48 hours at strain 21. Yesterday's strain counts down from midnight.",
       "howNeedTitle": "How sleep need is calculated",
-      "howNeed": "A JoyoFit estimate: a base of 7 h 30 min, plus up to 1 hour from today's strain (strain / 21), plus a quarter of the sleep debt of the last 7 nights (the shortfall from 7 h 30 min a night), at most 1 hour.",
+      "howNeed": "A Run Now estimate: a base of 7 h 30 min, plus up to 1 hour from today's strain (strain / 21), plus a quarter of the sleep debt of the last 7 nights (the shortfall from 7 h 30 min a night), at most 1 hour.",
       "howNeedStrain": "Today adds {{duration}}.",
       "howNeedDebt": "Sleep debt adds {{duration}}.",
       "howNeedNoDebt": "Sleep debt is not counted yet: it needs at least 3 recorded nights.",
@@ -255,8 +255,8 @@
         "unit": "ml/kg/min",
         "delta": "{{delta}} since {{date}}",
         "trend": "VO2max trend",
-        "none": "No VO2max yet. The watch reports it after a run or GPS walk, or JoyoFit estimates it from your resting heart rate after 5 recorded days.",
-        "how": "From the watch: the VO2max the watch reported on the latest workout (90 days). The watch sends maximum METs; JoyoFit multiplies by 3.5 ml/kg/min per MET and rounds down to a whole number, so it can be 1 below the watch's figure. Values outside 10 to 90 are ignored. Estimate (when the watch reports none): Uth-Sorensen 2004, VO2max = 15.3 x maximum heart rate / resting heart rate. Maximum is 220 minus the age from your profile, resting is the median of the daily lowest heart rates of the last 14 days. Rough: the real figure can be off by a few points."
+        "none": "No VO2max yet. The watch reports it after a run or GPS walk, or Run Now estimates it from your resting heart rate after 5 recorded days.",
+        "how": "From the watch: the VO2max the watch reported on the latest workout (90 days). The watch sends maximum METs; Run Now multiplies by 3.5 ml/kg/min per MET and rounds down to a whole number, so it can be 1 below the watch's figure. Values outside 10 to 90 are ignored. Estimate (when the watch reports none): Uth-Sorensen 2004, VO2max = 15.3 x maximum heart rate / resting heart rate. Maximum is 220 minus the age from your profile, resting is the median of the daily lowest heart rates of the last 14 days. Rough: the real figure can be off by a few points."
       },
       "load": {
         "title": "Training status",
@@ -268,14 +268,14 @@
         "short_one": "Needs at least {{need}} days with stored heart rate: only {{count}} day so far.",
         "short_other": "Needs at least {{need}} days with stored heart rate: only {{count}} days so far.",
         "none": "No training load in the last 28 days.",
-        "how": "A JoyoFit estimate from the heart rate the watch stored. Daily load = Edwards TRIMP (minutes in zones 1 to 5 times 1 to 5). Ratio = mean TRIMP of the last 7 days divided by the mean of the last 28 days (Gabbett 2016), today excluded. Above 1.5 is overreaching, 1.1 to 1.5 productive, 0.8 to 1.1 maintaining, 0.5 to 0.8 recovery, below 0.5 detraining. The same figure feeds Readiness. Days without data count as rest."
+        "how": "A Run Now estimate from the heart rate the watch stored. Daily load = Edwards TRIMP (minutes in zones 1 to 5 times 1 to 5). Ratio = mean TRIMP of the last 7 days divided by the mean of the last 28 days (Gabbett 2016), today excluded. Above 1.5 is overreaching, 1.1 to 1.5 productive, 0.8 to 1.1 maintaining, 0.5 to 0.8 recovery, below 0.5 detraining. The same figure feeds Readiness. Days without data count as rest."
       },
       "races": {
         "title": "Race predictions",
         "note": "An estimate, from your best efforts in runs of the last 90 days.",
         "short_one": "Needs at least {{need}} runs of 5 km or more in the last 90 days (GPS): only {{count}} so far.",
         "short_other": "Needs at least {{need}} runs of 5 km or more in the last 90 days (GPS): only {{count}} so far.",
-        "how": "A JoyoFit estimate with Riegel's formula (1981): T2 = T1 x (D2 / D1)^1.06. T1 is your fastest 5K, 10K or half marathon effort from runs of the last 90 days (the same as the best efforts in workout details). Each distance uses the effort closest to it. A marathon from a 5K effort tends to be too optimistic if you have not trained long runs."
+        "how": "A Run Now estimate with Riegel's formula (1981): T2 = T1 x (D2 / D1)^1.06. T1 is your fastest 5K, 10K or half marathon effort from runs of the last 90 days (the same as the best efforts in workout details). Each distance uses the effort closest to it. A marathon from a 5K effort tends to be too optimistic if you have not trained long runs."
       },
       "hrv": {
         "title": "HRV status",
@@ -287,7 +287,7 @@
         "avgValue_one": "{{value}} ms ({{count}} night)",
         "avgValue_other": "{{value}} ms ({{count}} nights)",
         "missing": "No status yet: {{reason}}.",
-        "how": "A JoyoFit estimate from the overnight HRV (RMSSD) the watch records while you sleep, Android only. The mean ln(RMSSD) of the last 7 nights is compared with your normal range: the mean of the 60 days before that week, plus or minus 1 standard deviation (Plews 2013, Buchheit 2014). Inside the range: balanced. Below: low. Above: unbalanced. Needs 14 baseline nights and 3 nights in the last 7 days."
+        "how": "A Run Now estimate from the overnight HRV (RMSSD) the watch records while you sleep, Android only. The mean ln(RMSSD) of the last 7 nights is compared with your normal range: the mean of the 60 days before that week, plus or minus 1 standard deviation (Plews 2013, Buchheit 2014). Inside the range: balanced. Below: low. Above: unbalanced. Needs 14 baseline nights and 3 nights in the last 7 days."
       },
       "intensity": {
         "title": "Intensity minutes",
@@ -296,7 +296,7 @@
         "breakdown": "{{moderate}} moderate minutes + 2 x {{vigorous}} vigorous minutes. Estimate.",
         "chart": "Intensity minutes per day, Monday to Sunday",
         "endLabel": "Sunday",
-        "how": "A JoyoFit estimate from the per-minute heart rate the watch stored (maximum {{maxHr}} bpm). Minutes at 60 to 80 percent of maximum (zones 2 and 3) count 1, minutes at 80 percent and above (zones 4 and 5) count 2. The thresholds are fixed percentages of your maximum, whichever heart-rate zones you set. The week runs Monday to Sunday. The target of 150 minutes a week follows WHO 2020 and ACSM 2018 advice.",
+        "how": "A Run Now estimate from the per-minute heart rate the watch stored (maximum {{maxHr}} bpm). Minutes at 60 to 80 percent of maximum (zones 2 and 3) count 1, minutes at 80 percent and above (zones 4 and 5) count 2. The thresholds are fixed percentages of your maximum, whichever heart-rate zones you set. The week runs Monday to Sunday. The target of 150 minutes a week follows WHO 2020 and ACSM 2018 advice.",
         "minutes": "{{value}} min"
       }
     }
@@ -306,7 +306,7 @@
     "intro": "This test measures your lactate threshold from one real run, not from a personal best. The result is your LTHR (heart rate at the threshold) and your threshold pace.",
     "how": {
       "title": "How the test works",
-      "body": "1. Pick a flat route or a track without stops. Be rested, and not after a hard day. Wear the watch or heart rate strap snugly.\n2. Run easy for 15 minutes as a warm-up.\n3. Run 30 minutes alone, as hard as you can hold evenly from start to finish. Do not start too fast.\n4. The first 10 minutes do not count. The average heart rate and pace of the last 20 minutes are the result (Joe Friel's protocol).\n5. Jog or walk easily for 10 minutes to cool down.\nRecord the run on the watch or with Record in JoyoFit (phone GPS and strap). The guide here only tells you when to start."
+      "body": "1. Pick a flat route or a track without stops. Be rested, and not after a hard day. Wear the watch or heart rate strap snugly.\n2. Run easy for 15 minutes as a warm-up.\n3. Run 30 minutes alone, as hard as you can hold evenly from start to finish. Do not start too fast.\n4. The first 10 minutes do not count. The average heart rate and pace of the last 20 minutes are the result (Joe Friel's protocol).\n5. Jog or walk easily for 10 minutes to cool down.\nRecord the run on the watch or with Record in Run Now (phone GPS and strap). The guide here only tells you when to start."
     },
     "start": "Start the guide",
     "cancel": "Cancel the guide",
@@ -320,7 +320,7 @@
       "left": "left"
     },
     "say": {
-      "warmup": "Run easy. Start recording the run on the watch or in JoyoFit now.",
+      "warmup": "Run easy. Start recording the run on the watch or in Run Now now.",
       "settle": "Settle into a pace you can hold for 30 minutes. Do not start too fast. This part is not counted yet.",
       "measure": "Hold the same pace. Heart rate and pace now count.",
       "cooldown": "Slow down, jog or walk easy. When done, save the workout (sync the watch) and come back here.",
@@ -375,7 +375,7 @@
       "title": "Lactate threshold",
       "lthr": "LTHR",
       "pace": "Threshold pace",
-      "fromTest": "From the JoyoFit test, {{date}}",
+      "fromTest": "From the Run Now test, {{date}}",
       "fromWatch": "From the watch, {{date}}",
       "other": "{{source}}: {{lthr}} bpm",
       "otherPace": "{{source}}: {{lthr}} bpm, {{pace}}",
@@ -383,7 +383,7 @@
       "sourceWatch": "Watch",
       "empty": "Nothing yet. Measure it with a 30-minute run, not from a personal best.",
       "open": "Lactate threshold test",
-      "note": "Watches that support it send their own lactate threshold; JoyoFit uses the newest one."
+      "note": "Watches that support it send their own lactate threshold; Run Now uses the newest one."
     },
     "clear": "Delete the test result",
     "unit": {

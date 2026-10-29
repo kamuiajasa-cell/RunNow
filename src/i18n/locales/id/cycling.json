@@ -200,7 +200,7 @@
       "1200": "20 menit",
       "3600": "60 menit"
     },
-    "note": "Daya rata-rata terbaik untuk tiap durasi dalam gowes ini. Garis putus-putus adalah terbaikmu dari gowes yang sudah tersimpan di JoyoFit.",
+    "note": "Daya rata-rata terbaik untuk tiap durasi dalam gowes ini. Garis putus-putus adalah terbaikmu dari gowes yang sudah tersimpan di Run Now.",
     "watts": "{{value}} W",
     "a11yRow": "{{name}}, {{value}} watt"
   },

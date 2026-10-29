@@ -37,7 +37,7 @@
     "brand": "Merek",
     "model": "Model",
     "startDistance": "Jarak awal (km)",
-    "startDistanceHint": "Jarak yang sudah ditempuh sebelum dicatat di JoyoFit.",
+    "startDistanceHint": "Jarak yang sudah ditempuh sebelum dicatat di Run Now.",
     "retireAt": "Pensiun di (km)",
     "retireAtHint": "Kosongkan kalau tanpa batas. Sepatu lari biasanya 500 sampai 800 km.",
     "photo": {
@@ -93,10 +93,10 @@
     "error": "Gear Strava tidak bisa dimuat: {{error}}",
     "notConnected": "Hubungkan Strava dulu di Lainnya, Strava.",
     "otherNoLink": "Gear jenis Lainnya tidak punya padanan di Strava.",
-    "note": "Setelah latihan terkirim, JoyoFit memasang gear ini di aktivitas Strava-nya.",
+    "note": "Setelah latihan terkirim, Run Now memasang gear ini di aktivitas Strava-nya.",
     "gearAccess": {
       "title": "Gear Strava",
-      "off": "Untuk menautkan gear, JoyoFit perlu izin membaca profil Strava kamu. Daftar sepatu dan sepeda hanya dibaca untuk ditampilkan di sini dan tidak dibagikan.",
+      "off": "Untuk menautkan gear, Run Now perlu izin membaca profil Strava kamu. Daftar sepatu dan sepeda hanya dibaca untuk ditampilkan di sini dan tidak dibagikan.",
       "on": "Izin baca gear sudah diberikan.",
       "grant": "Izinkan baca gear"
     }

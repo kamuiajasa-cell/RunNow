@@ -157,15 +157,15 @@
     "members": "Anggota",
     "inviteCode": "Kode undangan {{code}}",
     "sharingTitle": "Berbagi dengan grup ini",
-    "shareFitness": "Bagikan skor JoyoFit",
+    "shareFitness": "Bagikan skor Run Now",
     "shareFitnessHint": "Pemulihan, strain, tidur, dan kesiapan hari ini, terlihat oleh anggota.",
     "shareFood": "Bagikan nama makanan",
     "shareFoodHint": "Anggota melihat apa yang kamu makan, bukan hanya kalorinya."
   },
   "member": {
     "you": "{{name}} (kamu)",
-    "noScores": "Belum ada skor JoyoFit hari ini",
-    "notSharing": "Tidak membagikan skor JoyoFit",
+    "noScores": "Belum ada skor Run Now hari ini",
+    "notSharing": "Tidak membagikan skor Run Now",
     "recovery": "Pemulihan",
     "strain": "Strain",
     "sleep": "Tidur",

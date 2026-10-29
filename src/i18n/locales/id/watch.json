@@ -63,15 +63,15 @@
     "connectFirst": "Hubungkan jam kamu dulu.",
     "guide": "Buka panduan pemasangan",
     "hint": {
-      "busy": "Tidak bisa terhubung ke jam. Kalau jam masih terhubung ke HP atau aplikasi lain (Huawei Health, atau JoyoFit di HP lain), putuskan dulu di sana. Biarkan jam tetap menyala dan dekat dengan HP ini, lalu ketuk Coba lagi.",
+      "busy": "Tidak bisa terhubung ke jam. Kalau jam masih terhubung ke HP atau aplikasi lain (Huawei Health, atau Run Now di HP lain), putuskan dulu di sana. Biarkan jam tetap menyala dan dekat dengan HP ini, lalu ketuk Coba lagi.",
       "noWatchIos": "Jam tidak ditemukan. Kalau jam masih terhubung ke HP lain, putuskan dulu di sana. Pastikan jam menyala dan dekat dengan HP ini, lalu ketuk Segarkan.",
-      "noWatchScan": "Tidak ada jam di sekitar. Kalau jam masih terhubung ke HP atau aplikasi lain (Huawei Health, atau JoyoFit di HP lain), putuskan dulu di sana. Pastikan jam menyala dan dekat dengan HP ini, lalu cari lagi.",
-      "notPaired": "Android tidak punya pairing Bluetooth dengan jam ini (terhapus, atau jam menolak dipasangkan lagi). Buka pengaturan Bluetooth Android dan pasangkan jamnya, lalu ketuk Coba lagi. Kalau jam tidak muncul di sana, lepas HP ini sekali di pengaturan Bluetooth jam. JoyoFit tidak menghapus apa pun."
+      "noWatchScan": "Tidak ada jam di sekitar. Kalau jam masih terhubung ke HP atau aplikasi lain (Huawei Health, atau Run Now di HP lain), putuskan dulu di sana. Pastikan jam menyala dan dekat dengan HP ini, lalu cari lagi.",
+      "notPaired": "Android tidak punya pairing Bluetooth dengan jam ini (terhapus, atau jam menolak dipasangkan lagi). Buka pengaturan Bluetooth Android dan pasangkan jamnya, lalu ketuk Coba lagi. Kalau jam tidak muncul di sana, lepas HP ini sekali di pengaturan Bluetooth jam. Run Now tidak menghapus apa pun."
     },
     "silent": {
       "short": "Jam tersambung lewat Bluetooth tapi tidak menjawab. Langkah perbaikannya ada di Lainnya, Jam.",
       "title": "Jam tersambung tapi tidak menjawab",
-      "intro": "JoyoFit sudah menjangkau jam lewat Bluetooth, tapi jam tidak membalas permintaan pertama. Biasanya jam sedang dipakai aplikasi atau HP lain. Coba satu per satu, lalu ketuk Coba lagi.",
+      "intro": "Run Now sudah menjangkau jam lewat Bluetooth, tapi jam tidak membalas permintaan pertama. Biasanya jam sedang dipakai aplikasi atau HP lain. Coba satu per satu, lalu ketuk Coba lagi.",
       "step": {
         "release": "Putuskan jam dari Huawei Health dan dari HP lain, lalu tutup aplikasinya sepenuhnya.",
         "forgetIos": "Di iPhone, buka Pengaturan > Bluetooth, ketuk ikon (i) di samping jam, lalu pilih Lupakan Perangkat Ini.",
@@ -82,13 +82,13 @@
       "report": "Kirim laporan"
     },
     "limits": {
-      "optimized": "Android bisa menghentikan JoyoFit saat layar mati atau aplikasi ditutup untuk menghemat baterai. Itu penyebab umum jam putus sendiri. Izinkan JoyoFit berjalan tanpa pembatasan baterai.",
-      "restricted": "Pemakaian baterai JoyoFit di latar belakang dibatasi (Restricted), jadi Android mematikannya saat layar mati dan jam putus. Buka pengaturan aplikasi, pilih Baterai, lalu Tanpa batasan.",
-      "vendor": "HP {{maker}} juga punya daftar aplikasi yang boleh jalan sendiri (auto-start). Aktifkan JoyoFit di sana, kalau tidak jam bisa putus walau pengaturan baterai sudah benar.",
+      "optimized": "Android bisa menghentikan Run Now saat layar mati atau aplikasi ditutup untuk menghemat baterai. Itu penyebab umum jam putus sendiri. Izinkan Run Now berjalan tanpa pembatasan baterai.",
+      "restricted": "Pemakaian baterai Run Now di latar belakang dibatasi (Restricted), jadi Android mematikannya saat layar mati dan jam putus. Buka pengaturan aplikasi, pilih Baterai, lalu Tanpa batasan.",
+      "vendor": "HP {{maker}} juga punya daftar aplikasi yang boleh jalan sendiri (auto-start). Aktifkan Run Now di sana, kalau tidak jam bisa putus walau pengaturan baterai sudah benar.",
       "openBattery": "Buka pengaturan baterai",
       "openAutoStart": "Buka auto-start",
       "dismiss": "Tutup",
-      "error": "Layar pengaturan itu tidak bisa dibuka di HP ini. Buka Pengaturan, Aplikasi, JoyoFit, lalu Baterai."
+      "error": "Layar pengaturan itu tidak bisa dibuka di HP ini. Buka Pengaturan, Aplikasi, Run Now, lalu Baterai."
     },
     "status": {
       "linkA11y": "Status koneksi: {{label}}",
@@ -103,13 +103,13 @@
     "bonded": {
       "forgetTitle": "Lupakan pairing?",
       "forgetMessage": "Ini menghapus kunci autentikasi jam ini dari HP dan jam dihapus dari daftar jam kamu. Data kesehatan yang sudah tersimpan tetap ada. Hubungan berikutnya jadi pairing pertama dan harus dikonfirmasi di jam. Pairing Bluetooth Android tidak berubah.",
-      "forgetMessageIos": "Ini menghapus kunci autentikasi jam ini dari HP dan jam dihapus dari daftar jam kamu. Data kesehatan yang sudah tersimpan tetap ada. JoyoFit tidak bisa menghapus pairing di sisi jam: agar Huawei Health bisa dipakai lagi, reset atau lepas juga jamnya (Pengaturan jam > Sistem > Reset, atau hapus HP ini di pengaturan Bluetooth jam), lalu pairing di Huawei Health. Jika jam tampil di Pengaturan > Bluetooth iPhone, ketuk ikon (i) lalu pilih Lupakan Perangkat Ini.",
+      "forgetMessageIos": "Ini menghapus kunci autentikasi jam ini dari HP dan jam dihapus dari daftar jam kamu. Data kesehatan yang sudah tersimpan tetap ada. Run Now tidak bisa menghapus pairing di sisi jam: agar Huawei Health bisa dipakai lagi, reset atau lepas juga jamnya (Pengaturan jam > Sistem > Reset, atau hapus HP ini di pengaturan Bluetooth jam), lalu pairing di Huawei Health. Jika jam tampil di Pengaturan > Bluetooth iPhone, ketuk ikon (i) lalu pilih Lupakan Perangkat Ini.",
       "forget": "Lupakan",
       "forgetPairing": "Lupakan pairing",
       "unnamed": "Perangkat tanpa nama",
       "systemConnected": "Sudah terhubung ke iPhone ini. Ketuk Hubungkan untuk memakainya di sini.",
       "notInReach": "Di luar jangkauan. Kalau jam ada di HP lain, putuskan dulu di sana.",
-      "notPairedRemembered": "Diingat JoyoFit, tetapi Android tidak lagi mencatatnya sebagai terpasang. Hubungkan memakai alamat yang tersimpan dan meminta Android memasangkan lagi bila perlu.",
+      "notPairedRemembered": "Diingat Run Now, tetapi Android tidak lagi mencatatnya sebagai terpasang. Hubungkan memakai alamat yang tersimpan dan meminta Android memasangkan lagi bila perlu.",
       "disconnect": "Putuskan",
       "connect": "Hubungkan",
       "switchHere": "Ganti ke sini"
@@ -141,10 +141,10 @@
     },
     "bind": {
       "title": "Pasangkan jam ini dengan HP ini?",
-      "messageIos": "Jam ini belum dipasangkan dengan iPhone ini. Jam hanya menyimpan satu pairing HP, jadi melanjutkan akan menggantikan pairing dengan HP atau aplikasi lainmu (Huawei Health, atau JoyoFit di HP lain), yang nanti harus dipasangkan ulang. Setelah itu kamu konfirmasi di jam.",
-      "messageAndroid": "Jam ini belum dipasangkan dengan HP ini. Jam hanya menyimpan satu pairing HP, jadi melanjutkan akan menggantikan pairing dengan HP atau aplikasi lainmu (Huawei Health, atau JoyoFit di HP lain), yang nanti harus dipasangkan ulang. Setelah itu kamu konfirmasi di jam.",
-      "lostAndroid": "JoyoFit sudah dipasangkan dengan jam ini, tapi jam tidak lagi mengenali HP ini: ada aplikasi atau HP lain yang memasangkannya ulang saat JoyoFit tidak terhubung. Sering kali itu Huawei Health: selama aktif, Huawei Health menyambung ke jam begitu jam tidak terhubung ke JoyoFit dan memasangkannya ulang sendiri, walaupun tidak sedang kamu pakai. Nonaktifkan atau copot Huawei Health dulu lewat setelan aplikasi di HP, lalu lanjutkan dan konfirmasi di jam. Melepas jam dari Huawei Health bisa membuat jamnya direset.",
-      "lostIos": "JoyoFit sudah dipasangkan dengan jam ini, tapi jam tidak lagi mengenali iPhone ini: ada aplikasi atau HP lain yang memasangkannya ulang saat JoyoFit tidak terhubung, misalnya Huawei Health. Hentikan dulu aplikasi atau HP itu agar tidak tersambung ke jam, lalu lanjutkan dan konfirmasi di jam.",
+      "messageIos": "Jam ini belum dipasangkan dengan iPhone ini. Jam hanya menyimpan satu pairing HP, jadi melanjutkan akan menggantikan pairing dengan HP atau aplikasi lainmu (Huawei Health, atau Run Now di HP lain), yang nanti harus dipasangkan ulang. Setelah itu kamu konfirmasi di jam.",
+      "messageAndroid": "Jam ini belum dipasangkan dengan HP ini. Jam hanya menyimpan satu pairing HP, jadi melanjutkan akan menggantikan pairing dengan HP atau aplikasi lainmu (Huawei Health, atau Run Now di HP lain), yang nanti harus dipasangkan ulang. Setelah itu kamu konfirmasi di jam.",
+      "lostAndroid": "Run Now sudah dipasangkan dengan jam ini, tapi jam tidak lagi mengenali HP ini: ada aplikasi atau HP lain yang memasangkannya ulang saat Run Now tidak terhubung. Sering kali itu Huawei Health: selama aktif, Huawei Health menyambung ke jam begitu jam tidak terhubung ke Run Now dan memasangkannya ulang sendiri, walaupun tidak sedang kamu pakai. Nonaktifkan atau copot Huawei Health dulu lewat setelan aplikasi di HP, lalu lanjutkan dan konfirmasi di jam. Melepas jam dari Huawei Health bisa membuat jamnya direset.",
+      "lostIos": "Run Now sudah dipasangkan dengan jam ini, tapi jam tidak lagi mengenali iPhone ini: ada aplikasi atau HP lain yang memasangkannya ulang saat Run Now tidak terhubung, misalnya Huawei Health. Hentikan dulu aplikasi atau HP itu agar tidak tersambung ke jam, lalu lanjutkan dan konfirmasi di jam.",
       "continue": "Lanjut"
     },
     "sync": {
@@ -161,16 +161,16 @@
       "stop": "Berhenti"
     },
     "support": {
-      "shareTitle": "Laporan dukungan JoyoFit",
+      "shareTitle": "Laporan dukungan Run Now",
       "title": "Bantu dukung jam-mu",
-      "intro": "JoyoFit diuji di Huawei Watch Fit 4 Pro. Jam Huawei dan Honor lainnya masih eksperimental. Kalau ada yang tidak jalan, hubungkan sekali, lalu kirim laporan. Isinya jawaban jam-mu saat terakhir terhubung, tanpa alamat Bluetooth atau nomor seri.",
+      "intro": "Run Now diuji di Huawei Watch Fit 4 Pro. Jam Huawei dan Honor lainnya masih eksperimental. Kalau ada yang tidak jalan, hubungkan sekali, lalu kirim laporan. Isinya jawaban jam-mu saat terakhir terhubung, tanpa alamat Bluetooth atau nomor seri.",
       "copied": "Laporan lengkap ada di clipboard. Di GitHub, ceritakan apa yang jalan dan apa yang tidak, lalu tempel laporan ke kolom Log.",
       "github": "Lapor ke GitHub",
       "share": "Bagikan teks",
       "atur": {
         "send": "Kirim laporan",
         "messageLabel": "Apa yang terjadi? (boleh dikosongkan)",
-        "messageHint": "Log Bluetooth, info HP dan jam, serta riwayat putus ikut terkirim ke tim JoyoFit, tanpa alamat Bluetooth atau nomor seri.",
+        "messageHint": "Log Bluetooth, info HP dan jam, serta riwayat putus ikut terkirim ke tim Run Now, tanpa alamat Bluetooth atau nomor seri.",
         "messagePlaceholder": "Misalnya: jam tidak mau tersambung setelah restart, atau langkah tidak masuk.",
         "emailLabel": "Email untuk balasan (boleh dikosongkan)",
         "emailHint": "Dipakai hanya untuk membalas laporan ini.",
@@ -249,7 +249,7 @@
     "unsignedBody": "Jam ini hanya menerima tampilan jam yang ditandatangani Huawei. File ini kemungkinan ditolak setelah dikirim. Photo face tetap bisa dipakai.",
     "unsignedTryAnyway": "Tetap coba",
     "unsignedUsePhoto": "Pakai Photo face",
-    "signatureRefused": "Jam menolak tampilan ini karena tidak ditandatangani Huawei. Coba tampilan lain dari galeri JoyoFit.",
+    "signatureRefused": "Jam menolak tampilan ini karena tidak ditandatangani Huawei. Coba tampilan lain dari galeri Run Now.",
     "deleteTitle": "Hapus tampilan jam",
     "deleteMessage": "Hapus \"{{name}}\" dari jam?",
     "screenSize": "Layar {{width}} x {{height}} px",
@@ -712,23 +712,23 @@
     "refresh": "Perbarui sekarang",
     "cancel": "Batal",
     "phoneCopy": "Salinan di HP ini",
-    "details": "Jam-mu memakai data satelit supaya GPS cepat menemukan posisi. Datanya berlaku sekitar 7 hari. Kalau jam-mu meminta jenis Broadcom, JoyoFit mengunduhnya dari server publik Broadcom tanpa akun, lalu memberikannya ke jam. Jenis lain hanya disiapkan aplikasi Huawei sendiri; JoyoFit tidak pernah mengirim jam-mu sesuatu yang tidak diminta.",
-    "detailsLab": "Eksperimen yang kamu nyalakan di Pengaturan > Tentang & lanjutan: jam-mu meminta jenis HW_AGNSS, dan JoyoFit mengirim data satelit yang dibuat server JoyoFit dari data siaran publik (IGS/BKG), bukan dari Huawei. Datanya berlaku sekitar 4 jam. Jam tidak memeriksa data ini dan belum terbukti diterima jam mana pun. Catat berapa lama GPS jam menemukan posisi sebelum dan sesudahnya. Kalau GPS jam bermasalah, matikan eksperimennya; reset pabrik memulihkan jam.",
-    "detailsPgnss": "Eksperimen yang kamu nyalakan di Pengaturan > Tentang & lanjutan: jam-mu meminta jenis HW_PGNSS_PRED, dan JoyoFit mengirim enam berkas prediksi orbit satelit untuk 3 hari yang dihitung server JoyoFit dari data publik, bukan dari Huawei. Jam tidak memeriksa data ini dan belum terbukti diterima jam mana pun. Catat berapa lama GPS jam menemukan posisi sebelum dan sesudahnya. Kalau GPS jam bermasalah, matikan eksperimennya; reset pabrik memulihkan jam.",
+    "details": "Jam-mu memakai data satelit supaya GPS cepat menemukan posisi. Datanya berlaku sekitar 7 hari. Kalau jam-mu meminta jenis Broadcom, Run Now mengunduhnya dari server publik Broadcom tanpa akun, lalu memberikannya ke jam. Jenis lain hanya disiapkan aplikasi Huawei sendiri; Run Now tidak pernah mengirim jam-mu sesuatu yang tidak diminta.",
+    "detailsLab": "Eksperimen yang kamu nyalakan di Pengaturan > Tentang & lanjutan: jam-mu meminta jenis HW_AGNSS, dan Run Now mengirim data satelit yang dibuat server Run Now dari data siaran publik (IGS/BKG), bukan dari Huawei. Datanya berlaku sekitar 4 jam. Jam tidak memeriksa data ini dan belum terbukti diterima jam mana pun. Catat berapa lama GPS jam menemukan posisi sebelum dan sesudahnya. Kalau GPS jam bermasalah, matikan eksperimennya; reset pabrik memulihkan jam.",
+    "detailsPgnss": "Eksperimen yang kamu nyalakan di Pengaturan > Tentang & lanjutan: jam-mu meminta jenis HW_PGNSS_PRED, dan Run Now mengirim enam berkas prediksi orbit satelit untuk 3 hari yang dihitung server Run Now dari data publik, bukan dari Huawei. Jam tidak memeriksa data ini dan belum terbukti diterima jam mana pun. Catat berapa lama GPS jam menemukan posisi sebelum dan sesudahnya. Kalau GPS jam bermasalah, matikan eksperimennya; reset pabrik memulihkan jam.",
     "retryAt": "Percobaan otomatis berikutnya sekitar {{time}}.",
     "sizeValue": "{{kb}} KB",
     "status": {
-      "never": "Jam-mu belum pernah mengambil data satelit dari JoyoFit.",
+      "never": "Jam-mu belum pernah mengambil data satelit dari Run Now.",
       "delivered": "Jam-mu sudah punya data satelit terbaru.",
-      "deliveredLab": "Jam-mu sudah menerima data satelit eksperimen dari JoyoFit (HW_AGNSS). Belum terbukti dipakai jam; catat waktu GPS menemukan posisi.",
-      "deliveredPgnss": "Jam-mu sudah menerima data satelit prediksi eksperimen dari JoyoFit (HW_PGNSS_PRED, 3 hari). Belum terbukti dipakai jam; catat waktu GPS menemukan posisi.",
+      "deliveredLab": "Jam-mu sudah menerima data satelit eksperimen dari Run Now (HW_AGNSS). Belum terbukti dipakai jam; catat waktu GPS menemukan posisi.",
+      "deliveredPgnss": "Jam-mu sudah menerima data satelit prediksi eksperimen dari Run Now (HW_PGNSS_PRED, 3 hari). Belum terbukti dipakai jam; catat waktu GPS menemukan posisi.",
       "expired": "Data satelit di jam-mu sudah kedaluwarsa. Ketuk Perbarui sekarang.",
       "stored": "Data sudah diunduh ke HP ini. Data dikirim ke jam-mu saat jam-mu terhubung dan memintanya.",
       "watchSilent": "Data sudah siap di HP ini, tetapi jam-mu tidak menanggapi. Data dikirim saat jam-mu memintanya.",
       "noNetwork": "HP ini tidak punya internet. Coba lagi saat sudah tersambung.",
       "downloadFailed": "Data satelit gagal diunduh.",
       "invalidFile": "Yang terunduh bukan data satelit yang valid, jadi tidak dikirim ke jam-mu.",
-      "unsupported": "Jam-mu butuh data satelit yang hanya bisa disiapkan aplikasi Huawei sendiri, dan JoyoFit tidak bisa menyediakannya.",
+      "unsupported": "Jam-mu butuh data satelit yang hanya bisa disiapkan aplikasi Huawei sendiri, dan Run Now tidak bisa menyediakannya.",
       "watchRefused": "Jam-mu tidak ikut dalam pertukaran ini. Pembaruan dimulai dari jam sendiri.",
       "timeout": "Pengiriman ke jam-mu berhenti di tengah jalan, jadi dibatalkan.",
       "cancelled": "Pembaruan dibatalkan.",

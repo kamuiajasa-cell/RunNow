@@ -24,7 +24,7 @@
     "ended": "Perjalanan selesai. Tautan sudah tidak berlaku.",
     "error": {
       "not-signed-in": "Masuk ke akun JoyoRogo dulu untuk membagikan lokasi.",
-      "not-configured": "Server JoyoFit belum diatur, jadi lokasi belum bisa dibagikan.",
+      "not-configured": "Server Run Now belum diatur, jadi lokasi belum bisa dibagikan.",
       "unauthorized": "Server menolak kunci tautan. Matikan lalu nyalakan lagi untuk membuat tautan baru.",
       "expired": "Tautan kedaluwarsa karena lama tidak ada kiriman. Matikan lalu nyalakan lagi untuk membuat tautan baru.",
       "session-full": "Tautan sudah penuh. Matikan lalu nyalakan lagi untuk membuat tautan baru.",

@@ -68,11 +68,11 @@
     },
     "workouts_read": {
       "label": "Workouts",
-      "desc": "Workouts from your JoyoFit watch (duration, distance, heart rate, analysis) and strength sessions. No GPS routes."
+      "desc": "Workouts from your Run Now watch (duration, distance, heart rate, analysis) and strength sessions. No GPS routes."
     },
     "recovery_read": {
       "label": "Sleep and recovery",
-      "desc": "Hours slept, recovery, readiness, resting heart rate, HRV, VO2max and steps from JoyoFit or Health Connect."
+      "desc": "Hours slept, recovery, readiness, resting heart rate, HRV, VO2max and steps from Run Now or Health Connect."
     }
   },
   "row": {
@@ -81,7 +81,7 @@
   },
   "signedOut": {
     "title": "Sign in to JoyoRogo first",
-    "description": "AI connections use the same JoyoRogo account as JoyoFit. Sign in to see the AI apps that are connected."
+    "description": "AI connections use the same JoyoRogo account as Run Now. Sign in to see the AI apps that are connected."
   },
   "disclaimer": "What the AI answers is not medical advice. For health decisions, ask a health professional.",
   "privacy": "What is shared and where it goes, in the privacy policy"

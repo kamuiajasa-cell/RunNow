@@ -67,11 +67,11 @@
     },
     "workouts_read": {
       "label": "Latihan",
-      "desc": "Latihan dari jam JoyoFit (durasi, jarak, detak jantung, analisis) dan sesi latihan beban. Tanpa rute GPS."
+      "desc": "Latihan dari jam Run Now (durasi, jarak, detak jantung, analisis) dan sesi latihan beban. Tanpa rute GPS."
     },
     "recovery_read": {
       "label": "Tidur dan pemulihan",
-      "desc": "Jam tidur, pemulihan, kesiapan, detak jantung istirahat, HRV, VO2max, dan langkah dari JoyoFit atau Health Connect."
+      "desc": "Jam tidur, pemulihan, kesiapan, detak jantung istirahat, HRV, VO2max, dan langkah dari Run Now atau Health Connect."
     }
   },
   "row": {
@@ -80,7 +80,7 @@
   },
   "signedOut": {
     "title": "Masuk ke JoyoRogo dulu",
-    "description": "Koneksi AI memakai akun JoyoRogo yang sama dengan JoyoFit. Masuk dulu untuk melihat aplikasi AI yang tersambung."
+    "description": "Koneksi AI memakai akun JoyoRogo yang sama dengan Run Now. Masuk dulu untuk melihat aplikasi AI yang tersambung."
   },
   "disclaimer": "Jawaban dari AI bukan saran medis. Untuk keputusan kesehatan, tanyakan ke tenaga kesehatan.",
   "privacy": "Apa yang dibagikan dan ke mana, di kebijakan privasi"

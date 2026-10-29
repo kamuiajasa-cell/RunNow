@@ -30,7 +30,7 @@
   "chat": {
     "usageToday": "Today: {{tokens}} tokens, {{calls}} of {{ceiling}} calls",
     "ownTitle": "Or use your own key",
-    "ownBody": "Free from JoyoFit, no JoyoRogo Pro needed. You add a key from the AI provider you choose (OpenRouter, OpenAI, Anthropic, Gemini) and only pay them for what you use.",
+    "ownBody": "Free from Run Now, no JoyoRogo Pro needed. You add a key from the AI provider you choose (OpenRouter, OpenAI, Anthropic, Gemini) and only pay them for what you use.",
     "ownCta": "Set up your own key",
     "signIn": "Sign in",
     "noFood": "You are not signed in to JoyoRogo, so food and weight are not connected. Answers leave food out.",
@@ -168,7 +168,7 @@
     "useHosted": "Use the JoyoRogo engine",
     "noProvider": {
       "title": "Own key not set up",
-      "body": "Joyo AI with your own key needs one key from the AI provider you choose. The feature is free from JoyoFit; usage costs are on the provider's account.",
+      "body": "Joyo AI with your own key needs one key from the AI provider you choose. The feature is free from Run Now; usage costs are on the provider's account.",
       "action": "Set up your own key"
     },
     "noKey": {
@@ -279,9 +279,9 @@
       "pasteEmpty": "The clipboard is empty. Copy the key from the provider's page first.",
       "keepSaved": "Use the saved key",
       "open": "Open the {{provider}} key page",
-      "tip": "Create a key just for JoyoFit and set a monthly spending limit in the provider's account.",
+      "tip": "Create a key just for Run Now and set a monthly spending limit in the provider's account.",
       "revokeTitle": "How to revoke the key",
-      "revoke": "Revoke or delete the key at any time on the key page of the provider's account. Delete key in JoyoFit only removes it from this phone; the same key stays valid at the provider until you revoke it there."
+      "revoke": "Revoke or delete the key at any time on the key page of the provider's account. Delete key in Run Now only removes it from this phone; the same key stays valid at the provider until you revoke it there."
     },
     "test": {
       "run": "Test connection",

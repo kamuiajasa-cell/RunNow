@@ -27,11 +27,11 @@
     "question": "Pertanyaan untuk pembaca",
     "noQuestion": "Tanpa pertanyaan",
     "hashtag": {
-      "label": "Tagar #JoyoFit",
+      "label": "Tagar #Run Now",
       "hint": "Ditaruh di baris terakhir teks."
     }
   },
-  "branding": "Logo JoyoFit selalu ada di slide Threads, juga untuk akun Pro.",
+  "branding": "Logo Run Now selalu ada di slide Threads, juga untuk akun Pro.",
   "actions": {
     "share": "Bagikan ke Threads",
     "saveOpen": "Simpan semua dan buka Threads",
